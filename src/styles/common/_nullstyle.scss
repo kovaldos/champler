@@ -41,9 +41,8 @@ body {
 	min-height: 100vh;
 	height: 100%;
 	width: 100%;
-	font-size: 100%;
-	line-height: 1;
 	font-size: 16px;
+	line-height: 1;
 	scroll-behavior: smooth;
 	text-rendering: optimizeSpeed;
 	-ms-text-size-adjust: 100%;
@@ -68,7 +67,7 @@ a:visited {
 a:hover {
 	text-decoration: none;
 }
-ul li:not[class] {
+ul li[class] {
 	list-style: none;
 }
 

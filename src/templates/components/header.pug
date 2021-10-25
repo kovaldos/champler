@@ -1,24 +1,30 @@
 header.header 
 	.container.header__container 
 		.header__menu.menu
-			.menu__icon 
+			.header__menu-icon.menu__icon
 				span  
-			nav.menu__body
-				ul.menu__list
+			nav.header__menu-body.menu__body
+				ul.header__list.menu__list
 					li.header__list-item
-						a(href="concept.html").menu__link Концепция
+						a(href="concept.html").header__menu-link.menu__link Мужчинам
 					li.header__list-item
-						a(href="catalog.html").menu__link Серии
+						a(href="catalog.html").header__menu-link.menu__link Женщинам
 					li.header__list-item
-						a(href="projects.html").menu__link Проекты
+						a(href="projects.html").header__menu-link.menu__link Коллекции
 					li.header__list-item
-						a(href="blog.html").menu__link Блог
-				ul.menu__list
+						a(href="blog.html").header__menu-link.menu__link Виды спорта
+				ul.header__list.menu__list
 					li.header__list-item
-						a(href="concept.html").menu__link Концепция
+						a(href="concept.html").header__menu-link.menu__link Контакты
 					li.header__list-item
-						a(href="catalog.html").menu__link Серии
+						a(href="catalog.html").header__menu-link.menu__link Помощь
 					li.header__list-item
-						a(href="projects.html").menu__link Проекты
+						a(href="projects.html").header__menu-link.menu__link Аккаунт
 					li.header__list-item
-						a(href="blog.html").menu__link Блог
+						a(href="blog.html").header__menu-link.menu__link Корзина
+					li.header__list-item
+						a(href="blog.html").header__menu-link.menu__link Поиск
+		.header__logo-box 
+			a.header__logo-link(href="#")
+				svg.header__logo-img(width="150" height="46")  
+					use(xlink:href="./assets/images/sprite.svg#logo-white" alt="logo")
