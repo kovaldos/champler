@@ -1,1 +1,14 @@
 footer.footer
+    section.subscribe 
+        form.subscribe__form(action="#")
+            .subscribe__heading 
+                h3.subscribe__title Подписка на рассылку
+                p.subscribe__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, laboriosam?
+            .subscribe__block 
+                .subscribe__input-block
+                    input.subscribe__input(type="email" required placeholder="Ваш email")
+                    button.subscribe__btn(type="submit") подписаться
+                .subscribe__agreement
+                    .subscribe__agreement-text Подписываясь на рассылку, вы соглашаетесь с условиями 
+                        a.subscribe__link(href="#")  Политики конфиденциальности
+    .container.footer__container

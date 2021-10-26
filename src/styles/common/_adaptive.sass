@@ -8,6 +8,8 @@
             width: 120px
 
 @media screen and (max-width: 1024px)
+    .container
+        padding: $content-padding-tab
     .menu
         &__body
             flex-direction: column
@@ -18,7 +20,7 @@
             left: -100%
             width: 100%
             height: 100%
-            background-color: $color-grafite
+            background-color: $color-graphite
             padding: 100px 40px
             margin: 0
             transition: all 0.5s ease 0s
@@ -70,4 +72,24 @@
             &::after
                 bottom: 50%
                 transform: rotate(45deg) translate(0, 50%)
+
+    // .footer
+    .subscribe
+        &__form
+            flex-direction: column
+            align-items: flex-start
+        &__block
+            flex: auto
+            width: 100%
+            margin: 15px 0 0 0
+
+@media screen and (max-width: 425px)
+    .subscribe
+        &__input-block
+            flex-direction: column
+        &__btn
+            max-width: unset
+            width: 100%
+            margin: 10px auto
+
 

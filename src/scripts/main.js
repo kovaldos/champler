@@ -48,3 +48,18 @@ if (iconMenu) {
 }
 
 // Burger menu End
+
+
+// Mask for subscribe Start
+
+// const emailMask = IMask(
+// 	document.querySelector('.subscribe__input'),
+// 	{
+// 		mask: [
+// 			{
+// 				mask: /^\S*@?\S*$/
+// 			}
+// 		]
+// 	});
+
+// Mask for subscribe End
