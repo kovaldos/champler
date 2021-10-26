@@ -8,11 +8,22 @@ body
 	font-weight: normal
 	font-style: normal
 	color: $color-grafite
+	position: relative
+
+body._lock
+	overflow: 
+	
+.wrapper
+	max-width: $siteWidth
+	width: 100%
+	margin: 0 auto
 
 .container
-	width: $content-max-width
+	max-width: $content-max-width
+	width: 100%
 	margin: 0 auto
-	padding: $content-padding	
+	padding: $content-padding
+	
 
 @import "./common/header.sass"
 @import "./pages/index.sass"

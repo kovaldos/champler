@@ -1,20 +1,16 @@
 @import ./_vars
 .header
+	width: 100%
+	min-height: 86px
+	padding: 20px 0
 	position: relative
+	z-index: 1
 	&__container
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		width: $content-max-width
-		padding: $content-padding
-		min-height: 86px
+		width: 100%
 		display: flex
 		align-items: center
 	&__menu
 		width: 100%
-		padding: 20px 0
 	&__menu-body,
 	&__list
 		display: flex
@@ -22,15 +18,28 @@
 		align-items: center
 	&__menu-body
 		margin: 0 -12px
+		padding: 12px 0
+	&__list:last-child
+		margin-left: -12px
 	&__menu-link
 		padding: 12px
 		color: $color-White
 		font-size: 18px
 		line-height: 21px
 		margin: 0 4px 0 0
+	&__menu-link:hover
+		text-decoration: underline
 	&__logo-box
 		position: absolute
 		top: 20px
 		left: 50%
 		transform: translateX(-50%)
 		width: 150px
+		display: flex
+		justify-content: center
+		align-items: center
+
+// burger-menu
+.menu
+	&__icon
+		display: none
