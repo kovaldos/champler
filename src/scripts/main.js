@@ -63,3 +63,60 @@ if (iconMenu) {
 // 	});
 
 // Mask for subscribe End
+
+
+// slider1 Start
+
+const swiper = new Swiper('.slider1', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: false,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+ 
+	// If we need pagination
+	pagination: {
+	  el: '.swiper-pagination',
+	  type: 'fraction'
+	},
+ 
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+	breakpoints: {
+		// when window width is >= 1024px
+		1024: {
+		  slidesPerView: 2,
+		  spaceBetween: 10
+		}
+	 }
+
+ });
+ 
+
+// slider1 End
+
+// slider2 Start
+
+const swiper2 = new Swiper('.slider2', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: false,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	autoplay: true,
+	initialSlide: 1,
+	breakpoints: {
+		// when window width is >= 1024px
+		1024: {
+		  slidesPerView: 4,
+		  spaceBetween: 10
+		}
+	 }
+
+ });
+ 
+
+// slider2 End

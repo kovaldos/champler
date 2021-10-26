@@ -1,5 +1,5 @@
 footer.footer
-    section.subscribe 
+    section.section.subscribe 
         form.subscribe__form(action="#")
             .subscribe__heading 
                 h3.subscribe__title Подписка на рассылку
@@ -12,3 +12,87 @@ footer.footer
                     .subscribe__agreement-text Подписываясь на рассылку, вы соглашаетесь с условиями 
                         a.subscribe__link(href="#")  Политики конфиденциальности
     .container.footer__container
+        section.section.news-promo
+            .section__heading 
+                h2.section__title Новости / Акции
+                a.section__link(href="#") Смотреть все
+            .news-promo__slider
+                .swiper.slider1
+                    .swiper-pagination
+                    .swiper-button-prev
+                        svg.slider1__btn-prev(width="50" height="50")
+                            use(xlink:href="./assets/images/sprite.svg#swiper-arrow-prev" alt="Кнопка влево")
+                    .swiper-button-next
+                        svg.slider1__btn-next(width="50" height="50")
+                            use(xlink:href="./assets/images/sprite.svg#swiper-arrow-next" alt="Кнопка вправо")
+                    .swiper-wrapper
+                        .swiper-slide
+                            .slider1__item
+                                .slider1__img-box
+                                    img.slider1__img(src="assets/images/slider-img-1.jpg", alt="Картинка в слайде")
+                                .slider1__text-block 
+                                    .slider1__text-box
+                                        p.slider1__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula mauris turpis risus, ipsum viverra et. 
+                                        a.slider1__link(href="#") Перейти
+                        .swiper-slide
+                            .slider1__item
+                                .slider1__img-box
+                                    img.slider1__img(src="assets/images/slider-img-2.jpg", alt="Картинка в слайде")
+                                .slider1__text-block 
+                                    .slider1__text-box
+                                        p.slider1__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula mauris turpis risus, ipsum viverra et.
+                                        a.slider1__link(href="#") Перейти
+                        .swiper-slide
+                            .slider1__item
+                                .slider1__img-box
+                                    img.slider1__img(src="assets/images/slider-img-1.jpg", alt="Картинка в слайде")
+                                .slider1__text-block 
+                                    .slider1__text-box
+                                        p.slider1__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula mauris turpis risus, ipsum viverra et.
+                                        a.slider1__link(href="#") Перейти
+                        .swiper-slide
+                            .slider1__item
+                                .slider1__img-box
+                                    img.slider1__img(src="assets/images/slider-img-2.jpg", alt="Картинка в слайде")
+                                .slider1__text-block 
+                                    .slider1__text-box
+                                        p.slider1__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula mauris turpis risus, ipsum viverra et.
+                                        a.slider1__link(href="#") Перейти
+    section.section.our-insta
+        .our-insta__content
+            .our-insta__block
+                .our-insta__heading 
+                    h2.our-insta__title Мы в Instagram
+                    p.our-insta__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                a.our-insta__link-btn(href="#") Подписаться
+            .our-insta__slider
+                .swiper.slider2
+                    .swiper-wrapper
+                        .swiper-slide
+                            .slider2__item
+                                .slider2__img-box
+                                    img.slider2__img(src="assets/images/slider2-img-1.jpg", alt="Картинка в слайде")
+                        .swiper-slide
+                            .slider2__item
+                                .slider2__img-box
+                                    img.slider2__img(src="assets/images/slider2-img-2.jpg", alt="Картинка в слайде")
+                        .swiper-slide
+                            .slider2__item
+                                .slider2__img-box
+                                    img.slider2__img(src="assets/images/slider2-img-3.jpg", alt="Картинка в слайде")
+                        .swiper-slide
+                            .slider2__item
+                                .slider2__img-box
+                                    img.slider2__img(src="assets/images/slider2-img-1.jpg", alt="Картинка в слайде")
+                        .swiper-slide
+                            .slider2__item
+                                .slider2__img-box
+                                    img.slider2__img(src="assets/images/slider2-img-2.jpg", alt="Картинка в слайде")
+                        .swiper-slide
+                            .slider2__item
+                                .slider2__img-box
+                                    img.slider2__img(src="assets/images/slider2-img-3.jpg", alt="Картинка в слайде")
+
+
+
+

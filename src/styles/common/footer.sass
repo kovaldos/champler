@@ -1,65 +1,143 @@
 @import ./_vars
-.subscribe
-    width: 100%
-    min-height: 250px
-    background-color: $color-black_2
-    display: flex
-    justify-content: center
-    align-items: center
-    &__form
+.footer
+    .subscribe
+        width: 100%
+        min-height: 250px
+        background-color: $color-black_2
         display: flex
+        justify-content: center
         align-items: center
-        justify-content: flex-start
-        color: $color-White
-        max-width: 1240px
-        padding: 15px
+        margin: 150px 0
+        &__form
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            color: $color-White
+            max-width: 1240px
+            padding: 15px
+            width: 100%
+        &__heading
+            flex: 1 1 auto
+            max-width: 607px
+            padding: $content-padding-mob
+        &__title
+            font-weight: 700
+            font-size: 24px
+            line-height: 28px
+        &__text
+            font-size: 16px
+            line-height: 140%
+            max-width: 400px
+            margin: 10px 0 0 0
+        &__block
+            flex: 1 1 auto
+            padding: $content-padding-mob
+        &__input-block
+            display: flex
+            justify-content: flex-start
+            flex-wrap: nowrap
+        &__input
+            max-width: 343px
+            width: 100%
+            padding: 15px 20px
+            font-size: 16px
+            line-height: 16px
+            color: $color-graphite
+            min-height: 50px
+            border-radius: 5px
+            &::placeholder
+                color: $color-placeholder
+        &__btn
+            max-width: 159px
+            width: 100%
+            min-height: 50px
+            border-radius: 5px
+            background-color: $color-White
+            margin: 0 10px
+            font-size: 14px
+            line-height: 150%
+            text-transform: uppercase
+            color: $color-Black
+        &__btn:hover
+            box-shadow: 0 0 5px 0 $color-White
+        &__agreement-text
+            font-size: 12px
+            line-height: 14px
+            text-decoration-line: underline
+            margin: 10px 5px 0 0
+            max-width: 343px
+            width: 100%
+        &__link
+            display: inline-block
+            color: $color-White
+            text-decoration: underline
+
+    .news-promo
+        margin-bottom: 140px
+        &__slider
+            width: 100%
+            overflow: hidden
+            padding: 90px 0 0 0
+    .slider1
         width: 100%
-    &__heading
-        flex: 1 1 auto
-        max-width: 607px
-        padding: $content-padding-mob
-    &__title
-        font-weight: 700
-        font-size: 24px
-        line-height: 28px
-    &__text
-        font-size: 16px
-        line-height: 140%
-        max-width: 400px
-        margin: 10px 0 0 0
-    &__block
-        flex: 1 1 auto
-        padding: $content-padding-mob
-    &__input-block
-        display: flex
-        justify-content: flex-start
-        flex-wrap: nowrap
-    &__input
-        max-width: 343px
+        max-width: 1400px
+        &__item
+            display: flex
+            flex-direction: column
+        &__text
+            font-size: 16px
+            line-height: 140%
+            width: 100%
+            max-width: 343px
+            margin: 20px 0 10px 0
+        &__link
+            font-size: 16px
+            line-height: 18px
+            text-decoration: underline
+            color: $color-Black
+            padding: 5px
+            margin: 0 0 0 -5px
+            &:hover
+                text-decoration: none
+
+    .our-insta
         width: 100%
-        padding: 15px 20px
-        font-size: 16px
-        line-height: 16px
-        color: $color-graphite
-        min-height: 50px
-        border-radius: 5px
-        &::placeholder
-            color: $color-placeholder
-    &__btn
-        max-width: 159px
-        width: 100%
-        min-height: 50px
-        border-radius: 5px
-        background-color: $color-White
-        margin: 0 10px
-    &__agreement-text
-        font-size: 12px
-        line-height: 14px
-        text-decoration-line: underline
-        margin: 10px 5px 0 0
-        max-width: 343px
-        width: 100%
-    &__link
-        display: inline-block
-        color: $color-White
-        text-decoration: underline
+        max-width: 1440px
+        padding: $content-padding
+        margin: 0 auto
+        &__content
+            display: flex
+            justify-content: flex-start
+            width: 1700px
+        &__block
+            flex: 0 0 470px
+        &__title
+            font-weight: bold
+            font-size: 36px
+            line-height: 41px
+            margin: 30px 0 0 0
+        &__text
+            font-size: 16px
+            line-height: 140%
+            margin: 25px 0 0 0
+            max-width: 345px
+            width: 100%
+        &__link-btn
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+            max-width: 159px
+            min-height: 50px
+            border-radius: 5px
+            background-color: $color-graphite
+            color: $color-White
+            font-size: 14px
+            line-height: 150%
+            text-transform: uppercase
+            margin: 50px 0 0 0
+        &__slider
+            width: 1229px
+            overflow: hidden
+        .slider2
+            width: 1400px

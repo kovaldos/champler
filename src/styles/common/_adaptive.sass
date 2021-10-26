@@ -8,8 +8,14 @@
             width: 120px
 
 @media screen and (max-width: 1024px)
+    .section
+        &__title
+            font-size: $section-title-tablet
+    .swiper-container-horizontal>.swiper-pagination-fraction
+        max-width: 82%
+
     .container
-        padding: $content-padding-tab
+        padding: $content-padding-tablet
     .menu
         &__body
             flex-direction: column
@@ -75,6 +81,7 @@
 
     // .footer
     .subscribe
+        margin: 70px 0
         &__form
             flex-direction: column
             align-items: flex-start
@@ -82,14 +89,41 @@
             flex: auto
             width: 100%
             margin: 15px 0 0 0
+    .footer
+        &__news-promo
+            margin-bottom: 70px
+
+@media screen and (max-width: 768px)
+    .swiper-container-horizontal>.swiper-pagination-fraction
+        max-width: 75%
+
+@media screen and (max-width: 640px)
+    .section
+        &__title
+            font-size: $section-title-mobile
+    .swiper-container-horizontal>.swiper-pagination-fraction
+        top: 28px
+        max-width: 65%
+        transform: translate(17px, 0)
+    .swiper-container-horizontal>.swiper-pagination
+        & span
+            font-size: 14px
+
+    .swiper-button-prev,
+    .swiper-button-next
+        width: 30px
+        height: 30px
+        top: 44px
+    .swiper-button-prev
+        right: 40px
 
 @media screen and (max-width: 425px)
     .subscribe
         &__input-block
             flex-direction: column
+        &__input
+            max-width: unset
         &__btn
             max-width: unset
             width: 100%
             margin: 10px auto
-
-
