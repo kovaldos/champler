@@ -51,6 +51,8 @@
             border-radius: 5px
             &::placeholder
                 color: $color-placeholder
+            &:focus
+                box-shadow: 0 0 5px 0 $color-White
         &__btn
             max-width: 159px
             width: 100%
@@ -62,8 +64,8 @@
             line-height: 150%
             text-transform: uppercase
             color: $color-Black
-        &__btn:hover
-            box-shadow: 0 0 5px 0 $color-White
+            &:hover
+                box-shadow: 0 0 5px 0 $color-White
         &__agreement-text
             font-size: 12px
             line-height: 14px
@@ -75,6 +77,8 @@
             display: inline-block
             color: $color-White
             text-decoration: underline
+            &:hover
+                text-decoration: none
 
     .news-promo
         margin-bottom: 140px
@@ -139,6 +143,9 @@
             line-height: 150%
             text-transform: uppercase
             margin: 50px 0 0 0
+            &:hover
+                background-color: $color-Black
+                opacity: 0.8
         &__slider
             width: 100%
         .slider2
@@ -204,9 +211,13 @@
             font-size: 16px
             line-height: 140%
             color: $color-placeholder
+        &:focus
+            box-shadow: 0 0 5px 0 $color-White
     &__btn
         max-width: 40px
         min-height: 40px
         width: 100%
         background-color: $color-White
         margin-left: 1px
+        &:hover
+            box-shadow: 0 0 5px 0 $color-White

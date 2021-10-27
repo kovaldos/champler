@@ -1,5 +1,11 @@
 @import ./_vars
 
+@media screen and (max-width: 1440px)
+    .collection
+        .slider4
+            .swiper-button-next
+                left: 48.7%
+
 @media screen and (max-width: 1280px)
     .header
         &__menu-link
@@ -86,9 +92,14 @@
     // main
     .main-banner
         margin: 0
+    
     .new-collection
         &__title
             font-size: 42px
+
+    .collection
+        .slider4
+            width: 1280px
 
 
     // footer
@@ -109,12 +120,14 @@
             margin-bottom: 70px
 
         .our-insta
+            min-height: 200px
             &__block
                 flex: 0 0 350px
             &__link-btn
                 margin: 25px 0 0 0
 
     .footer-bottom
+        margin: 50px 0 0 0
         &__link,
         &__span
             font-size: $text-font-size-fablet
@@ -130,9 +143,26 @@
             gap: 30px
 
 @media screen and (max-width: 768px)
+    .section
+        margin: 35px 0 0 0
+    .main-banner
+        margin: 0
     .swiper-container-horizontal>.swiper-pagination-fraction
         max-width: 75%
 
+    .collection
+        .slider4
+            width: 1100px
+            &__item-link
+                font-size: $section-title-tablet
+            .swiper-button-next
+                width: 35px
+                height: 35px
+                left: 48.5%
+
+    .footer-top
+        .subscribe
+            margin: 35px 0
     .footer-top
         .our-insta
             &__title
@@ -165,6 +195,11 @@
         top: 44px
     .swiper-button-prev
         right: 40px
+
+    .main-banner
+        &__img
+            height: 100vh
+            width: auto
 
     .new-collection
         &__content

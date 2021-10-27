@@ -176,7 +176,7 @@ const swiper4 = new Swiper('.slider4', {
 	// Optional parameters
 	direction: 'horizontal',
 	loop: true,
-	slidesPerView: 1,
+	slidesPerView: 4,
 	slidesPerGroup: 1,
 	autoplay: false,
 	initialSlide: 0,
@@ -184,22 +184,22 @@ const swiper4 = new Swiper('.slider4', {
 	navigation: {
 		nextEl: '.swiper-button-next',
 	},
-	breakpoints: {
-		425: {
-			slidesPerView: 2,
-		},
-		640: {
-			slidesPerView: 3,
+	// breakpoints: {
+	// 	425: {
+	// 		slidesPerView: 2,
+	// 	},
+	// 	640: {
+	// 		slidesPerView: 3,
 
-		},
-		1024: {
-			slidesPerView: 3,
+	// 	},
+	// 	1024: {
+	// 		slidesPerView: 3,
 
-		},
-		1280: {
-			slidesPerView: 4,
-		},
-	}
+	// 	},
+	// 	1280: {
+	// 		slidesPerView: 4,
+	// 	},
+	// }
 
 });
 

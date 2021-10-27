@@ -62,10 +62,21 @@
     height: 100%
     &__content
         width: 100%
+        height: 100%
         margin: 0 auto
     &__img
         width: 100%
 
+.fav-btn
+    top: 0
+    left: 0
+    padding: 20px
+    z-index: 5
+    cursor: pointer
+    &:hover>.slider3__fav-img
+        transform: scale(115%)
+    &:active>.slider3__fav-img
+        color: $color-Black
 .sale
     margin: 80px 0 0 0
 
@@ -73,11 +84,48 @@
     padding: 90px 0 0 0
     &__item
         position: relative
+        &:hover> .add-to-cart__box
+            visibility: visible
+            opacity: 1
+    .add-to-cart
+        &__box
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            transition: all 0.3s ease 0s
+            visibility: hidden
+            opacity: 0
+        &__link
+            max-width: 185px
+            width: 100%
+            min-height: 40px
+            border-radius: 5px
+            background-color: $color-White
+            margin: 0 10px
+            font-size: 14px
+            line-height: 150%
+            text-transform: uppercase
+            color: $color-Black
+            display: flex
+            justify-content: center
+            align-items: center
+            transform: translate(0, 65px)
+            transition: all 0.3s ease 0s
+
     &__fav-img-box
         position: absolute
-        top: 20px
+        top: 0
         left: auto
-        right: 20px
+        right: 0
+    &__fav-img
+        width: 100%
+        color: transparent
+        transition: all 0.3s ease 0s
     &__text
         font-size: $text-font-size-desktop
         margin: 15px 0 10px 0
@@ -131,6 +179,9 @@
         line-height: 150%
         text-transform: uppercase
         color: $color-White
+        &:hover
+            background-color: $color-Black
+            opacity: 0.8
     &__img-box
         width: 100%
         height: 100%
@@ -150,7 +201,8 @@
     .slider4
         width: 1870px
         .swiper-button-next
-            right: 440px
+            right: 0
+            left: 74%
             top: 50%
         &__item
             position: relative
@@ -176,6 +228,5 @@
             img
                 transform: scale(100%)
                 transition: transform 0.3s ease 0s
-        &__item:hover> .slider4__img-box img 
+        &__item:hover> .slider4__img-box img
             transform: scale(110%)
-
