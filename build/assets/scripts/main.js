@@ -112,7 +112,7 @@ const swiper2 = new Swiper('.slider2', {
 	breakpoints: {
 		641: {
 			slidesPerView: 3,
-			
+
 		},
 		1024: {
 			slidesPerView: 3,
@@ -127,3 +127,81 @@ const swiper2 = new Swiper('.slider2', {
 
 
 // slider2 End
+
+// slider3 Start
+
+const swiper3 = new Swiper('.slider3', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: false,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	autoplay: false,
+	initialSlide: 0,
+	spaceBetween: 10,
+	// If we need pagination
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'fraction'
+	},
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	breakpoints: {
+		425: {
+			slidesPerView: 2,
+
+		},
+		640: {
+			slidesPerView: 3,
+
+		},
+		1024: {
+			slidesPerView: 4,
+		},
+	}
+
+});
+
+
+// slider3 End
+
+
+// slider4 Start
+
+const swiper4 = new Swiper('.slider4', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	autoplay: false,
+	initialSlide: 0,
+	spaceBetween: 10,
+	navigation: {
+		nextEl: '.swiper-button-next',
+	},
+	breakpoints: {
+		425: {
+			slidesPerView: 2,
+		},
+		640: {
+			slidesPerView: 3,
+
+		},
+		1024: {
+			slidesPerView: 3,
+
+		},
+		1280: {
+			slidesPerView: 4,
+		},
+	}
+
+});
+
+
+// slider4 End

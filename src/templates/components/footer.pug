@@ -1,18 +1,19 @@
 footer.footer-top
-    section.section.subscribe 
-        form.subscribe__form(action="#")
-            .subscribe__heading 
-                h3.subscribe__title Подписка на рассылку
-                p.subscribe__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, laboriosam?
-            .subscribe__block 
-                .subscribe__input-block
-                    input.subscribe__input(type="email" required placeholder="Ваш email")
-                    button.subscribe__btn(type="submit") подписаться
-                .subscribe__agreement
-                    .subscribe__agreement-text Подписываясь на рассылку, вы соглашаетесь с условиями 
-                        a.subscribe__link(href="#")  Политики конфиденциальности
-    .container.footer-top__container
-        section.section.news-promo.section__slider
+    section.section.subscribe
+        .container.subscribe__container
+            form.subscribe__form(action="#")
+                .subscribe__heading 
+                    h2.subscribe__title Подписка на рассылку
+                    p.subscribe__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, laboriosam?
+                .subscribe__block 
+                    .subscribe__input-block
+                        input.subscribe__input(type="email" required placeholder="Ваш email")
+                        button.subscribe__btn(type="submit") подписаться
+                    .subscribe__agreement
+                        .subscribe__agreement-text Подписываясь на рассылку, вы соглашаетесь с условиями 
+                            a.subscribe__link(href="#")  Политики конфиденциальности
+    section.section.news-promo.section__slider
+        .container
             .section__heading.slider__heading 
                 h2.section__title Новости / Акции
                 a.section__link(href="#") Смотреть все
@@ -29,7 +30,7 @@ footer.footer-top
                         .swiper-slide
                             .slider1__item
                                 .slider1__img-box
-                                    img.slider1__img(src="assets/images/slider-img-1.jpg", alt="Картинка в слайде")
+                                    img.slider1__img(src="assets/images/slider-img-1.jpg" alt="Картинка в слайде")
                                 .slider1__text-block 
                                     .slider1__text-box
                                         p.slider1__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula mauris turpis risus, ipsum viverra et. 
@@ -37,7 +38,7 @@ footer.footer-top
                         .swiper-slide
                             .slider1__item
                                 .slider1__img-box
-                                    img.slider1__img(src="assets/images/slider-img-2.jpg", alt="Картинка в слайде")
+                                    img.slider1__img(src="assets/images/slider-img-2.jpg" alt="Картинка в слайде")
                                 .slider1__text-block 
                                     .slider1__text-box
                                         p.slider1__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula mauris turpis risus, ipsum viverra et.
@@ -45,7 +46,7 @@ footer.footer-top
                         .swiper-slide
                             .slider1__item
                                 .slider1__img-box
-                                    img.slider1__img(src="assets/images/slider-img-1.jpg", alt="Картинка в слайде")
+                                    img.slider1__img(src="assets/images/slider-img-1.jpg" alt="Картинка в слайде")
                                 .slider1__text-block 
                                     .slider1__text-box
                                         p.slider1__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula mauris turpis risus, ipsum viverra et.
@@ -53,12 +54,13 @@ footer.footer-top
                         .swiper-slide
                             .slider1__item
                                 .slider1__img-box
-                                    img.slider1__img(src="assets/images/slider-img-2.jpg", alt="Картинка в слайде")
+                                    img.slider1__img(src="assets/images/slider-img-2.jpg" alt="Картинка в слайде")
                                 .slider1__text-block 
                                     .slider1__text-box
                                         p.slider1__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula mauris turpis risus, ipsum viverra et.
                                         a.slider1__link(href="#") Перейти
-        section.section.our-insta
+    section.section.our-insta
+        .container
             .our-insta__content
                 .our-insta__block
                     .our-insta__heading 
@@ -71,28 +73,27 @@ footer.footer-top
                             .swiper-slide
                                 .slider2__item
                                     .slider2__img-box
-                                        img.slider2__img(src="assets/images/slider2-img-1.jpg", alt="Картинка в слайде")
+                                        img.slider2__img(src="assets/images/slider2-img-1.jpg" alt="Картинка в слайде")
                             .swiper-slide
                                 .slider2__item
                                     .slider2__img-box
-                                        img.slider2__img(src="assets/images/slider2-img-2.jpg", alt="Картинка в слайде")
+                                        img.slider2__img(src="assets/images/slider2-img-2.jpg" alt="Картинка в слайде")
                             .swiper-slide
                                 .slider2__item
                                     .slider2__img-box
-                                        img.slider2__img(src="assets/images/slider2-img-3.jpg", alt="Картинка в слайде")
+                                        img.slider2__img(src="assets/images/slider2-img-3.jpg" alt="Картинка в слайде")
                             .swiper-slide
                                 .slider2__item
                                     .slider2__img-box
-                                        img.slider2__img(src="assets/images/slider2-img-1.jpg", alt="Картинка в слайде")
+                                        img.slider2__img(src="assets/images/slider2-img-1.jpg" alt="Картинка в слайде")
                             .swiper-slide
                                 .slider2__item
                                     .slider2__img-box
-                                        img.slider2__img(src="assets/images/slider2-img-2.jpg", alt="Картинка в слайде")
+                                        img.slider2__img(src="assets/images/slider2-img-2.jpg" alt="Картинка в слайде")
                             .swiper-slide
                                 .slider2__item
                                     .slider2__img-box
-                                        img.slider2__img(src="assets/images/slider2-img-3.jpg", alt="Картинка в слайде")
-
+                                        img.slider2__img(src="assets/images/slider2-img-3.jpg" alt="Картинка в слайде")
 footer.footer-bottom
     .container.footer-bottom__container 
         .footer-bottom__row 
@@ -100,9 +101,9 @@ footer.footer-bottom
                 .footer-bottom__logo-box 
                     a.footer-bottom__logo-link(href="index.html")
                         svg(width="163" height="37")
-                                use(xlink:href="./assets/images/sprite.svg#footer-logo-white" alt="Champler logo")
+                            use(xlink:href="./assets/images/sprite.svg#footer-logo-white" alt="Champler logo")
                 .footer-bottom__socials-box.socials-box 
-                    h4.socials-box__title Мы в соцсетях
+                    h2.socials-box__title Мы в соцсетях
                     .socials-box__links 
                         a.socials-box__link(href="#") Instagram
                         a.socials-box__link(href="#") VK

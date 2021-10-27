@@ -5,22 +5,26 @@
         width: 100%
         min-height: 250px
         background-color: $color-black_2
-        display: flex
-        justify-content: center
-        align-items: center
         margin: 150px 0
+        &__container
+            width: 100%
+            min-height: inherit
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0 auto
         &__form
             display: flex
             align-items: center
             justify-content: flex-start
+            gap: 20px
             color: $color-White
             max-width: 1240px
-            padding: 15px
             width: 100%
+            height: 100%
         &__heading
             flex: 1 1 auto
             max-width: 607px
-            padding: $content-padding-mob
         &__title
             font-weight: 700
             font-size: 24px
@@ -32,7 +36,6 @@
             margin: 10px 0 0 0
         &__block
             flex: 1 1 auto
-            padding: $content-padding-mob
         &__input-block
             display: flex
             justify-content: flex-start

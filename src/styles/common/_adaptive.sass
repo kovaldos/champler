@@ -4,11 +4,14 @@
     .header
         &__menu-link
             font-size: 16px
+            margin: 0
+            padding: 10px
         &__logo-img
             width: 120px
 
 @media screen and (max-width: 1024px)
     .section
+        margin: 70px 0 0 0
         &__title
             font-size: $section-title-tablet
     .swiper-container-horizontal>.swiper-pagination-fraction
@@ -50,7 +53,6 @@
             cursor: pointer
             transition: all 0.5s ease 0s
             margin-left: auto
-
             & span,
             &::before,
             &::after
@@ -81,13 +83,23 @@
                 bottom: 50%
                 transform: rotate(45deg) translate(0, 50%)
 
-    // .footer
+    // main
+    .main-banner
+        margin: 0
+    .new-collection
+        &__title
+            font-size: 42px
+
+
+    // footer
     .footer-top
         .subscribe
             margin: 70px 0
             &__form
                 flex-direction: column
                 align-items: flex-start
+                gap: 0
+                padding: 15px 0
             &__block
                 flex: auto
                 width: 100%
@@ -95,13 +107,13 @@
     .footer-top
         .news-promo
             margin-bottom: 70px
-        
+
         .our-insta
             &__block
                 flex: 0 0 350px
             &__link-btn
                 margin: 25px 0 0 0
-    
+
     .footer-bottom
         &__link,
         &__span
@@ -154,6 +166,22 @@
     .swiper-button-prev
         right: 40px
 
+    .new-collection
+        &__content
+            align-items: flex-start
+        &__title
+            font-size: 25px
+        &__img-box
+            overflow: hidden
+            display: flex
+            justify-content: center
+            align-items: center
+        &__bg-img
+            max-width: unset
+            width: auto
+            object-fit: none
+            margin: 0 0 0 -45%
+
     .footer-top
         .slider1
             &__text
@@ -167,7 +195,6 @@
                 margin-bottom: 15px
             &__link-btn
                 max-width: 100%
-
 
     .footer-bottom
         &__row

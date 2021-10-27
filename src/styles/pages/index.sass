@@ -1,5 +1,8 @@
 @import ../common/_vars
 
+.wrapper
+    overflow-x: hidden
+
 .swiper-container-horizontal>.swiper-pagination-fraction
     max-width: 87%
     text-align: right
@@ -27,6 +30,7 @@
 
 .section
     width: 100%
+    margin: 150px 0 0 0
     &__slider
         position: relative
     &__title
@@ -53,7 +57,7 @@
     height: 100%
 
 .main-banner
-    margin-top: -86px
+    margin: 0
     width: 100%
     height: 100%
     &__content
@@ -61,3 +65,117 @@
         margin: 0 auto
     &__img
         width: 100%
+
+.sale
+    margin: 80px 0 0 0
+
+.slider3
+    padding: 90px 0 0 0
+    &__item
+        position: relative
+    &__fav-img-box
+        position: absolute
+        top: 20px
+        left: auto
+        right: 20px
+    &__text
+        font-size: $text-font-size-desktop
+        margin: 15px 0 10px 0
+    &__price,
+    &__currency
+        font-weight: bold
+
+.new
+    margin: 150px 0 0 0
+
+.new-collection
+    width: 100%
+    margin: 150px 0 0 0
+    height: 650px
+    position: relative
+    &__container
+        width: 100%
+        height: 100%
+    &__content
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__content-box
+        width: 100%
+        max-width: 577px
+        z-index: 1
+    &__title
+        font-weight: bold
+        font-size: 64px
+        line-height: 74px
+        color: $color-graphite
+    &__text
+        font-size: 16px
+        line-height: 140%
+        color: $color-graphite
+        margin-top: 6px
+    &__link-btn
+        margin: 50px 0 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 16px 25px 13px
+        max-width: 193px
+        width: 100%
+        min-height: 50px
+        border-radius: 5px
+        background-color: $color-graphite
+        font-size: 14px
+        line-height: 150%
+        text-transform: uppercase
+        color: $color-White
+    &__img-box
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: 0
+        img
+            height: 100%
+
+.collection
+    width: 100%
+    &__heading
+        margin-bottom: 41px
+    .slider4
+        width: 1870px
+        .swiper-button-next
+            right: 440px
+            top: 50%
+        &__item
+            position: relative
+        &__item-title
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            left: 0
+            z-index: 10
+        &__item-link
+            font-weight: bold
+            font-size: 36px
+            line-height: 41px
+            color: $color-White
+            width: 100%
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+        &__img-box
+            overflow: hidden
+            img
+                transform: scale(100%)
+                transition: transform 0.3s ease 0s
+        &__item:hover> .slider4__img-box img 
+            transform: scale(110%)
+
