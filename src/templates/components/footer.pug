@@ -1,4 +1,4 @@
-footer.footer
+footer.footer-top
     section.section.subscribe 
         form.subscribe__form(action="#")
             .subscribe__heading 
@@ -11,13 +11,13 @@ footer.footer
                 .subscribe__agreement
                     .subscribe__agreement-text Подписываясь на рассылку, вы соглашаетесь с условиями 
                         a.subscribe__link(href="#")  Политики конфиденциальности
-    .container.footer__container
-        section.section.news-promo
-            .section__heading 
+    .container.footer-top__container
+        section.section.news-promo.section__slider
+            .section__heading.slider__heading 
                 h2.section__title Новости / Акции
                 a.section__link(href="#") Смотреть все
             .news-promo__slider
-                .swiper.slider1
+                .swiper-container.slider1
                     .swiper-pagination
                     .swiper-button-prev
                         svg.slider1__btn-prev(width="50" height="50")
@@ -58,41 +58,94 @@ footer.footer
                                     .slider1__text-box
                                         p.slider1__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula mauris turpis risus, ipsum viverra et.
                                         a.slider1__link(href="#") Перейти
-    section.section.our-insta
-        .our-insta__content
-            .our-insta__block
-                .our-insta__heading 
-                    h2.our-insta__title Мы в Instagram
-                    p.our-insta__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                a.our-insta__link-btn(href="#") Подписаться
-            .our-insta__slider
-                .swiper.slider2
-                    .swiper-wrapper
-                        .swiper-slide
-                            .slider2__item
-                                .slider2__img-box
-                                    img.slider2__img(src="assets/images/slider2-img-1.jpg", alt="Картинка в слайде")
-                        .swiper-slide
-                            .slider2__item
-                                .slider2__img-box
-                                    img.slider2__img(src="assets/images/slider2-img-2.jpg", alt="Картинка в слайде")
-                        .swiper-slide
-                            .slider2__item
-                                .slider2__img-box
-                                    img.slider2__img(src="assets/images/slider2-img-3.jpg", alt="Картинка в слайде")
-                        .swiper-slide
-                            .slider2__item
-                                .slider2__img-box
-                                    img.slider2__img(src="assets/images/slider2-img-1.jpg", alt="Картинка в слайде")
-                        .swiper-slide
-                            .slider2__item
-                                .slider2__img-box
-                                    img.slider2__img(src="assets/images/slider2-img-2.jpg", alt="Картинка в слайде")
-                        .swiper-slide
-                            .slider2__item
-                                .slider2__img-box
-                                    img.slider2__img(src="assets/images/slider2-img-3.jpg", alt="Картинка в слайде")
+        section.section.our-insta
+            .our-insta__content
+                .our-insta__block
+                    .our-insta__heading 
+                        h2.our-insta__title Мы в Instagram
+                        p.our-insta__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    a.our-insta__link-btn(href="#") Подписаться
+                .our-insta__slider
+                    .swiper-container.slider2
+                        .swiper-wrapper
+                            .swiper-slide
+                                .slider2__item
+                                    .slider2__img-box
+                                        img.slider2__img(src="assets/images/slider2-img-1.jpg", alt="Картинка в слайде")
+                            .swiper-slide
+                                .slider2__item
+                                    .slider2__img-box
+                                        img.slider2__img(src="assets/images/slider2-img-2.jpg", alt="Картинка в слайде")
+                            .swiper-slide
+                                .slider2__item
+                                    .slider2__img-box
+                                        img.slider2__img(src="assets/images/slider2-img-3.jpg", alt="Картинка в слайде")
+                            .swiper-slide
+                                .slider2__item
+                                    .slider2__img-box
+                                        img.slider2__img(src="assets/images/slider2-img-1.jpg", alt="Картинка в слайде")
+                            .swiper-slide
+                                .slider2__item
+                                    .slider2__img-box
+                                        img.slider2__img(src="assets/images/slider2-img-2.jpg", alt="Картинка в слайде")
+                            .swiper-slide
+                                .slider2__item
+                                    .slider2__img-box
+                                        img.slider2__img(src="assets/images/slider2-img-3.jpg", alt="Картинка в слайде")
 
+footer.footer-bottom
+    .container.footer-bottom__container 
+        .footer-bottom__row 
+            .footer-bottom__col.col-1 
+                .footer-bottom__logo-box 
+                    a.footer-bottom__logo-link(href="index.html")
+                        svg(width="163" height="37")
+                                use(xlink:href="./assets/images/sprite.svg#footer-logo-white" alt="Champler logo")
+                .footer-bottom__socials-box.socials-box 
+                    h4.socials-box__title Мы в соцсетях
+                    .socials-box__links 
+                        a.socials-box__link(href="#") Instagram
+                        a.socials-box__link(href="#") VK
+                        a.socials-box__link(href="#") Facebook
+            .footer-bottom__col.col-2
+                ul.footer-bottom__list 
+                    li.footer-bottom__item 
+                        a.footer-bottom__link(href="#") Мужчинам
+                    li.footer-bottom__item 
+                        a.footer-bottom__link(href="#") Женщинам 
+                    li.footer-bottom__item 
+                        a.footer-bottom__link(href="#") Детям
+            .footer-bottom__col.col-3
+                ul.footer-bottom__list 
+                    li.footer-bottom__item 
+                        a.footer-bottom__link(href="#") Помощь
+                    li.footer-bottom__item 
+                        a.footer-bottom__link(href="#") Доставка и оплата
+                    li.footer-bottom__item 
+                        a.footer-bottom__link(href="#") Гарантия
+                    li.footer-bottom__item 
+                        a.footer-bottom__link(href="#") Возврат товара
+                    li.footer-bottom__item 
+                        a.footer-bottom__link(href="#") Отмена заказа
+            .footer-bottom__col.col-4
+                ul.footer-bottom__list 
+                    li.footer-bottom__item 
+                        a.footer-bottom__link(href="#") О компании
+                    li.footer-bottom__item 
+                        a.footer-bottom__link(href="#") О нас
+                    li.footer-bottom__item 
+                        a.footer-bottom__link(href="#") Контакты
+            .footer-bottom__col.col-5
+                a.footer-bottom__link(href="#") Новости и акции
+                form.footer-bottom__form(action="#")
+                    .footer-bottom__input-block
+                        input.footer-bottom__input(type="email" required placeholder="Подписаться на новости")
+                        button.footer-bottom__btn(type="submit")
+                            svg(width="10" height="10")
+                                use(xlink:href="./assets/images/sprite.svg#footer-subscribe-arrow" alt="Срелка вправо")
+                .footer-bottom__item
+                    span.footer-bottom__span Сделал:&nbsp;
+                    a.footer-bottom__link(href="https://ra-studio.ru/") RA-Studio
 
 
 

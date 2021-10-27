@@ -73,28 +73,28 @@ const swiper = new Swiper('.slider1', {
 	loop: false,
 	slidesPerView: 1,
 	slidesPerGroup: 1,
- 
+
 	// If we need pagination
 	pagination: {
-	  el: '.swiper-pagination',
-	  type: 'fraction'
+		el: '.swiper-pagination',
+		type: 'fraction'
 	},
- 
+
 	// Navigation arrows
 	navigation: {
-	  nextEl: '.swiper-button-next',
-	  prevEl: '.swiper-button-prev',
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
 	},
 	breakpoints: {
 		// when window width is >= 1024px
-		1024: {
-		  slidesPerView: 2,
-		  spaceBetween: 10
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 10
 		}
-	 }
+	}
 
- });
- 
+});
+
 
 // slider1 End
 
@@ -108,15 +108,22 @@ const swiper2 = new Swiper('.slider2', {
 	slidesPerGroup: 1,
 	autoplay: true,
 	initialSlide: 1,
+	spaceBetween: 10,
 	breakpoints: {
-		// when window width is >= 1024px
+		641: {
+			slidesPerView: 3,
+			
+		},
 		1024: {
-		  slidesPerView: 4,
-		  spaceBetween: 10
-		}
-	 }
+			slidesPerView: 3,
 
- });
- 
+		},
+		1280: {
+			slidesPerView: 4,
+		},
+	}
+
+});
+
 
 // slider2 End

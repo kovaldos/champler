@@ -24,22 +24,11 @@
 
 .swiper-button-next
     right: 0
-svg>circle
-    stroke: inherit
-    fill: inherit
 
-svg>path
-    stroke: inherit
-    fill: inherit
-
-#swiper-arrow-next
-    stroke: orange
-    fill: orange
 .section
     width: 100%
-    position: relative
-    &__heading
-        margin-bottom: -45px
+    &__slider
+        position: relative
     &__title
         font-weight: bold
         font-size: $section-title-desktop
@@ -53,11 +42,18 @@ svg>path
         padding: 5px
         margin: 0 0 0 -5px
 
+.slider
+    &__heading
+        position: absolute
+        top: 0
+        z-index: 5
+
 .main
     width: 100%
     height: 100%
 
 .main-banner
+    margin-top: -86px
     width: 100%
     height: 100%
     &__content

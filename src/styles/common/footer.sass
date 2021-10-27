@@ -1,5 +1,6 @@
 @import ./_vars
-.footer
+.footer-top
+    overflow-x: hidden
     .subscribe
         width: 100%
         min-height: 250px
@@ -76,11 +77,11 @@
         margin-bottom: 140px
         &__slider
             width: 100%
-            overflow: hidden
-            padding: 90px 0 0 0
+            
     .slider1
         width: 100%
         max-width: 1400px
+        padding: 90px 0 0 0
         &__item
             display: flex
             flex-direction: column
@@ -102,13 +103,12 @@
 
     .our-insta
         width: 100%
-        max-width: 1440px
-        padding: $content-padding
-        margin: 0 auto
+        min-height: 342px
         &__content
             display: flex
             justify-content: flex-start
-            width: 1700px
+            width: 100%
+            gap: 10px
         &__block
             flex: 0 0 470px
         &__title
@@ -137,7 +137,73 @@
             text-transform: uppercase
             margin: 50px 0 0 0
         &__slider
-            width: 1229px
-            overflow: hidden
+            width: 100%
         .slider2
-            width: 1400px
+            width: 100%
+            max-width: 1400px
+
+.footer-bottom
+    width: 100%
+    min-height: 240px
+    background-color: $color-graphite
+    margin: 100px 0 0 0
+    padding: 40px 0 38px 0
+    &__row
+        display: flex
+        gap: 10px
+    &__col
+        flex: 1 1 auto
+    &__logo-box
+        margin-bottom: 30px
+    &__logo-link
+        display: inline-block
+        padding: 5px
+        margin: -5px
+
+    .socials-box
+        &__title
+            font-size: 18px
+            line-height: 21px
+            color: $color-White
+            margin-bottom: 17px
+        &__link
+            font-size: 16px
+            line-height: 140%
+            padding: 15px
+            margin: 0 15px 0 -15px
+            color: $color-White
+    &__link,
+    &__span
+        display: inline-block
+        font-size: 18px
+        line-height: 21px
+        color: $color-White
+        margin-bottom: 17px
+    &__span
+        color: $color-Gray_1
+    &__link:hover
+        text-decoration: underline
+    &__input-block
+        width: 100%
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin: 10px 0 29px 0
+    &__input
+        width: 100%
+        max-width: 301px
+        min-height: 40px
+        padding: 8px 20px
+        font-size: 16px
+        line-height: 140%
+        color: $color-Black
+        &:placeholder
+            font-size: 16px
+            line-height: 140%
+            color: $color-placeholder
+    &__btn
+        max-width: 40px
+        min-height: 40px
+        width: 100%
+        background-color: $color-White
+        margin-left: 1px
