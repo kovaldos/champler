@@ -1,53 +1,69 @@
 
 // Показ и скрытие элементов страницы Старт
-
+// При натяжке на БУС этот скрипт не пригодится
+// Сделан для демонстрации верстки
 document.addEventListener('DOMContentLoaded', () => {
-	const headers = document.querySelectorAll('header');
-	const footers = document.querySelectorAll('footer');
 
-	if (headers && footers) {
+	const hideOrShowElements = () => {
+		const headers = document.querySelectorAll('header');
+		const footers = document.querySelectorAll('footer');
+		
+		if (headers && footers) {
 
-		const pageTitles = [
-			"Карта сайта",
-			"Главная",
-			"Мужчинам",
-			"Женщинам",
-			"Коллекции",
-			"Виды спорта"
-		];
+			const pageTitles = [
+				"Карта сайта",
+				"Главная",
+				"Мужчинам",
+				"Женщинам",
+				"Коллекции",
+				"Виды спорта",
+			];
 
-		headers.forEach(header => {
-			if (pageTitles) {
-				if (document.title == pageTitles[0]) {
-					header.classList.add('_hidden');
-				} else if (document.title !== pageTitles[1]) {
-					document.querySelector('.header-top').classList.add('_white');
-					document.querySelector('.header-top').classList.add('_fixed');
-				} else if (document.title == pageTitles[1]) {
-					document.querySelector('.header-bottom').classList.add('_hidden');
-				} else {
-					header.classList.remove('_hidden');
+			headers.forEach(header => {
+				if (pageTitles.length) {
+					if (document.title == pageTitles[0]) {
+						header.classList.add('_hidden');
+					} if (document.title !== pageTitles[1]) {
+						document.querySelector('.header-top').classList.add('_white');
+						document.querySelector('.header-top').classList.add('_fixed');
+					} if (document.title == pageTitles[1]) {
+						document.querySelector('.header-bottom').classList.add('_hidden');
+					} if (document.title == pageTitles[4]) {
+						document.querySelector('.header-bottom__title').textContent = pageTitles[4];
+						document.querySelector('.breadcrumbs__link._current').textContent = pageTitles[4];
+						document.querySelector('.sub-menu__list_for-men').classList.add('_hidden');
+						document.querySelector('.sub-menu__list_collections').classList.remove('_hidden');
+						document.querySelector('.header-bottom__img_for-men').classList.add('_hidden');
+						document.querySelector('.header-bottom__img_collections').classList.remove('_hidden');
+
+					} if (document.title == pageTitles[5]) {
+						document.querySelector('.header-bottom__title').textContent = pageTitles[5];
+						document.querySelector('.breadcrumbs__link._current').textContent = pageTitles[5];
+						document.querySelector('.sub-menu__list_for-men').classList.add('_hidden');
+						document.querySelector('.sub-menu__list_kinds-of-sports').classList.remove('_hidden');
+						document.querySelector('.header-bottom__img_for-men').classList.add('_hidden');
+						document.querySelector('.header-bottom__img_kinds-of-sports').classList.remove('_hidden');
+					}
 				}
-			}
 
-		});
+			});
 
-		footers.forEach(footer => {
-			if (pageTitles) {
-				if (document.title == pageTitles[0]) {
-					footer.classList.add('_hidden');
-				} else if (document.title == pageTitles[2] || document.title == pageTitles[3]) {
-					document.querySelector('.footer-top .news-promo').classList.add('_hidden');
-				} else {
-					footer.classList.remove('_hidden');
+			footers.forEach(footer => {
+				if (pageTitles.length) {
+					if (document.title == pageTitles[0]) {
+						footer.classList.add('_hidden');
+					} if (document.title !== pageTitles[0]) {
+						document.querySelector('.footer-top .news-promo').classList.add('_hidden');
+					}
 				}
-			}
 
-		});
+			});
+		}
 	}
 
+	hideOrShowElements();
 
-})
+});
 
 // Показ и скрытие элементов страницы Конец
 

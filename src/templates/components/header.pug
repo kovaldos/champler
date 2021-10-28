@@ -31,7 +31,10 @@ header.header-top
 header.header-bottom
 	section.header-bottom__banner 
 		.header-bottom__img-box
-			img.header-bottom__img(src="assets/images/header-bottom-bg-img.jpg", alt="Фото мужчины") 
+			img.header-bottom__img.header-bottom__img_for-men(src="assets/images/header-bottom-bg-img.jpg", alt="Фото мужчины")
+			img.header-bottom__img.header-bottom__img_collections._hidden(src="assets/images/header-bottom-bg-img-2.jpg", alt="Фото мужчины с канатом") 
+			img.header-bottom__img.header-bottom__img_kinds-of-sports._hidden(src="assets/images/header-bottom-bg-img-3.jpg", alt="Фото мужчины") 
+			//- два модификатора ниже при натяжке, вероятно, не понадобятся
 		.header-bottom__heading 
 			h1.header-bottom__title Мужчинам
 	nav.breadcrumbs
@@ -42,10 +45,10 @@ header.header-bottom
 						a.breadcrumbs__link(href="home-page.html") Главная
 							span &nbsp;/&nbsp;
 					li.breadcrumbs__item
-						a.breadcrumbs__link(href="#") Мужчинам
+						a.breadcrumbs__link._current(href="#") Мужчинам
 	nav.sub-menu
 		.container.sub-menu__container
-			ul.sub-menu__list
+			ul.sub-menu__list.sub-menu__list_for-men
 				li.sub-menu__item
 					a.sub-menu__link(href="#") Обувь
 				li.sub-menu__item
@@ -56,3 +59,18 @@ header.header-bottom
 					a.sub-menu__link(href="#") Новинки
 				li.sub-menu__item
 					a.sub-menu__link(href="#") Sale
+			//- Ниже оверкод для показа верстки. При натяжке на БУС не понадобистся.
+			ul.sub-menu__list.sub-menu__list_collections._hidden
+				li.sub-menu__item
+					a.sub-menu__link(href="#") Yoga style
+				li.sub-menu__item
+					a.sub-menu__link(href="#") Running
+				li.sub-menu__item
+					a.sub-menu__link(href="#") Hard sport
+			ul.sub-menu__list.sub-menu__list_kinds-of-sports._hidden
+				li.sub-menu__item
+					a.sub-menu__link(href="#") Йога
+				li.sub-menu__item
+					a.sub-menu__link(href="#") Бег
+				li.sub-menu__item
+					a.sub-menu__link(href="#") Легкая атлетика	

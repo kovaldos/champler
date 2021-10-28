@@ -87,11 +87,14 @@ header._white
 		position: absolute
 		width: 100%
 		height: 300px
-		
 	&__img
 		width: 100%
 		height: 100%
 		object-position: top
+		&_for-men._hidden,
+		&_collections._hidden,
+		&_kinds-of-sports._hidden
+			display: none
 	&__heading
 		position: absolute
 		display: flex
@@ -134,11 +137,17 @@ header._white
 		display: flex
 		justify-content: center
 		align-items: center
+		&_for-men._hidden,
+		&_for-women._hidden,
+		&_collections._hidden, 
+		&_kinds-of-sports._hidden // На проде этb модификаторs, скорее всего, не понадобятся
+			display: none
 	&__link
 		padding: 10px
 		margin: 0 20px
 		color: $color-Black
 		font-size: 18px
 		line-height: 21px
+		white-space: nowrap
 		&:hover
 			text-decoration: underline
