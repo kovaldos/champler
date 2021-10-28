@@ -1,5 +1,31 @@
 
-const activeClass = "active";
+// Показ и скрытие элементов страницы Старт
+
+document.addEventListener('DOMContentLoaded', () => {
+	const header = document.querySelectorAll('header');
+	const footer = document.querySelectorAll('footer');
+
+	if (header && footer) {
+
+		header.forEach(el => {
+			if (document.title == "Карта сайта") {
+				el.classList.add('_hidden');
+			} else {
+				el.classList.remove('_hidden');
+			}
+		});
+
+		footer.forEach(el => {
+			if (document.title == "Карта сайта") {
+				el.classList.add('_hidden');
+			} else {
+				el.classList.remove('_hidden');
+			}
+		});
+	}
+})
+
+// Показ и скрытие элементов страницы Конец
 
 // Переключение табов
 // demo
@@ -67,8 +93,11 @@ function animateMarquee(el, duration) {
 const marquee1 = document.querySelector('#marquee1');
 const marquee2 = document.querySelector('#marquee2');
 
-animateMarquee(marquee1, 35000);
-animateMarquee(marquee2, 40000);
+if (marquee1 && marquee2) {
+	animateMarquee(marquee1, 35000);
+	animateMarquee(marquee2, 40000);
+}
+
 
 // Бегущая строка на главной Конец
 
