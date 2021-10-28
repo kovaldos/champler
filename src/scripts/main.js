@@ -2,27 +2,51 @@
 // Показ и скрытие элементов страницы Старт
 
 document.addEventListener('DOMContentLoaded', () => {
-	const header = document.querySelectorAll('header');
-	const footer = document.querySelectorAll('footer');
+	const headers = document.querySelectorAll('header');
+	const footers = document.querySelectorAll('footer');
 
-	if (header && footer) {
+	if (headers && footers) {
 
-		header.forEach(el => {
-			if (document.title == "Карта сайта") {
-				el.classList.add('_hidden');
-			} else {
-				el.classList.remove('_hidden');
+		const pageTitles = [
+			"Карта сайта",
+			"Главная",
+			"Мужчинам",
+			"Женщинам",
+			"Коллекции",
+			"Виды спорта"
+		];
+
+		headers.forEach(header => {
+			if (pageTitles) {
+				if (document.title == pageTitles[0]) {
+					header.classList.add('_hidden');
+				} else if (document.title !== pageTitles[1]) {
+					document.querySelector('.header-top').classList.add('_white');
+					document.querySelector('.header-top').classList.add('_fixed');
+				} else if (document.title == pageTitles[1]) {
+					document.querySelector('.header-bottom').classList.add('_hidden');
+				} else {
+					header.classList.remove('_hidden');
+				}
 			}
+
 		});
 
-		footer.forEach(el => {
-			if (document.title == "Карта сайта") {
-				el.classList.add('_hidden');
-			} else {
-				el.classList.remove('_hidden');
+		footers.forEach(footer => {
+			if (pageTitles) {
+				if (document.title == pageTitles[0]) {
+					footer.classList.add('_hidden');
+				} else if (document.title == pageTitles[2] || document.title == pageTitles[3]) {
+					document.querySelector('.footer-top .news-promo').classList.add('_hidden');
+				} else {
+					footer.classList.remove('_hidden');
+				}
 			}
+
 		});
 	}
+
+
 })
 
 // Показ и скрытие элементов страницы Конец

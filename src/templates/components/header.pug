@@ -1,30 +1,58 @@
-header.header 
-	.container.header__container 
-		.header__menu.menu
-			.header__menu-icon.menu__icon
+header.header-top
+	.container.header-top__container 
+		.header-top__menu.menu
+			.header-top__menu-icon.menu__icon
 				span  
-			nav.header__menu-body.menu__body
-				ul.header__list.menu__list
-					li.header__list-item.menu__item
-						a(href="concept.html").header__menu-link.menu__link Мужчинам
-					li.header__list-item.menu__item
-						a(href="catalog.html").header__menu-link.menu__link Женщинам
-					li.header__list-item.menu__item
-						a(href="projects.html").header__menu-link.menu__link Коллекции
-					li.header__list-item.menu__item
-						a(href="blog.html").header__menu-link.menu__link Виды спорта
-				ul.header__list.menu__list
-					li.header__list-item.menu__item
-						a(href="concept.html").header__menu-link.menu__link Контакты
-					li.header__list-item.menu__item
-						a(href="catalog.html").header__menu-link.menu__link Помощь
-					li.header__list-item.menu__item
-						a(href="projects.html").header__menu-link.menu__link Аккаунт
-					li.header__list-item.menu__item
-						a(href="blog.html").header__menu-link.menu__link Корзина
-					li.header__list-item.menu__item
-						a(href="blog.html").header__menu-link.menu__link Поиск
-		.header__logo-box 
-			a.header__logo-link(href="#")
-				svg.header__logo-img(width="150" height="46")  
+			nav.header-top__menu-body.menu__body
+				ul.header-top__list.menu__list
+					li.header-top__list-item.menu__item
+						a(href="for-men.html").header-top__menu-link.menu__link Мужчинам
+					li.header-top__list-item.menu__item
+						a(href="for-women.html").header-top__menu-link.menu__link Женщинам
+					li.header-top__list-item.menu__item
+						a(href="collections.html").header-top__menu-link.menu__link Коллекции
+					li.header-top__list-item.menu__item
+						a(href="kinds-of-sports.html").header-top__menu-link.menu__link Виды спорта
+				ul.header-top__list.menu__list
+					li.header-top__list-item.menu__item
+						a(href="contacts.html").header-top__menu-link.menu__link Контакты
+					li.header-top__list-item.menu__item
+						a(href="help.html").header-top__menu-link.menu__link Помощь
+					li.header-top__list-item.menu__item
+						a(href="my-data.html").header-top__menu-link.menu__link Аккаунт
+					li.header-top__list-item.menu__item
+						a(href="cart.html").header-top__menu-link.menu__link Корзина
+					li.header-top__list-item.menu__item
+						a(href="search-result.html").header-top__menu-link.menu__link Поиск
+		.header-top__logo-box 
+			a.header-top__logo-link(href="home-page.html")
+				svg.header-top__logo-img(width="150" height="46")  
 					use(xlink:href="./assets/images/sprite.svg#logo-white" alt="Champler logo")
+header.header-bottom
+	section.header-bottom__banner 
+		.header-bottom__img-box
+			img.header-bottom__img(src="assets/images/header-bottom-bg-img.jpg", alt="Фото мужчины") 
+		.header-bottom__heading 
+			h1.header-bottom__title Мужчинам
+	nav.breadcrumbs
+		.container.breadcrumbs__container 
+			.breadcrumbs__content 
+				ul.breadcrumbs__list
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="home-page.html") Главная
+							span &nbsp;/&nbsp;
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Мужчинам
+	nav.sub-menu
+		.container.sub-menu__container
+			ul.sub-menu__list
+				li.sub-menu__item
+					a.sub-menu__link(href="#") Обувь
+				li.sub-menu__item
+					a.sub-menu__link(href="#") Одежда
+				li.sub-menu__item
+					a.sub-menu__link(href="#") Аксессуары
+				li.sub-menu__item
+					a.sub-menu__link(href="#") Новинки
+				li.sub-menu__item
+					a.sub-menu__link(href="#") Sale

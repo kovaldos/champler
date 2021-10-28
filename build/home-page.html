@@ -14,31 +14,60 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/app.css">
   </head>
   <body>
-    <header class="header"> 
-      <div class="container header__container"> 
-        <div class="header__menu menu">
-          <div class="header__menu-icon menu__icon"><span> </span></div>
-          <nav class="header__menu-body menu__body">
-            <ul class="header__list menu__list">
-              <li class="header__list-item menu__item"><a class="header__menu-link menu__link" href="concept.html">Мужчинам</a></li>
-              <li class="header__list-item menu__item"><a class="header__menu-link menu__link" href="catalog.html">Женщинам</a></li>
-              <li class="header__list-item menu__item"><a class="header__menu-link menu__link" href="projects.html">Коллекции</a></li>
-              <li class="header__list-item menu__item"><a class="header__menu-link menu__link" href="blog.html">Виды спорта</a></li>
+    <header class="header-top">
+      <div class="container header-top__container"> 
+        <div class="header-top__menu menu">
+          <div class="header-top__menu-icon menu__icon"><span> </span></div>
+          <nav class="header-top__menu-body menu__body">
+            <ul class="header-top__list menu__list">
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="for-men.html">Мужчинам</a></li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="for-women.html">Женщинам</a></li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="collections.html">Коллекции</a></li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="kinds-of-sports.html">Виды спорта</a></li>
             </ul>
-            <ul class="header__list menu__list">
-              <li class="header__list-item menu__item"><a class="header__menu-link menu__link" href="concept.html">Контакты</a></li>
-              <li class="header__list-item menu__item"><a class="header__menu-link menu__link" href="catalog.html">Помощь</a></li>
-              <li class="header__list-item menu__item"><a class="header__menu-link menu__link" href="projects.html">Аккаунт</a></li>
-              <li class="header__list-item menu__item"><a class="header__menu-link menu__link" href="blog.html">Корзина</a></li>
-              <li class="header__list-item menu__item"><a class="header__menu-link menu__link" href="blog.html">Поиск</a></li>
+            <ul class="header-top__list menu__list">
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="contacts.html">Контакты</a></li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="help.html">Помощь</a></li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="my-data.html">Аккаунт</a></li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="cart.html">Корзина</a></li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="search-result.html">Поиск</a></li>
             </ul>
           </nav>
         </div>
-        <div class="header__logo-box"> <a class="header__logo-link" href="#">
-            <svg class="header__logo-img" width="150" height="46"> 
+        <div class="header-top__logo-box"> <a class="header-top__logo-link" href="home-page.html">
+            <svg class="header-top__logo-img" width="150" height="46"> 
               <use xlink:href="./assets/images/sprite.svg#logo-white" alt="Champler logo"></use>
             </svg></a></div>
       </div>
+    </header>
+    <header class="header-bottom">
+      <section class="header-bottom__banner"> 
+        <div class="header-bottom__img-box"><img class="header-bottom__img" src="assets/images/header-bottom-bg-img.jpg" alt="Фото мужчины"></div>
+        <div class="header-bottom__heading"> 
+          <h1 class="header-bottom__title">Мужчинам</h1>
+        </div>
+      </section>
+      <nav class="breadcrumbs">
+        <div class="container breadcrumbs__container"> 
+          <div class="breadcrumbs__content"> 
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="home-page.html">Главная<span>&nbsp;/&nbsp;</span></a></li>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Мужчинам</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="sub-menu">
+        <div class="container sub-menu__container">
+          <ul class="sub-menu__list">
+            <li class="sub-menu__item"><a class="sub-menu__link" href="#">Обувь</a></li>
+            <li class="sub-menu__item"><a class="sub-menu__link" href="#">Одежда</a></li>
+            <li class="sub-menu__item"><a class="sub-menu__link" href="#">Аксессуары</a></li>
+            <li class="sub-menu__item"><a class="sub-menu__link" href="#">Новинки</a></li>
+            <li class="sub-menu__item"><a class="sub-menu__link" href="#">Sale</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <div class="wrapper">
       <main class="main">
@@ -46,10 +75,10 @@
           <div class="main-banner__content">
             <div class="main-banner__heading-box">
               <div class="main-banner__heading main-banner__heading_top marquee" id="marquee1">
-                <h1 class="main-banner__title main-banner__title_top marquee__inner"><span class="main-banner__title-span">champler</span><span class="main-banner__title-span">champler</span><span class="main-banner__title-span">champler</span></h1>
+                <div class="main-banner__title main-banner__title_top marquee__inner"><span class="main-banner__title-span">champler</span><span class="main-banner__title-span">champler</span><span class="main-banner__title-span">champler</span></div>
               </div>
               <div class="main-banner__heading main-banner__heading_bottom marquee" id="marquee2">
-                <h2 class="main-banner__title main-banner__title_bottom marquee__inner"><span class="main-banner__title-span">sportsshoes</span><span class="main-banner__title-span">sportsshoes</span></h2>
+                <div class="main-banner__title main-banner__title_bottom marquee__inner"><span class="main-banner__title-span">sportsshoes</span><span class="main-banner__title-span">sportsshoes</span></div>
               </div>
             </div>
             <div class="main-banner__img-box main-banner__img-box_below"><img class="main-banner__img_below" src="./assets/images/main-banner-bg.jpg" alt="Кроссовок Nike"></div>
@@ -59,7 +88,7 @@
         <section class="section sale section__slider">
           <div class="container">
             <div class="section__heading slider__heading"> 
-              <h2 class="section__title">Sale до 50%</h2><a class="section__link" href="#">Смотреть все</a>
+              <h1 class="section__title">Sale до 50%</h1><a class="section__link" href="#">Смотреть все</a>
             </div>
             <div class="sale__slider">
               <div class="swiper-container slider3">
@@ -584,7 +613,7 @@
         </div>
       </section>
       <section class="section news-promo section__slider">
-        <div class="container">
+        <div class="container news-promo__container">
           <div class="section__heading slider__heading"> 
             <h2 class="section__title">Новости / Акции</h2><a class="section__link" href="#">Смотреть все</a>
           </div>

@@ -2,6 +2,7 @@
 
 footer._hidden
     display: none
+
 .footer-top
     overflow-x: hidden
     .subscribe
@@ -83,34 +84,6 @@ footer._hidden
             &:hover
                 text-decoration: none
 
-    .news-promo
-        margin-bottom: 140px
-        &__slider
-            width: 100%
-            
-    .slider1
-        width: 100%
-        max-width: 1400px
-        padding: 90px 0 0 0
-        &__item
-            display: flex
-            flex-direction: column
-        &__text
-            font-size: 16px
-            line-height: 140%
-            width: 100%
-            max-width: 343px
-            margin: 20px 0 10px 0
-        &__link
-            font-size: 16px
-            line-height: 18px
-            text-decoration: underline
-            color: $color-Black
-            padding: 5px
-            margin: 0 0 0 -5px
-            &:hover
-                text-decoration: none
-
     .our-insta
         width: 100%
         min-height: 342px
@@ -154,6 +127,36 @@ footer._hidden
         .slider2
             width: 100%
             max-width: 1400px
+
+.news-promo
+    margin-bottom: 140px
+    &__slider
+        width: 100%
+.news-promo._hidden
+    display: none
+
+.slider1
+    width: 100%
+    max-width: 1400px
+    padding: 90px 0 0 0
+    &__item
+        display: flex
+        flex-direction: column
+    &__text
+        font-size: 16px
+        line-height: 140%
+        width: 100%
+        max-width: 343px
+        margin: 20px 0 10px 0
+    &__link
+        font-size: 16px
+        line-height: 18px
+        text-decoration: underline
+        color: $color-Black
+        padding: 5px
+        margin: 0 0 0 -5px
+        &:hover
+            text-decoration: none
 
 .footer-bottom
     width: 100%
