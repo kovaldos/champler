@@ -9,8 +9,20 @@ block content
         main.main
             section.section.main-banner 
                 .main-banner__content
-                    .main-banner__img-box
-                        img.main-banner__img(src="./assets/images/main-banner-bg.jpg", alt="Кроссовок Nike")
+                    .main-banner__heading-box
+                        .main-banner__heading.main-banner__heading_top#marquee1.marquee
+                            h1.main-banner__title.main-banner__title_top.marquee__inner
+                                span.main-banner__title-span champler
+                                span.main-banner__title-span champler
+                                span.main-banner__title-span champler
+                        .main-banner__heading.main-banner__heading_bottom#marquee2.marquee
+                            h2.main-banner__title.main-banner__title_bottom.marquee__inner
+                                span.main-banner__title-span sportsshoes
+                                span.main-banner__title-span sportsshoes
+                    .main-banner__img-box.main-banner__img-box_below
+                        img.main-banner__img_below(src="./assets/images/main-banner-bg.jpg", alt="Кроссовок Nike")
+                    .main-banner__img-box.main-banner__img-box_above
+                        img.main-banner__img_above(src="./assets/images/main-banner-bg-z-top.png", alt="Кроссовок Nike")
             section.section.sale.section__slider
                 .container
                     .section__heading.slider__heading 
