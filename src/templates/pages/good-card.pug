@@ -1,0 +1,168 @@
+extends ../template
+
+block variables
+    - var title = 'Футболка чёрная с логотипом'
+    - var contactForm = false
+
+block content
+    .wrapper
+        main.main
+            section.section.good-card
+                .container.good-card__container
+                    .section__heading
+                        h1.section__title Футболка чёрная с логотипом 
+                    .good-card__content 
+                        .good-card__images
+                            .swiper-container.slider-vertical
+                                .swiper-wrapper 
+                                    .swiper-slide
+                                        .slider-vertical__item 
+                                            .slider-vertical__img-box 
+                                                img.slider-vertical__img(src="assets/images/good-card-img-1.jpg" alt="Фото модели в чёрной футболке" data-zoomable)
+                                    .swiper-slide
+                                        .slider-vertical__item 
+                                            .slider-vertical__img-box 
+                                                img.slider-vertical__img(src="assets/images/good-card-img-2.jpg" alt="Фото модели в чёрной футболке" data-zoomable)
+                                    .swiper-slide
+                                        .slider-vertical__item 
+                                            .slider-vertical__img-box 
+                                                img.slider-vertical__img(src="assets/images/good-card-img-3.jpg" alt="Фото модели в чёрной футболке" data-zoomable)
+                                    .swiper-slide
+                                        .slider-vertical__item 
+                                            .slider-vertical__img-box 
+                                                img.slider-vertical__img(src="assets/images/good-card-img-1.jpg" alt="Фото модели в чёрной футболке" data-zoomable)
+                                    .swiper-slide
+                                        .slider-vertical__item 
+                                            .slider-vertical__img-box 
+                                                img.slider-vertical__img(src="assets/images/good-card-img-2.jpg" alt="Фото модели в чёрной футболке" data-zoomable)
+                                    .swiper-slide
+                                        .slider-vertical__item 
+                                            .slider-vertical__img-box 
+                                                img.slider-vertical__img(src="assets/images/good-card-img-3.jpg" alt="Фото модели в чёрной футболке" data-zoomable)
+                        .good-card__info
+            section.section.popular.section__slider
+                .container
+                    .section__heading.slider__heading 
+                        h2.section__title Вам может понравиться
+                    .popular__slider
+                        .swiper-container.slider3
+                            .swiper-pagination
+                            .swiper-button-prev
+                                svg.slider3__btn-prev(width="50" height="50")
+                                    use(xlink:href="./assets/images/sprite.svg#swiper-arrow-prev" alt="Кнопка влево")
+                            .swiper-button-next
+                                svg.slider3__btn-next(width="50" height="50")
+                                    use(xlink:href="./assets/images/sprite.svg#swiper-arrow-next" alt="Кнопка вправо")
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .slider3__item
+                                        .add-to-cart__box 
+                                            a.add-to-cart__link(href="#") Добавить в корзину 
+                                        .slider3__fav-img-box.fav-btn 
+                                            svg.slider3__fav-img(width="17" height="16")
+                                                use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                        .slider3__img-box
+                                            img.slider3__img(src="assets/images/slider3-img-5.jpg" alt="Картинка в слайде")
+                                        .slider3__text-block 
+                                            .slider3__text-box
+                                                p.slider3__text Кроссовки черные на высокой подошве с молнией 
+                                                span.slider3__price 3500&nbsp;
+                                                span.slider3__currency &#8381;
+                                .swiper-slide
+                                    .slider3__item
+                                        .add-to-cart__box 
+                                            a.add-to-cart__link(href="#") Добавить в корзину 
+                                        .slider3__fav-img-box.fav-btn 
+                                            svg.slider3__fav-img(width="17" height="16")
+                                                use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                        .slider3__img-box
+                                            img.slider3__img(src="assets/images/slider3-img-6.jpg" alt="Картинка в слайде")
+                                        .slider3__text-block 
+                                            .slider3__text-box
+                                                p.slider3__text Кроссовки черные на высокой подошве с молнией
+                                                span.slider3__price 3500&nbsp;
+                                                span.slider3__currency &#8381; 
+                                .swiper-slide
+                                    .slider3__item
+                                        .add-to-cart__box 
+                                            a.add-to-cart__link(href="#") Добавить в корзину 
+                                        .slider3__fav-img-box.fav-btn 
+                                            svg.slider3__fav-img(width="17" height="16")
+                                                use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                        .slider3__img-box
+                                            img.slider3__img(src="assets/images/slider3-img-7.jpg" alt="Картинка в слайде")
+                                        .slider3__text-block 
+                                            .slider3__text-box
+                                                p.slider3__text Кроссовки черные на высокой подошве с молнией
+                                                span.slider3__price 3500&nbsp;
+                                                span.slider3__currency &#8381;
+                                .swiper-slide
+                                    .slider3__item
+                                        .add-to-cart__box 
+                                            a.add-to-cart__link(href="#") Добавить в корзину 
+                                        .slider3__fav-img-box.fav-btn 
+                                            svg.slider3__fav-img(width="17" height="16")
+                                                use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                        .slider3__img-box
+                                            img.slider3__img(src="assets/images/slider3-img-8.jpg" alt="Картинка в слайде")
+                                        .slider3__text-block 
+                                            .slider3__text-box
+                                                p.slider3__text Кроссовки черные на высокой подошве с молнией
+                                                span.slider3__price 3500&nbsp;
+                                                span.slider3__currency &#8381;
+                                .swiper-slide
+                                    .slider3__item
+                                        .add-to-cart__box 
+                                            a.add-to-cart__link(href="#") Добавить в корзину 
+                                        .slider3__fav-img-box.fav-btn 
+                                            svg.slider3__fav-img(width="17" height="16")
+                                                use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                        .slider3__img-box
+                                            img.slider3__img(src="assets/images/slider3-img-1.jpg" alt="Картинка в слайде")
+                                        .slider3__text-block 
+                                            .slider3__text-box
+                                                p.slider3__text Кроссовки черные на высокой подошве с молнией 
+                                                span.slider3__price 3500&nbsp;
+                                                span.slider3__currency &#8381;
+                                .swiper-slide
+                                    .slider3__item
+                                        .add-to-cart__box 
+                                            a.add-to-cart__link(href="#") Добавить в корзину 
+                                        .slider3__fav-img-box.fav-btn 
+                                            svg.slider3__fav-img(width="17" height="16")
+                                                use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                        .slider3__img-box
+                                            img.slider3__img(src="assets/images/slider3-img-2.jpg" alt="Картинка в слайде")
+                                        .slider3__text-block 
+                                            .slider3__text-box
+                                                p.slider3__text Кроссовки черные на высокой подошве с молнией
+                                                span.slider3__price 3500&nbsp;
+                                                span.slider3__currency &#8381; 
+                                .swiper-slide
+                                    .slider3__item
+                                        .add-to-cart__box 
+                                            a.add-to-cart__link(href="#") Добавить в корзину 
+                                        .slider3__fav-img-box.fav-btn 
+                                            svg.slider3__fav-img(width="17" height="16")
+                                                use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                        .slider3__img-box
+                                            img.slider3__img(src="assets/images/slider3-img-3.jpg" alt="Картинка в слайде")
+                                        .slider3__text-block 
+                                            .slider3__text-box
+                                                p.slider3__text Кроссовки черные на высокой подошве с молнией
+                                                span.slider3__price 3500&nbsp;
+                                                span.slider3__currency &#8381;
+                                .swiper-slide
+                                    .slider3__item
+                                        .add-to-cart__box 
+                                            a.add-to-cart__link(href="#") Добавить в корзину 
+                                        .slider3__fav-img-box.fav-btn 
+                                            svg.slider3__fav-img(width="17" height="16")
+                                                use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                        .slider3__img-box
+                                            img.slider3__img(src="assets/images/slider3-img-4.jpg" alt="Картинка в слайде")
+                                        .slider3__text-block 
+                                            .slider3__text-box
+                                                p.slider3__text Кроссовки черные на высокой подошве с молнией
+                                                span.slider3__price 3500&nbsp;
+                                                span.slider3__currency &#8381;

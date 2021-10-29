@@ -1,13 +1,13 @@
 
 // Показ и скрытие элементов страницы Старт
-// При натяжке на БУС этот скрипт не пригодится
+// При натяжке на БУС этот оверкод не нужен
 // Сделан для демонстрации верстки
 document.addEventListener('DOMContentLoaded', () => {
 
 	const hideOrShowElements = () => {
 		const headers = document.querySelectorAll('header');
 		const footers = document.querySelectorAll('footer');
-		
+
 		if (headers && footers) {
 
 			const pageTitles = [
@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				"Женщинам",
 				"Коллекции",
 				"Виды спорта",
-				"Мужская одежда"
+				"Мужская одежда",
+				"Футболка чёрная с логотипом"
 			];
 
 			headers.forEach(header => {
@@ -44,19 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
 						document.querySelector('.sub-menu__list_kinds-of-sports').classList.remove('_hidden');
 						document.querySelector('.header-bottom__img_for-men').classList.add('_hidden');
 						document.querySelector('.header-bottom__img_kinds-of-sports').classList.remove('_hidden');
-					} if ((document.title == pageTitles[6])) {
+					} if (document.title == pageTitles[6]) {
 						document.querySelector('.header-bottom__banner').classList.add('_hidden');
 						document.querySelector('.header-bottom .sub-menu').classList.add('_hidden');
 						const breadCrumps = header.querySelector('.breadcrumbs__list');
 						const breadcrumpsItem = document.createElement('li');
 						breadcrumpsItem.classList.add('breadcrumbs__link');
-						if(breadCrumps !== null) {
+						if (breadCrumps !== null) {
 							breadcrumpsItem.textContent = " / " + document.title;
 							breadCrumps.appendChild(breadcrumpsItem);
 
 						}
-						
-
+					} if (document.title == pageTitles[7]) {
+						document.querySelector('.breadcrumbs__link._current').textContent = document.title;
+						document.querySelector('.header-bottom__banner').classList.add('_hidden');
 					}
 				}
 
@@ -68,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
 						footer.classList.add('_hidden');
 					} if (document.title !== pageTitles[1]) {
 						document.querySelector('.footer-top .news-promo').classList.add('_hidden');
-					} 
+						document.querySelector('.header-bottom .sub-menu').classList.add('_hidden');
+					}
 				}
 
 			});
@@ -313,3 +316,44 @@ const swiper4 = new Swiper('.slider4', {
 
 
 // slider4 End
+
+// slider-vertical Start
+
+const swiper5 = new Swiper('.slider-vertical', {
+	// Optional parameters
+	direction: 'vertical',
+	loop: false,
+	slidesPerView: 3,
+	slidesPerGroup: 1,
+	autoplay: false,
+	initialSlide: 0,
+	spaceBetween: 10,
+	mousewheel: {
+		releaseOnEdges: true,
+		sensitivity: 3,
+		// thresholdDelta: 20,
+		// thresholdTime: 300,
+		forceToAxis: true
+	}
+	
+});
+
+
+// slider-vertical End
+
+// init image zoom Start
+
+mediumZoom('[data-zoomable]', {
+	margin: 50,
+	background: '#3D3D3D',
+	scrollOffset: 100,
+	
+})
+
+
+
+
+
+
+
+// init image zoom End
