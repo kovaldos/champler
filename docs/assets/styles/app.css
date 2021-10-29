@@ -297,6 +297,8 @@ header._white {
     height: 100%;
     -o-object-position: top;
        object-position: top; }
+    .header-bottom__img_for-men._hidden, .header-bottom__img_collections._hidden, .header-bottom__img_kinds-of-sports._hidden {
+      display: none; }
   .header-bottom__heading {
     position: absolute;
     display: flex;
@@ -336,12 +338,15 @@ header._white {
     display: flex;
     justify-content: center;
     align-items: center; }
+    .sub-menu__list_for-men._hidden, .sub-menu__list_for-women._hidden, .sub-menu__list_collections._hidden, .sub-menu__list_kinds-of-sports._hidden {
+      display: none; }
   .sub-menu__link {
     padding: 10px;
     margin: 0 20px;
     color: #000000;
     font-size: 18px;
-    line-height: 21px; }
+    line-height: 21px;
+    white-space: nowrap; }
     .sub-menu__link:hover {
       text-decoration: underline; }
 
