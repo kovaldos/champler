@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				"Женщинам",
 				"Коллекции",
 				"Виды спорта",
+				"Мужская одежда"
 			];
 
 			headers.forEach(header => {
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 						document.querySelector('.header-bottom').classList.add('_hidden');
 					} if (document.title == pageTitles[4]) {
 						document.querySelector('.header-bottom__title').textContent = pageTitles[4];
-						document.querySelector('.breadcrumbs__link._current').textContent = pageTitles[4];
+						document.querySelector('.breadcrumbs__link._current').textContent = document.title;
 						document.querySelector('.sub-menu__list_for-men').classList.add('_hidden');
 						document.querySelector('.sub-menu__list_collections').classList.remove('_hidden');
 						document.querySelector('.header-bottom__img_for-men').classList.add('_hidden');
@@ -43,6 +44,19 @@ document.addEventListener('DOMContentLoaded', () => {
 						document.querySelector('.sub-menu__list_kinds-of-sports').classList.remove('_hidden');
 						document.querySelector('.header-bottom__img_for-men').classList.add('_hidden');
 						document.querySelector('.header-bottom__img_kinds-of-sports').classList.remove('_hidden');
+					} if ((document.title == pageTitles[6])) {
+						document.querySelector('.header-bottom__banner').classList.add('_hidden');
+						document.querySelector('.header-bottom .sub-menu').classList.add('_hidden');
+						const breadCrumps = header.querySelector('.breadcrumbs__list');
+						const breadcrumpsItem = document.createElement('li');
+						breadcrumpsItem.classList.add('breadcrumbs__link');
+						if(breadCrumps !== null) {
+							breadcrumpsItem.textContent = " / " + document.title;
+							breadCrumps.appendChild(breadcrumpsItem);
+
+						}
+						
+
 					}
 				}
 
@@ -52,9 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				if (pageTitles.length) {
 					if (document.title == pageTitles[0]) {
 						footer.classList.add('_hidden');
-					} if (document.title !== pageTitles[0]) {
+					} if (document.title !== pageTitles[1]) {
 						document.querySelector('.footer-top .news-promo').classList.add('_hidden');
-					}
+					} 
 				}
 
 			});
@@ -64,6 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	hideOrShowElements();
 
 });
+
+// ToDo
+// Сделать нормальные Хлебные крошки
 
 // Показ и скрытие элементов страницы Конец
 

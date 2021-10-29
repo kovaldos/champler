@@ -15,6 +15,10 @@
         &__logo-img
             width: 120px
 
+    .goods
+        &__items
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+
 @media screen and (max-width: 1024px)
     .section
         margin: 70px 0 0 0
@@ -142,6 +146,18 @@
             flex-wrap: wrap
             gap: 30px
 
+    .goods
+        margin: 15px 0 0 0
+
+    .page-pagination
+        &__block
+            grid-template-columns: repeat(3, 1fr)
+        &__nav
+            grid-column-start: 2
+        &__link-btn
+            grid-column-start: 3
+
+
 @media screen and (max-width: 768px)
     .sub-menu
         &__list
@@ -178,6 +194,13 @@
                 margin: 10px 0 0 0
             &__link-btn
                 margin: 15px 0 0 0
+
+    .page-pagination
+        &__block
+            display: flex
+            flex-direction: column
+        &__nav
+            margin: 0 0 20px 0
 
 @media screen and (max-width: 640px)
     .container
@@ -239,6 +262,27 @@
     .footer-bottom
         &__row
             flex-direction: column
+
+    .goods
+        &__content
+            flex-direction: column
+            margin: 15px 0 0 0
+        &__filter-box
+            width: 100%
+            padding: 0
+        &__filter-form
+            flex-direction: row
+            margin: 0 0 15px 0
+            overflow-x: scroll
+        &__filter-label
+            margin: 0 10px
+        &__item
+            max-width: 100%
+        &__img-box
+            max-width: 100%
+            max-height: unset
+
+
 @media screen and (max-width: 425px)
     .footer-top
         .subscribe

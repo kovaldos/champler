@@ -107,6 +107,9 @@ header._white
 		font-size: 48px
 		line-height: 48px
 		color: $color-White
+	
+	&__banner._hidden
+		display: none
 
 // burger-menu
 .menu
@@ -122,8 +125,14 @@ header._white
 	&__list
 		display: flex
 		justify-content: flex-start
+	&__item,
 	&__link
 		color: $color-breadcrumbs
+		font-size: 12px
+		line-height: 14px
+
+.breadcrumbs._hidden
+	display: none
 
 .sub-menu
 	width: 100%
@@ -151,3 +160,6 @@ header._white
 		white-space: nowrap
 		&:hover
 			text-decoration: underline
+
+.sub-menu._hidden
+	display: none
