@@ -89,22 +89,17 @@
             <div class="good-card__content"> 
               <div class="good-card__images">
                 <div class="swiper-container slider-vertical">
+                  <div class="swiper-button-prev">
+                    <svg class="slider3__btn-prev" width="50" height="50">
+                      <use xlink:href="./assets/images/sprite.svg#swiper-arrow-prev" alt="Кнопка влево"></use>
+                    </svg>
+                  </div>
+                  <div class="swiper-button-next">
+                    <svg class="slider3__btn-next" width="50" height="50">
+                      <use xlink:href="./assets/images/sprite.svg#swiper-arrow-next" alt="Кнопка вправо"></use>
+                    </svg>
+                  </div>
                   <div class="swiper-wrapper"> 
-                    <div class="swiper-slide">
-                      <div class="slider-vertical__item"> 
-                        <div class="slider-vertical__img-box"> <img class="slider-vertical__img" src="assets/images/good-card-img-1.jpg" alt="Фото модели в чёрной футболке" data-zoomable></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="slider-vertical__item"> 
-                        <div class="slider-vertical__img-box"> <img class="slider-vertical__img" src="assets/images/good-card-img-2.jpg" alt="Фото модели в чёрной футболке" data-zoomable></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="slider-vertical__item"> 
-                        <div class="slider-vertical__img-box"> <img class="slider-vertical__img" src="assets/images/good-card-img-3.jpg" alt="Фото модели в чёрной футболке" data-zoomable></div>
-                      </div>
-                    </div>
                     <div class="swiper-slide">
                       <div class="slider-vertical__item"> 
                         <div class="slider-vertical__img-box"> <img class="slider-vertical__img" src="assets/images/good-card-img-1.jpg" alt="Фото модели в чёрной футболке" data-zoomable></div>
@@ -123,16 +118,110 @@
                   </div>
                 </div>
               </div>
-              <div class="good-card__info"></div>
+              <div class="good-card__info">
+                <div class="good-card__heading"> 
+                  <h1 class="good-card__title">Футболка черная с логотипом</h1><small class="good-card__vendor-code">Артикул: </small><small class="good-card__vendor-code">113263RS502</small>
+                </div>
+                <div class="good-card__price"> <span>3500</span><span>&nbsp;&#8381;</span></div>
+                <div class="good-card__add-to-cart-block"> 
+                  <form class="good-card__form" action="#"><small class="good-card__available-colors">Доступные цвета</small>
+                    <div class="good-card__form-inputs">
+                      <label class="good-card__label">
+                        <input type="checkbox" name="available colors"><span class="span01"></span>
+                      </label>
+                      <label class="good-card__label">
+                        <input type="checkbox" name="available colors"><span class="span02"></span>
+                      </label>
+                    </div>
+                    <div class="good-card__select-wrapper">
+                      <select class="good-card__select" name="choose size">
+                        <option value="0">Выберите размер</option>
+                        <option value="1">xxs</option>
+                        <option value="2">xs</option>
+                        <option value="3">s</option>
+                        <option value="4">s/m</option>
+                        <option value="5">m</option>
+                        <option value="6">m/l</option>
+                        <option value="7">l</option>
+                        <option value="8">l/xl</option>
+                        <option value="9">xl</option>
+                        <option value="10">xl/xxl</option>
+                        <option value="11">xxl</option>
+                        <option value="12">xxl/xxxl</option>
+                        <option value="13">xxxl</option>
+                      </select>
+                      <div class="good-card__select-icon">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.99996 12C8.82472 12.0003 8.6549 11.9393 8.51996 11.8275L4.01996 8.07746C3.8668 7.95016 3.77048 7.76723 3.7522 7.56891C3.73391 7.37059 3.79516 7.17312 3.92246 7.01996C4.04977 6.8668 4.2327 6.77048 4.43102 6.7522C4.62934 6.73391 4.8268 6.79516 4.97996 6.92246L8.99996 10.2825L13.02 7.04246C13.0967 6.98016 13.185 6.93364 13.2797 6.90557C13.3745 6.87749 13.4738 6.86842 13.5721 6.87888C13.6704 6.88933 13.7656 6.9191 13.8523 6.96648C13.9391 7.01386 14.0156 7.07792 14.0775 7.15496C14.1461 7.23208 14.1982 7.32255 14.2303 7.4207C14.2624 7.51886 14.2738 7.62258 14.264 7.72538C14.2541 7.82818 14.2231 7.92783 14.173 8.0181C14.1228 8.10837 14.0546 8.1873 13.9725 8.24996L9.47246 11.8725C9.33365 11.9666 9.16729 12.0115 8.99996 12Z" fill="black"></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <button class="good-card__btn" type="submit">добавить в корзину</button>
+                  </form>
+                </div>
+                <div class="good-card__size-table"> <a class="good-card__link-to-size-table" href="#">Таблица размеров</a></div>
+                <div class="good-card__benefits"> 
+                  <div class="good-card__benefit"> 
+                    <div class="good-card__benefit-img-box">
+                      <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.83325 5.5L6.08325 9.75L13.1666 1.25" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="good-card__benefit-text">Курьером — примерка бесплатно</div>
+                  </div>
+                  <div class="good-card__benefit"> 
+                    <div class="good-card__benefit-img-box">
+                      <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.83325 5.5L6.08325 9.75L13.1666 1.25" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="good-card__benefit-text">В пункты выдачи доставка бесплатно</div>
+                  </div>
+                  <div class="good-card__benefit"> 
+                    <div class="good-card__benefit-img-box">
+                      <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.83325 5.5L6.08325 9.75L13.1666 1.25" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="good-card__benefit-text">Обмен и возврат в течении 14 дней</div>
+                  </div>
+                  <div class="good-card__benefit"> 
+                    <div class="good-card__benefit-img-box">
+                      <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.83325 5.5L6.08325 9.75L13.1666 1.25" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div class="good-card__benefit-text">Сертификат доверия</div>
+                  </div>
+                </div>
+                <div class="good-card__tabs">
+                  <nav class="good-card__nav">
+                    <div class="good-card__tabs-navbar"><a class="good-card__tabs-switch" href="#block01"> Описание</a><a class="good-card__tabs-switch" href="#block02"> Задать вопрос</a><a class="good-card__tabs-switch" href="#block03"> Отзывы</a><a class="good-card__tabs-switch" href="#block04"> Доставка</a></div>
+                  </nav>
+                  <div class="good-card__tabs-block" id="block01">  
+                    <p class="good-card__tabs-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam commodi reiciendis quasi corporis quos dolorem quaerat consectetur nemo fuga, eligendi veniam sapiente quisquam</p>
+                    <p class="good-card__tabs-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis labore vel error debitis commodi sint dolores quas a porro illum.</p>
+                  </div>
+                  <div class="good-card__tabs-block" id="block02">
+                    <p class="good-card__tabs-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut vitae architecto error cumque exercitationem voluptatum neque magni impedit, placeat eos sit, laudantium voluptatibus enim quibusdam totam similique numquam fuga autem.</p>
+                  </div>
+                  <div class="good-card__tabs-block" id="block03">   
+                    <p class="good-card__tabs-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At veritatis alias recusandae corrupti voluptatem quidem culpa ducimus vero modi deserunt?</p>
+                  </div>
+                  <div class="good-card__tabs-block" id="block04">   
+                    <p class="good-card__tabs-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati illo aspernatur qui? Cumque deserunt commodi mollitia dolores placeat ducimus vel consequuntur expedita esse ex! Sequi! </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <section class="section popular section__slider">
+        <section class="section additional section__slider">
           <div class="container">
             <div class="section__heading slider__heading"> 
               <h2 class="section__title">Вам может понравиться</h2>
             </div>
-            <div class="popular__slider">
+            <div class="additional__slider">
               <div class="swiper-container slider3">
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev">

@@ -19,6 +19,13 @@
         &__items
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
 
+    .good-card
+        margin: 15px 0 0 0
+        &__content
+            column-gap: 20px
+        &__images
+            padding: 0
+
 @media screen and (max-width: 1024px)
     .section
         margin: 70px 0 0 0
@@ -105,6 +112,24 @@
         .slider4
             width: 1280px
 
+    // good-card
+
+    .good-card
+        &__content
+            flex-direction: column
+            column-gap: 0
+        &__info
+            margin: 20px 0 0 0
+        &__images,
+        &__info
+            flex: auto
+            width: 100%
+            
+    .slider-vertical
+        height: auto
+        min-height: 300px
+        max-width: 578px
+        width: 100%
 
     // footer
     .footer-top
@@ -157,6 +182,11 @@
         &__link-btn
             grid-column-start: 3
 
+    .slider-vertical
+        .swiper-button-prev,
+        .swiper-button-next
+            display: block
+
 
 @media screen and (max-width: 768px)
     .sub-menu
@@ -201,6 +231,11 @@
             flex-direction: column
         &__nav
             margin: 0 0 20px 0
+
+    .good-card
+        margin: 15px 0 0 0
+        &__content
+            margin: 20px 0 0 0
 
 @media screen and (max-width: 640px)
     .container
@@ -282,7 +317,26 @@
             max-width: 100%
             max-height: unset
 
+    .slider-vertical
+        max-width: 610px
 
+    .good-card
+        &__title
+            font-size: 24px
+        &__tabs
+            margin: 20px 0 0 0
+        &__nav
+            overflow-x: auto
+            height: 65px
+            padding: 5px 0 0 0
+        &__tabs-navbar
+            margin: 0 0 20px 0
+            padding: 6px 0 6px 5px
+            width: max-content
+        &__tabs-switch
+            font-size: 16px
+            min-width: max-content
+            margin: -6px 10px -6px 0
 @media screen and (max-width: 425px)
     .footer-top
         .subscribe
