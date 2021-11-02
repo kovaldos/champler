@@ -1,0 +1,43 @@
+extends ../template
+
+block variables
+	- var title = 'Контакты'
+	- var contactForm = false
+
+block content
+	.wrapper
+		main.main
+			section.section.contacts
+				.container.contacts__container
+					.section__heading
+						h1.section__title Контакты
+					.contacts__content
+						.contacts__cols 
+							.contacts__col
+								.contacts__col-title Адрес:
+								.contacts__col-content
+									p.contacts__col-text г. Санкт-Петербург, ул. Льва Толстого д.5
+							.contacts__col
+								.contacts__col-title Телефон:
+								.contacts__col-content
+									a.contacts__col-link.tel-link(href="tel:+88122223344") 8 (812) 222-33-44 
+							.contacts__col
+								.contacts__col-title E-mail:
+								.contacts__col-content
+									a.contacts__col-link.email-link(href="mailto:example@mail.ru") example@mail.ru
+							.contacts__col
+								.contacts__col-title Соцсети:
+								.contacts__col-content
+									.contacts__social 
+										a.contacts__social-link(href="#")
+											svg.contacts__social-icon(width="35" height="35")
+												use(xlink:href="./assets/images/sprite.svg#whatsApp-icon-black" alt="WhatsApp icon")
+										a.contacts__social-link(href="#")
+											svg.contacts__social-icon(width="35" height="35")
+												use(xlink:href="./assets/images/sprite.svg#instagram-icon-black" alt="Instagram icon")
+										a.contacts__social-link(href="#")
+											svg.contacts__social-icon(width="35" height="35")
+												use(xlink:href="./assets/images/sprite.svg#fb-icon-black" alt="Facebook icon")
+			section
+				.contacts__map 
+					.map-box#map
