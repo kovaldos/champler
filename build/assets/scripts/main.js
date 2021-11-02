@@ -93,7 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           if (
             document.title == pageTitles[8] ||
-            document.title == pageTitles[9]
+            document.title == pageTitles[9] ||
+            document.title == pageTitles[10]
           ) {
             document.querySelector(".breadcrumbs__link._current").textContent =
               document.title;
@@ -148,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const tabItems = document.querySelectorAll(".tabs__link");
 const tabBlocks = document.querySelectorAll(".tabs__item");
 
-tabItems.forEach(onTabClick);
+// tabItems.forEach(onTabClick);
 
 function onTabClick(item) {
   item.addEventListener("click", (event) => {
@@ -435,26 +436,34 @@ if (selectWrappers.length) {
 // rotate arrow in select End
 
 // y-maps Start
+const myMap = document.getElementById("map");
+if (myMap) {
+  ymaps.ready(init);
 
-ymaps.ready(init);
+  function init() {
+    var myMap = new ymaps.Map("map", {
+      center: [59.93, 30.28],
+      zoom: 10,
+    });
 
-function init() {
-  var myMap = new ymaps.Map("map", {
-    center: [59.93, 30.28],
-    zoom: 10,
-  });
-
-  //отключаем zoom карты колесом мыши
-  myMap.behaviors.disable("scrollZoom");
-  //на мобильных устройствах... (проверяем по userAgent браузера)
-  if (
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    )
-  ) {
-    //... отключаем перетаскивание карты на мобильных устройствах
-    myMap.behaviors.disable("drag");
+    //отключаем zoom карты колесом мыши
+    myMap.behaviors.disable("scrollZoom");
+    //на мобильных устройствах... (проверяем по userAgent браузера)
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      //... отключаем перетаскивание карты на мобильных устройствах
+      myMap.behaviors.disable("drag");
+    }
   }
 }
 
 // y-maps End
+
+
+// Accordion Start
+new Accordion('.accordion-container');
+
+// Accordion End

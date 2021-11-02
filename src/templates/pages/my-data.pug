@@ -1,0 +1,72 @@
+extends ../template
+
+block variables
+	- var title = 'Мои данные'
+	- var contactForm = false
+
+block content
+	.wrapper
+		main.main
+			section.section.account
+				.container.account__container
+					.section__heading
+						h1.section__title Аккаунт
+					.account__content
+						.help__tabs.account__tabs.tabs
+							nav.help__nav.account__nav
+								.help__tabs-navbar.account__tabs-navbar.tabs__navbar
+									a.help__tabs-switch.account__tabs-switch.tabs__link(href="#block01")  Мои данные
+									a.help__tabs-switch.account__tabs-switch.tabs__link._active(href="#block02")  Текущие заказы
+									a.help__tabs-switch.account__tabs-switch.tabs__link(href="#block03") История заказов
+								.account__bonus-box
+									.account__bonus-content 
+										h2.account__bonus-title У вас на счету:
+										.account__bonus
+											span 96
+											span &nbsp;баллов
+							.help__tabs-items.tabs__items
+								.help__tabs-block.account__tabs-block.tabs__item#block01
+									form.account__form
+										input.account__form-input(type="text" placeholder="Фамилия")
+										input.account__form-input(type="text" placeholder="Имя" required)
+										input.account__form-input(type="text" placeholder="Отчество")
+										input.account__form-input(type="email" placeholder="Ваш e-mail" required)
+										input.account__form-input(type="tel" placeholder="Телефон" required)
+										label.account__form-label Изменить пароль
+											input.account__form-input(type="password" placeholder="Введите пароль" required)
+										input.account__form-input(type="password" placeholder="Повторите пароль" required)
+										label.account__form-label Адрес доставки по умолчанию
+											input.account__form-input(type="text" placeholder="г. Санкт-петербург, Заневский пр-т, д. 38, кв. 150")
+										a.account__form-link(href="#") добавить адрес
+										button.account__form-btn(type="submit") сохранить
+								.help__tabs-block.account__tabs-block.tabs__item#block02._active
+									.account-orders.accordion-container
+										.account-orders-heading.ac 
+											button.ac-trigger Заказ №123456-12345
+												span от 24.03.2021
+											.ac-panel
+												.ac-content-row
+													.ac-content-col 
+														.img-box 
+															img.account-orders-img(src="./assets/images/orders-img-1.jpg", alt="Фото модели в образце продукции")
+													.ac-content-col 
+														h3.account-orders__name Футболка черная с логотипом
+														span.account-orders__vendor-code Артикул:&nbsp; 
+														span.account-orders__vendor-code 113263RS502
+													.ac-content-col
+														span.account-orders__size Размер&nbsp;
+														span.account-orders__size-value S
+													.ac-content-col 
+														span.account-orders__quantity Количество&nbsp;
+														span.account-orders__quantity-value 1
+													.ac-content-col 
+														span.account-orders__price 4190
+														span.account-orders__price-currency &nbsp;&#8381; 
+								.help__tabs-block.account__tabs-block.tabs__item#block03
+									.account__img-box 
+										svg.account__cart-img(width="108" height="108")
+											use(xlink:href="./assets/images/sprite.svg#shopping-bag-1" alt="Рисунок корзины для покупок")
+									.account__orders-history-heading 
+										h2.account__orders-history-title Заказов нет
+										h3.account__orders-history-sub-title Чтобы сделать заказ добавьте вещи в корзину
+									a.account__back-link(href="home-page.html") Вернуться на главную

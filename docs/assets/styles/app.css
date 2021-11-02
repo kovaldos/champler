@@ -1181,6 +1181,53 @@ header._white {
   .size-table__tabs-block._active {
     display: block; }
 
+.contacts {
+  margin: 28px 0 0 0; }
+  .contacts__content {
+    width: 100%;
+    margin: 40px 0 0 0; }
+  .contacts__cols {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1120px;
+    gap: 30px;
+    flex-wrap: wrap; }
+  .contacts__col {
+    flex: 1 1 auto; }
+  .contacts__col-title {
+    font-size: 18px;
+    line-height: 21px; }
+  .contacts__col-content {
+    margin: 17px 0 0 0; }
+  .contacts__col-text, .contacts__col-link {
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000; }
+  .contacts__col-text {
+    max-width: 250px; }
+  .contacts__social {
+    max-width: 165px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px; }
+  .contacts__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; }
+    .contacts__social-link:hover {
+      box-shadow: 0 0 2px 2px #3D3D3D; }
+  .contacts__social-icon {
+    color: #000000; }
+  .contacts__map {
+    margin: 40px 0 0 0; }
+
+.map-box {
+  width: 100%;
+  height: 700px; }
+
 footer._hidden {
   display: none; }
 
@@ -1437,7 +1484,9 @@ footer._hidden {
   .help__nav {
     margin: 0; }
   .help__tabs-items {
-    flex: 0 0 485px; } }
+    flex: 0 0 485px; }
+  .contacts {
+    margin: 15px 0 0 0; } }
 
 @media screen and (max-width: 1024px) {
   .section {
@@ -1549,6 +1598,8 @@ footer._hidden {
     .help__tabs-items, .help__nav {
       flex: auto;
       width: 100%; }
+  .contacts {
+    margin: 15px 0 0 0; }
   .footer-top .subscribe {
     margin: 70px 0; }
     .footer-top .subscribe__form {
@@ -1616,6 +1667,8 @@ footer._hidden {
       font-size: 15px; }
     .help__tabs-text {
       font-size: 14px; }
+  .contacts {
+    margin: 15px 0 0 0; }
   .footer-top .subscribe {
     margin: 35px 0; }
   .footer-top .our-insta__title {

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Карта сайта</title>
+    <title>Мои данные</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,54 +80,79 @@
         </div>
       </nav>
     </header>
-    <div class="map">
-      <div class="container">
-        <div class="map__logo-box"> <a class="header__logo-link" href="#">
-            <svg class="header__logo-img" width="150" height="46"> 
-              <use xlink:href="./assets/images/sprite.svg#logo-white" alt="Champler logo"></use>
-            </svg></a></div>
-        <table class="map-table">
-          <tbody>
-            <tr>
-              <td><a class="map-table__link" href="home-page.html" target="_blank">Главная</a></td>
-            </tr>
-            <tr>
-              <td><a class="map-table__link" href="for-men.html" target="_blank">Мужчинам</a></td>
-              <td><a class="map-table__link" href="subcategory.html" target="_blank">Подкатегория</a></td>
-            </tr>
-            <tr>
-              <td><a class="map-table__link" href="collections.html" target="_blank">Коллекции</a></td>
-            </tr>
-            <tr>
-              <td><a class="map-table__link" href="kinds-of-sports.html" target="_blank">Виды спорта</a></td>
-            </tr>
-            <tr>
-              <td><a class="map-table__link" href="good-card.html" target="_blank">Карточка товара</a></td>
-            </tr>
-            <tr>
-              <td><a class="map-table__link" href="help.html" target="_blank">Помощь</a></td>
-            </tr>
-            <tr>
-              <td><a class="map-table__link" href="contacts.html" target="_blank">Контакты</a></td>
-            </tr>
-            <tr>
-              <td><a class="map-table__link" href="my-data.html" target="_blank">Мои данные</a></td>
-              <td><a class="map-table__link" href="all-orders.html" target="_blank">Все заказы</a></td>
-              <td><a class="map-table__link" href="current-orders.html" target="_blank">Текущие заказы</a></td>
-            </tr>
-            <tr>
-              <td><a class="map-table__link" href="cart.html" target="_blank">Корзина</a></td>
-              <td><a class="map-table__link" href="order.html" target="_blank">Оформление заказа</a></td>
-            </tr>
-            <tr>
-              <td><a class="map-table__link" href="favorite.html" target="_blank">Избранное</a></td>
-            </tr>
-            <tr>
-              <td><a class="map-table__link" href="search-result.html" target="_blank">Результат поиска</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="wrapper">
+      <main class="main">
+        <section class="section account">
+          <div class="container account__container">
+            <div class="section__heading">
+              <h1 class="section__title">Аккаунт</h1>
+            </div>
+            <div class="account__content">
+              <div class="help__tabs account__tabs tabs">
+                <nav class="help__nav account__nav">
+                  <div class="help__tabs-navbar account__tabs-navbar tabs__navbar"><a class="help__tabs-switch account__tabs-switch tabs__link" href="#block01"> Мои данные</a><a class="help__tabs-switch account__tabs-switch tabs__link _active" href="#block02"> Текущие заказы</a><a class="help__tabs-switch account__tabs-switch tabs__link" href="#block03">История заказов</a></div>
+                  <div class="account__bonus-box">
+                    <div class="account__bonus-content"> 
+                      <h2 class="account__bonus-title">У вас на счету:</h2>
+                      <div class="account__bonus"><span>96</span><span>&nbsp;баллов</span></div>
+                    </div>
+                  </div>
+                </nav>
+                <div class="help__tabs-items tabs__items">
+                  <div class="help__tabs-block account__tabs-block tabs__item" id="block01">
+                    <form class="account__form">
+                      <input class="account__form-input" type="text" placeholder="Фамилия">
+                      <input class="account__form-input" type="text" placeholder="Имя" required>
+                      <input class="account__form-input" type="text" placeholder="Отчество">
+                      <input class="account__form-input" type="email" placeholder="Ваш e-mail" required>
+                      <input class="account__form-input" type="tel" placeholder="Телефон" required>
+                      <label class="account__form-label">Изменить пароль
+                        <input class="account__form-input" type="password" placeholder="Введите пароль" required>
+                      </label>
+                      <input class="account__form-input" type="password" placeholder="Повторите пароль" required>
+                      <label class="account__form-label">Адрес доставки по умолчанию
+                        <input class="account__form-input" type="text" placeholder="г. Санкт-петербург, Заневский пр-т, д. 38, кв. 150">
+                      </label><a class="account__form-link" href="#">добавить адрес</a>
+                      <button class="account__form-btn" type="submit">сохранить</button>
+                    </form>
+                  </div>
+                  <div class="help__tabs-block account__tabs-block tabs__item _active" id="block02">
+                    <div class="account-orders accordion-container">
+                      <div class="account-orders-heading ac"> 
+                        <button class="ac-trigger">Заказ №123456-12345<span>от 24.03.2021</span></button>
+                        <div class="ac-panel">
+                          <div class="ac-content-row">
+                            <div class="ac-content-col"> 
+                              <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
+                            </div>
+                            <div class="ac-content-col"> 
+                              <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
+                            </div>
+                            <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
+                            <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
+                            <div class="ac-content-col"> <span class="account-orders__price">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="help__tabs-block account__tabs-block tabs__item" id="block03">
+                    <div class="account__img-box"> 
+                      <svg class="account__cart-img" width="108" height="108">
+                        <use xlink:href="./assets/images/sprite.svg#shopping-bag-1" alt="Рисунок корзины для покупок"></use>
+                      </svg>
+                    </div>
+                    <div class="account__orders-history-heading"> 
+                      <h2 class="account__orders-history-title">Заказов нет</h2>
+                      <h3 class="account__orders-history-sub-title">Чтобы сделать заказ добавьте вещи в корзину</h3>
+                    </div><a class="account__back-link" href="home-page.html">Вернуться на главную</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
     <footer class="footer-top">
       <section class="section subscribe">
