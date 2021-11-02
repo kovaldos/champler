@@ -1,0 +1,101 @@
+extends ../template
+
+block variables
+	- var title = 'Помощь'
+	- var contactForm = false
+
+block content
+	.wrapper
+		main.main
+			section.section.help
+				.container.help__container
+					.section__heading
+						h1.section__title Помощь
+					.help__content
+						.help__tabs.tabs
+							nav.help__nav
+								.help__tabs-navbar.tabs__navbar
+									a.help__tabs-switch.tabs__link(href="#block01")  Как отменить заказ?
+									a.help__tabs-switch.tabs__link(href="#block02")  Какие условия при доставке курьером?
+									a.help__tabs-switch.tabs__link(href="#block03") Памятка по доставке и возврату
+									a.help__tabs-switch.tabs__link(href="#block04")  Какие условия при доставке в постамат?
+									a.help__tabs-switch.tabs__link._active(href="#block05")  Таблица размеров
+							.help__tabs-items.tabs__items
+								.help__tabs-block.tabs__item#block01   
+									p.help__tabs-text Ты можешь частично или полностью отменить заказ в течение 15 минут после создания.
+									p.help__tabs-text Для отмены заказа следуй шагам: 
+									.help__tabs-text
+										ol.help__tabs-list
+											li  На странице отслеживания заказа введи номер заказа и e-mail адрес, указанный при оформлении заказа. Номер заказа ты можешь найти в SMS и e-mail от adidas, а также в личном кабинете.
+											li Кликни на кнопку «ОТМЕНИТЬ ЗАКАЗ». Эта кнопка будет доступна в течение 15 минут после создания заказа.
+											li Отметь товары из заказа, от которых ты хочешь отказаться, затем выбери причину отмены. Подтверди отмену.
+											li Нам нужно немного времени, чтобы обработать отмену заказа, и как только все будет готово, мы пришлем SMS и e-mail об отмене. Если ты оплатил товары на сайте, мы вернем денежные средства на ту же карту в течение 3-х дней - точный срок зависит от банка. 
+									p.help__tabs-text Через 15 минут мы приступаем к формированию заказа на складе, поэтому отменить заказ не всегда возможно. Заполни форму для отмены заказа здесь
+									p.help__tabs-text Если ты получил смс об отгрузке, то можешь отказаться от заказа, связавшись с курьерской службой или когда тебе позвонит курьер.
+									p.help__tabs-text Контакты курьерской службы доступны по ссылке.
+									p.help__tabs-text Отменить заказ может только тот, чье имя и фамилия указаны в заказе.
+								.help__tabs-block.tabs__item#block02
+									p.help__tabs-text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut vitae architecto error cumque exercitationem voluptatum neque magni impedit, placeat eos sit, laudantium voluptatibus enim quibusdam totam similique numquam fuga autem.
+								.help__tabs-block.tabs__item#block03    
+									p.help__tabs-text Lorem ipsum dolor sit amet consectetur adipisicing elit. At veritatis alias recusandae corrupti voluptatem quidem culpa ducimus vero modi deserunt?
+								.help__tabs-block.tabs__item#block04    
+									p.help__tabs-text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati illo aspernatur qui? Cumque deserunt commodi mollitia dolores placeat ducimus vel consequuntur expedita esse ex! Sequi! 
+								.help__tabs-block.tabs__item#block05._active
+									.size-table 
+										.size-table__heading 
+											p.size-table__title Все измерения фигуры выполняются при соблюдении определенных условий: измеряемый должен стоять прямо , без напряжения, сохраняя привычную осанку.
+										.size-table__tabs.tabs
+											nav.size-table__nav
+												.size-table__tabs-navbar
+													a.size-table__tabs-switch(href="#size-table-block01")  Женская одежда
+													a.size-table__tabs-switch(href="#size-table-block02")  Мужская одежда
+													a.size-table__tabs-switch(href="#size-table-block03")  Обувь
+											p.help__tabs-text Внимание! Все данные приведены в европейских размерах! Внимание: объем груди, талии, бедер и длина шага зависят от производителя и его таблиц размеров. Поэтому общие значения размеров не могут на 100% соответствовать фактическим размерам!
+											.size-table__tabs-block#size-table-block01
+												h3.size-table__tabs-block-title Женская одежда
+												.size-table__container
+													.size-table__box 
+														.size-table__table
+															.size-table__col.col-left
+																.col-left__row Международный размер
+																.col-left__row Конфекционный размер
+																.col-left__row Объем груди (см)
+																.col-left__row Объем груди (см)
+																.col-left__row Объем бедер (см)
+																.col-left__row Рост (см)
+															.size-table__col.col-right
+																- const cells = ["xxs", "xs", "s", "s/m", "m", "m/l", "l", "l/xl", "xl", "xl/2xl", "2xl", "2xl/3xl", "3xl", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54"]
+																	each cell in cells
+																		.col-right__item= cell
+											.size-table__tabs-block#size-table-block02
+												h3.size-table__tabs-block-title Мужская одежда
+												.size-table__container
+													.size-table__box 
+														.size-table__table
+															.size-table__col.col-left
+																.col-left__row Международный размер
+																.col-left__row Конфекционный размер
+																.col-left__row Объем груди (см)
+																.col-left__row Объем груди (см)
+																.col-left__row Объем бедер (см)
+																.col-left__row Рост (см)
+															.size-table__col.col-right
+																- const cells2 = ["xxs", "xs", "s", "s/m", "m", "m/l", "l", "l/xl", "xl", "xl/2xl", "2xl", "2xl/3xl", "3xl", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54"]
+																	each cell2 in cells
+																		.col-right__item= cell2
+											.size-table__tabs-block#size-table-block03
+												h3.size-table__tabs-block-title Обувь 
+												.size-table__container
+													.size-table__box 
+														.size-table__table
+															.size-table__col.col-left
+																.col-left__row Международный размер
+																.col-left__row Конфекционный размер
+																.col-left__row Объем груди (см)
+																.col-left__row Объем груди (см)
+																.col-left__row Объем бедер (см)
+																.col-left__row Рост (см)
+															.size-table__col.col-right
+																- const cells3 = ["xxs", "xs", "s", "s/m", "m", "m/l", "l", "l/xl", "xl", "xl/2xl", "2xl", "2xl/3xl", "3xl", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54", "40", "42", "44", "44-46", "46", "46-48", "48", "48-50", "50", "50-52", "52", "52-54", "54"]
+																	each cell3 in cells3
+																		.col-right__item= cell3

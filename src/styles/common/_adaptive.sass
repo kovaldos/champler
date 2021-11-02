@@ -26,6 +26,14 @@
         &__images
             padding: 0
 
+    .help
+        &__tabs
+            column-gap: 70px
+        &__nav
+            margin: 0
+        &__tabs-items
+            flex: 0 0 485px
+
 @media screen and (max-width: 1024px)
     .section
         margin: 70px 0 0 0
@@ -50,7 +58,7 @@
             padding: 100px 40px
             margin: 0
             transition: all 0.5s ease 0s
-            z-index: 49
+            z-index: 14
         &__body._active
             left: 0
         &__list
@@ -100,10 +108,14 @@
                 bottom: 50%
                 transform: rotate(45deg) translate(0, 50%)
 
+    header._white
+        .header-top__logo-img._white
+            color: $color-White
+
     // main
     .main-banner
         margin: 0
-    
+
     .new-collection
         &__title
             font-size: 42px
@@ -112,9 +124,21 @@
         .slider4
             width: 1280px
 
-    // good-card
+    //subcategory page
+    .goods
+        margin: 15px 0 0 0
 
+    .page-pagination
+        &__block
+            grid-template-columns: repeat(3, 1fr)
+        &__nav
+            grid-column-start: 2
+        &__link-btn
+            grid-column-start: 3
+
+    // good-card
     .good-card
+        margin: 15px 0 0 0
         &__content
             flex-direction: column
             column-gap: 0
@@ -124,12 +148,28 @@
         &__info
             flex: auto
             width: 100%
-            
+
+    // vertical slider
+    .slider-vertical
+        .swiper-button-prev,
+        .swiper-button-next
+            display: block
+
     .slider-vertical
         height: auto
         min-height: 300px
         max-width: 578px
         width: 100%
+
+    // help page
+    .help
+        margin: 15px 0 0 0
+        &__tabs
+            column-gap: 30px
+        &__tabs-items,
+        &__nav
+            flex: auto
+            width: 100%
 
     // footer
     .footer-top
@@ -171,23 +211,6 @@
             flex-wrap: wrap
             gap: 30px
 
-    .goods
-        margin: 15px 0 0 0
-
-    .page-pagination
-        &__block
-            grid-template-columns: repeat(3, 1fr)
-        &__nav
-            grid-column-start: 2
-        &__link-btn
-            grid-column-start: 3
-
-    .slider-vertical
-        .swiper-button-prev,
-        .swiper-button-next
-            display: block
-
-
 @media screen and (max-width: 768px)
     .sub-menu
         &__list
@@ -211,6 +234,29 @@
                 height: 35px
                 left: 48.5%
 
+    //subcategory page  
+    .page-pagination
+        &__block
+            display: flex
+            flex-direction: column
+        &__nav
+            margin: 0 0 20px 0
+
+    // good-card page
+    .good-card
+        margin: 15px 0 0 0
+        &__content
+            margin: 20px 0 0 0
+
+    //help page
+    .help
+        margin: 15px 0 0 0
+        &__tabs-switch
+            font-size: $text-font-size-fablet
+        &__tabs-text
+            font-size: $text-font-size-mobile
+
+    //footer
     .footer-top
         .subscribe
             margin: 35px 0
@@ -224,18 +270,6 @@
                 margin: 10px 0 0 0
             &__link-btn
                 margin: 15px 0 0 0
-
-    .page-pagination
-        &__block
-            display: flex
-            flex-direction: column
-        &__nav
-            margin: 0 0 20px 0
-
-    .good-card
-        margin: 15px 0 0 0
-        &__content
-            margin: 20px 0 0 0
 
 @media screen and (max-width: 640px)
     .container
@@ -280,24 +314,7 @@
             object-fit: none
             margin: 0 0 0 -45%
 
-    .footer-top
-        .slider1
-            &__text
-                font-size: $text-font-size-fablet
-        .our-insta
-            &__content
-                flex-direction: column
-            &__block
-                flex: auto
-                width: 100%
-                margin-bottom: 15px
-            &__link-btn
-                max-width: 100%
-
-    .footer-bottom
-        &__row
-            flex-direction: column
-
+    // subcategory page
     .goods
         &__content
             flex-direction: column
@@ -317,9 +334,7 @@
             max-width: 100%
             max-height: unset
 
-    .slider-vertical
-        max-width: 610px
-
+    //good-card page
     .good-card
         &__title
             font-size: 24px
@@ -337,6 +352,76 @@
             font-size: 16px
             min-width: max-content
             margin: -6px 10px -6px 0
+
+    .slider-vertical
+        max-width: 610px
+
+    //help page
+    .help
+        &__tabs
+            flex-direction: column
+            row-gap: 20px
+        &__nav
+            overflow: auto
+            padding: 5px 0 
+        &__tabs-navbar
+            flex-direction: row
+            width: fit-content
+            align-items: center
+            margin: 0
+            padding: 5px 0
+        &__tabs-switch
+            width: fit-content
+            margin: 0 10px
+            padding: 5px
+            white-space: nowrap
+            border-radius: 5px
+        &__tabs-switch._active
+            transform: translate(0, 0)
+            box-shadow: 0 0 2px 2px #3d3d3d
+            &::before
+                display: none
+
+    .size-table
+        &__nav
+            width: 100%
+            overflow: auto
+            margin: 0 0 15px 0
+            padding: 0 0 15px 0
+        &__tabs-navbar
+            width: fit-content
+            padding: 0
+            align-items: center
+            height: 40px
+            margin: 0
+        &__tabs-switch
+            align-items: center
+            white-space: nowrap
+            margin: 0 10px
+            padding: 5px
+            &::after
+                display: none
+        &__tabs-switch._active
+            box-shadow: 0 0 2px 2px #3d3d3d
+
+    .footer-top
+        .slider1
+            &__text
+                font-size: $text-font-size-fablet
+        .our-insta
+            &__content
+                flex-direction: column
+            &__block
+                flex: auto
+                width: 100%
+                margin-bottom: 15px
+            &__link-btn
+                max-width: 100%
+
+    .footer-bottom
+        &__row
+            flex-direction: column
+
 @media screen and (max-width: 425px)
     .footer-top
         .subscribe

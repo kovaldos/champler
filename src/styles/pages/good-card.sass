@@ -185,15 +185,16 @@
         &::after
             visibility: visible
             opacity: 1
-    &__tabs-block
-        display: none
-    &__tabs-block._active
-        display: block
     &__tabs-text
         font-size: 16px
         line-height: 140%
         color: $color-Black
         padding: 0 0 5px 0
+.tabs
+    &__item
+        display: none
+    &__item._active
+        display: block
 
 .slider-vertical
     height: 753px

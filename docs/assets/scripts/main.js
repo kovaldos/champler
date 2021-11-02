@@ -1,13 +1,13 @@
 
 // Показ и скрытие элементов страницы Старт
-// При натяжке на БУС этот скрипт не пригодится
+// При натяжке на БУС этот оверкод не нужен
 // Сделан для демонстрации верстки
 document.addEventListener('DOMContentLoaded', () => {
 
 	const hideOrShowElements = () => {
 		const headers = document.querySelectorAll('header');
 		const footers = document.querySelectorAll('footer');
-		
+
 		if (headers && footers) {
 
 			const pageTitles = [
@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				"Женщинам",
 				"Коллекции",
 				"Виды спорта",
-				"Мужская одежда"
+				"Мужская одежда",
+				"Футболка чёрная с логотипом"
 			];
 
 			headers.forEach(header => {
@@ -44,19 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
 						document.querySelector('.sub-menu__list_kinds-of-sports').classList.remove('_hidden');
 						document.querySelector('.header-bottom__img_for-men').classList.add('_hidden');
 						document.querySelector('.header-bottom__img_kinds-of-sports').classList.remove('_hidden');
-					} if ((document.title == pageTitles[6])) {
+					} if (document.title == pageTitles[6]) {
 						document.querySelector('.header-bottom__banner').classList.add('_hidden');
 						document.querySelector('.header-bottom .sub-menu').classList.add('_hidden');
 						const breadCrumps = header.querySelector('.breadcrumbs__list');
 						const breadcrumpsItem = document.createElement('li');
 						breadcrumpsItem.classList.add('breadcrumbs__link');
-						if(breadCrumps !== null) {
+						if (breadCrumps !== null) {
 							breadcrumpsItem.textContent = " / " + document.title;
 							breadCrumps.appendChild(breadcrumpsItem);
 
 						}
-						
-
+					} if (document.title == pageTitles[7]) {
+						document.querySelector('.breadcrumbs__link._current').textContent = document.title;
+						document.querySelector('.header-bottom__banner').classList.add('_hidden');
 					}
 				}
 
@@ -68,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
 						footer.classList.add('_hidden');
 					} if (document.title !== pageTitles[1]) {
 						document.querySelector('.footer-top .news-promo').classList.add('_hidden');
-					} 
+						document.querySelector('.header-bottom .sub-menu').classList.add('_hidden');
+					}
 				}
 
 			});
@@ -84,39 +87,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Показ и скрытие элементов страницы Конец
 
-// Переключение табов
-// demo
-// button(data-tab-id="tabId1", data-tab-control="tab1") 1
-// button(data-tab-id="tabId1", data-tab-control="tab2") 2
-// .tab-block(data-tab-id="tabId1", data-tab-block="tab1") 1
-// .tab-block(data-tab-id="tabId1", data-tab-block="tab2") 2
-const tabIdList = document.querySelectorAll("[data-tab-id]");
-if (tabIdList) {
-	let tabGroupList = new Set();
-	for (const tabId of tabIdList) {
-		tabGroupList.add(tabId.dataset.tabId);
-	}
-	for (const tabGroup of tabGroupList) {
-		const tab = {
-			controlList: document.querySelectorAll(`[data-tab-id="${tabGroup}"][data-tab-control]`),
-			blockList: document.querySelectorAll(`[data-tab-id="${tabGroup}"][data-tab-block]`),
-		};
+// Переключение табов Start
 
-		function tabSwith(name) {
-			for (const control of tab.controlList) control.classList.remove(activeClass);
-			for (const block of tab.blockList) block.style.display = "none";
-			document.querySelector(`[data-tab-id="${tabGroup}"][data-tab-control="${name}"]`).classList.add(activeClass);
-			document.querySelector(`[data-tab-id="${tabGroup}"][data-tab-block="${name}"]`).style.display = "";
-		}
-		tabSwith(tab.controlList[0].dataset.tabControl);
+const tabItems = document.querySelectorAll(".good-card__tabs-switch");
+const tabBlocks = document.querySelectorAll(".good-card__tabs-block");
 
-		for (const control of tab.controlList) {
-			control.addEventListener("click", () => {
-				tabSwith(control.dataset.tabControl);
+tabItems.forEach(onTabClick);
+
+function onTabClick(item) {
+	item.addEventListener("click", (event) => {
+		event.preventDefault();
+		let tabLink = item.getAttribute("href");
+		let currentBlock = document.querySelector(tabLink);
+		if (!item.classList.contains("_active")) {
+			tabItems.forEach((item) => {
+				item.classList.remove("_active");
 			});
+			tabBlocks.forEach((item) => {
+				item.classList.remove("_active");
+			});
+			item.classList.add("_active");
+			currentBlock.classList.add("_active");
 		}
-	}
+	});
+	document.querySelector(".good-card__tabs-switch").click();
 }
+
+// Переключение табов End
 
 
 // Бегущая строка на главной Старт
@@ -313,3 +310,68 @@ const swiper4 = new Swiper('.slider4', {
 
 
 // slider4 End
+
+// slider-vertical Start
+
+const swiper5 = new Swiper('.slider-vertical', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: false,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	autoplay: false,
+	initialSlide: 0,
+	spaceBetween: 10,
+	speed: 500,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	mousewheel: {
+		releaseOnEdges: true,
+		sensitivity: 0,
+		thresholdDelta: 20,
+		thresholdTime: 300,
+		forceToAxis: true
+	},
+	breakpoints: {
+		1025: {
+			direction: 'vertical',
+			navigation: false
+		}
+
+	}
+	
+});
+
+
+// slider-vertical End
+
+// init image zoom Start
+
+mediumZoom('[data-zoomable]', {
+	margin: 50,
+	background: '#3D3D3D',
+	scrollOffset: 100,
+	
+})
+
+// init image zoom End
+
+// rotate arrow in select Start
+const selectWrappers = document.querySelectorAll(".good-card__select-wrapper");
+if (selectWrappers.length) {
+  selectWrappers.forEach((selectWrapper) => {
+    selectWrapper.addEventListener("click", (e) => {
+      selectWrapper.classList.toggle("icon-rotated");
+      // setTimeout(() => {
+      //   if (selectWrapper.classList.contains("icon-rotated")) {
+      //     selectWrapper.classList.remove("icon-rotated");
+      //   }
+      // }, 10000);
+    });
+  });
+}
+
+
+// rotate arrow in select End

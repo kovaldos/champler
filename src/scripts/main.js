@@ -18,7 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
 				"Коллекции",
 				"Виды спорта",
 				"Мужская одежда",
-				"Футболка чёрная с логотипом"
+				"Футболка чёрная с логотипом",
+				"Помощь",
+				"Контакты",
+				"Мои данные",
+				""
 			];
 
 			headers.forEach(header => {
@@ -59,6 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
 					} if (document.title == pageTitles[7]) {
 						document.querySelector('.breadcrumbs__link._current').textContent = document.title;
 						document.querySelector('.header-bottom__banner').classList.add('_hidden');
+					} if (document.title == pageTitles[8]) {
+						document.querySelector('.breadcrumbs__link._current').textContent = document.title;
+						document.querySelector('.header-bottom__banner').classList.add('_hidden');
 					}
 				}
 
@@ -70,6 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
 						footer.classList.add('_hidden');
 					} if (document.title !== pageTitles[1]) {
 						document.querySelector('.footer-top .news-promo').classList.add('_hidden');
+						document.querySelector('.header-bottom .sub-menu').classList.add('_hidden');
+					} if (document.title !== pageTitles[1] || document.title !== pageTitles[2] || document.title !== pageTitles[3] || document.title !== pageTitles[4] || document.title !== pageTitles[5] || document.title !== pageTitles[6]) {
+
+						document.querySelector('.footer-top').classList.add('_hidden');
 						document.querySelector('.header-bottom .sub-menu').classList.add('_hidden');
 					}
 				}
@@ -89,8 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Переключение табов Start
 
-const tabItems = document.querySelectorAll(".good-card__tabs-switch");
-const tabBlocks = document.querySelectorAll(".good-card__tabs-block");
+const tabItems = document.querySelectorAll(".tabs__link");
+const tabBlocks = document.querySelectorAll(".tabs__item");
 
 tabItems.forEach(onTabClick);
 
@@ -110,7 +121,31 @@ function onTabClick(item) {
 			currentBlock.classList.add("_active");
 		}
 	});
-	document.querySelector(".good-card__tabs-switch").click();
+	document.querySelector(".tabs__link").click();
+}
+
+const tabItemsInner = document.querySelectorAll(".size-table__tabs-switch");
+const tabBlocksInner = document.querySelectorAll(".size-table__tabs-block");
+
+tabItemsInner.forEach(onTabClickInner);
+
+function onTabClickInner(item) {
+	item.addEventListener("click", (event) => {
+		event.preventDefault();
+		let tabLink = item.getAttribute("href");
+		let currentBlock = document.querySelector(tabLink);
+		if (!item.classList.contains("_active")) {
+			tabItemsInner.forEach((item) => {
+				item.classList.remove("_active");
+			});
+			tabBlocksInner.forEach((item) => {
+				item.classList.remove("_active");
+			});
+			item.classList.add("_active");
+			currentBlock.classList.add("_active");
+		}
+	});
+	document.querySelector(".size-table__tabs-switch").click();
 }
 
 // Переключение табов End
@@ -165,6 +200,7 @@ if (iconMenu) {
 		document.body.classList.toggle('_lock');
 		iconMenu.classList.toggle('_active');
 		menuBody.classList.toggle('_active');
+		document.querySelector('.header-top__logo-img').classList.toggle('_white')
 	})
 }
 
