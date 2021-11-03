@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Контакты",
         "Аккаунт",
         "Избранное",
+        "Результат поиска"
       ];
 
       headers.forEach((header) => {
@@ -88,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
               breadCrumps.appendChild(breadcrumpsItem);
             }
           }
-          if (document.title == pageTitles[7]) {
+          if (document.title == pageTitles[7] || document.title == pageTitles[12]) {
             document.querySelector(".breadcrumbs__link._current").textContent =
               document.title;
             document
@@ -414,11 +415,11 @@ const swiper5 = new Swiper(".slider-vertical", {
 
 // favorite slider Start
 
-const swiperFavorite = new Swiper(".favotite__slider", {
+const swiperFavorite = new Swiper(".favorite__slider", {
   watchOverflow: true,
   direction: "horizontal",
   loop: false,
-  slidesPerView: 1,
+  slidesPerView: "auto",
   slidesPerGroup: 1,
   autoplay: false,
   initialSlide: 0,
@@ -433,28 +434,24 @@ const swiperFavorite = new Swiper(".favotite__slider", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  breakpoints: {
-    425: {
-      slidesPerView: 2,
-    },
-    640: {
-      slidesPerView: 3,
-    },
-    1024: {
-      slidesPerView: 4,
-    },
-  },
+  // breakpoints: {
+  //   425: {
+  //     slidesPerView: "auto",
+  //   },
+  //   640: {
+  //     slidesPerView: "auto",
+  //   },
+  //   1024: {
+  //     slidesPerView: "auto",
+  //   },
+  // },
 });
 
-const slidesQuntity = swiperFavorite.slides.length
-console.log(slidesQuntity);
-if (slidesQuntity > 4) {
- 
-  navigationShow(swiperFavorite)
-} else {
-  navigationHide(swiperFavorite)
+const slidesQuantity = swiperFavorite.slides.length;
 
-}
+if (slidesQuantity > 4) {
+  navigationShow(swiperFavorite);
+} 
 
 // favorite slider End
 

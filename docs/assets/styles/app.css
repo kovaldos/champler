@@ -484,8 +484,9 @@ header._white {
   cursor: pointer; }
   .fav-btn:hover > .slider3__fav-img {
     transform: scale(115%); }
-  .fav-btn:active > .slider3__fav-img {
-    color: #000000; }
+
+.fav-btn._active .slider3__fav-img {
+  color: #000000; }
 
 .sale {
   margin: 80px 0 0 0; }
@@ -1474,6 +1475,11 @@ header._white {
 
 .account-orders__heading.is-active .ac-panel {
   border-top: 1px solid #CBCBCB; }
+
+.favorite {
+  margin: 28px 0 0 0; }
+  .favorite__slider {
+    padding: 65px 0 0 0; }
 
 footer._hidden {
   display: none; }
