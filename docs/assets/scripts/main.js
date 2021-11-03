@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Футболка чёрная с логотипом",
         "Помощь",
         "Контакты",
-        "Мои данные",
+        "Аккаунт",
       ];
 
       headers.forEach((header) => {
@@ -93,7 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           if (
             document.title == pageTitles[8] ||
-            document.title == pageTitles[9]
+            document.title == pageTitles[9] ||
+            document.title == pageTitles[10]
           ) {
             document.querySelector(".breadcrumbs__link._current").textContent =
               document.title;
@@ -250,15 +251,15 @@ if (iconMenu) {
 
 // Mask for subscribe Start
 
-// const emailMask = IMask(
-// 	document.querySelector('.subscribe__input'),
-// 	{
-// 		mask: [
-// 			{
-// 				mask: /^\S*@?\S*$/
-// 			}
-// 		]
-// 	});
+const inputTel = document.getElementById('tel');
+
+if (inputTel) {
+  var phoneMask = IMask(inputTel, {
+      mask: '+{7} (000) 000-00-00'
+    });
+}
+
+
 
 // Mask for subscribe End
 
@@ -435,26 +436,52 @@ if (selectWrappers.length) {
 // rotate arrow in select End
 
 // y-maps Start
+const myMap = document.getElementById("map");
+if (myMap) {
+  ymaps.ready(init);
 
-ymaps.ready(init);
+  function init() {
+    var myMap = new ymaps.Map("map", {
+      center: [59.93, 30.28],
+      zoom: 10,
+    });
 
-function init() {
-  var myMap = new ymaps.Map("map", {
-    center: [59.93, 30.28],
-    zoom: 10,
-  });
-
-  //отключаем zoom карты колесом мыши
-  myMap.behaviors.disable("scrollZoom");
-  //на мобильных устройствах... (проверяем по userAgent браузера)
-  if (
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    )
-  ) {
-    //... отключаем перетаскивание карты на мобильных устройствах
-    myMap.behaviors.disable("drag");
+    //отключаем zoom карты колесом мыши
+    myMap.behaviors.disable("scrollZoom");
+    //на мобильных устройствах... (проверяем по userAgent браузера)
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      //... отключаем перетаскивание карты на мобильных устройствах
+      myMap.behaviors.disable("drag");
+    }
   }
 }
 
 // y-maps End
+
+// Accordion Start
+const accordion = document.querySelector(".accordion-container");
+if (accordion) {
+  new Accordion(accordion);
+}
+
+// Accordion End
+
+// Вставляем пробелы между разрядами цифр в ценах Старт
+
+const setSpaces = () => {
+  const numbers = document.querySelectorAll(".number-spaced");
+  if (numbers.length) {
+    numbers.forEach((number) => {
+      const spaced = number.innerHTML.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
+      number.innerHTML = spaced;
+    });
+  }
+};
+
+setSpaces();
+
+// Вставляем пробелы между разрядами цифр в ценах Конец

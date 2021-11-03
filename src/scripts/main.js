@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Помощь",
         "Контакты",
         "Аккаунт",
+        "Избранное",
       ];
 
       headers.forEach((header) => {
@@ -69,7 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
               .querySelector(".header-bottom__img_kinds-of-sports")
               .classList.remove("_hidden");
           }
-          if (document.title == pageTitles[6]) {
+          if (
+            document.title == pageTitles[6] ||
+            document.title == pageTitles[11]
+          ) {
             document
               .querySelector(".header-bottom__banner")
               .classList.add("_hidden");
@@ -139,10 +143,11 @@ document.addEventListener("DOMContentLoaded", () => {
   hideOrShowElements();
 });
 
+// Показ и скрытие элементов страницы Конец
+
 // ToDo
 // Сделать нормальные Хлебные крошки
-
-// Показ и скрытие элементов страницы Конец
+// Сделать добавление в избранное
 
 // Переключение табов Start
 
@@ -170,6 +175,7 @@ function onTabClick(item) {
   document.querySelector(".tabs__link").click();
 }
 
+// Внутренние табы
 const tabItemsInner = document.querySelectorAll(".size-table__tabs-switch");
 const tabBlocksInner = document.querySelectorAll(".size-table__tabs-block");
 
@@ -249,19 +255,17 @@ if (iconMenu) {
 
 // Burger menu End
 
-// Mask for subscribe Start
+// Mask for phone number Start
 
-const inputTel = document.getElementById('tel');
+const inputTel = document.getElementById("tel");
 
 if (inputTel) {
   var phoneMask = IMask(inputTel, {
-      mask: '+{7} (000) 000-00-00'
-    });
+    mask: "+{7} (000) 000-00-00",
+  });
 }
 
-
-
-// Mask for subscribe End
+// Mask for phone number End
 
 // slider1 Start
 
@@ -408,6 +412,69 @@ const swiper5 = new Swiper(".slider-vertical", {
 
 // slider-vertical End
 
+// favorite slider Start
+
+const swiperFavorite = new Swiper(".favotite__slider", {
+  watchOverflow: true,
+  direction: "horizontal",
+  loop: false,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  autoplay: false,
+  initialSlide: 0,
+  spaceBetween: 10,
+
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    425: {
+      slidesPerView: 2,
+    },
+    640: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+const slidesQuntity = swiperFavorite.slides.length
+console.log(slidesQuntity);
+if (slidesQuntity > 4) {
+ 
+  navigationShow(swiperFavorite)
+} else {
+  navigationHide(swiperFavorite)
+
+}
+
+// favorite slider End
+
+// favorite toggle Start
+
+const addToFav = () => {
+  const favBtns = document.querySelectorAll(".fav-btn");
+  if (favBtns) {
+    favBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("_active");
+      });
+    });
+  }
+};
+
+addToFav();
+
+// favorite toggle End
+
 // init image zoom Start
 
 mediumZoom("[data-zoomable]", {
@@ -476,7 +543,10 @@ const setSpaces = () => {
   const numbers = document.querySelectorAll(".number-spaced");
   if (numbers.length) {
     numbers.forEach((number) => {
-      const spaced = number.innerHTML.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
+      const spaced = number.innerHTML.replace(
+        /(\d)(?=(\d\d\d)+([^\d]|$))/g,
+        "$1 "
+      );
       number.innerHTML = spaced;
     });
   }

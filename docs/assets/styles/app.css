@@ -957,7 +957,7 @@ header._white {
     display: flex;
     justify-content: space-between;
     padding: 0 20px 6px 0;
-    border-bottom: 3px solid #E7E7E7;
+    border-bottom: 3px solid #f5f5f5;
     margin: 0 0 50px 0; }
   .good-card__tabs-switch {
     width: -webkit-fit-content;
@@ -1098,7 +1098,7 @@ header._white {
     display: flex;
     justify-content: space-between;
     padding: 0 20px 6px 0;
-    border-bottom: 3px solid #E7E7E7;
+    border-bottom: 3px solid #f5f5f5;
     margin: 0 0 30px 0; }
   .size-table__tabs-switch {
     width: -webkit-fit-content;
@@ -1227,6 +1227,253 @@ header._white {
 .map-box {
   width: 100%;
   height: 700px; }
+
+.account {
+  margin: 28px 0 0 0; }
+  .account__content, .account__tabs {
+    width: 100%;
+    gap: 20px; }
+  .account__nav {
+    flex: 0 333px;
+    margin: 0; }
+  .account__bonus-box {
+    margin: 47px 0 0 0; }
+  .account__bonus-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDEEF0;
+    width: 100%;
+    max-width: 225px;
+    min-height: 160px; }
+  .account__bonus-title {
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0 0 17px 0; }
+  .account__bonus {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px; }
+  .account__tabs-items {
+    flex: 1 1 auto; }
+  .account__tabs-block#block01 {
+    margin: 0 0 0 107px; }
+  .account__form {
+    width: 100%;
+    max-width: 570px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px; }
+  .account__form-label {
+    width: 100%;
+    margin: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 27px;
+    font-size: 18px;
+    line-height: 21px; }
+  .account__form-input {
+    width: 100%;
+    min-height: 50px;
+    font-size: 16px;
+    line-height: 140%;
+    background-color: #F9F9F9;
+    border: 1px solid #D9D9D9;
+    padding: 14px 20px; }
+    .account__form-input:hover, .account__form-input:focus {
+      box-shadow: 0 0 3px 3px #999999; }
+  .account__form-link, .account__form-btn {
+    align-self: flex-start; }
+  .account__form-link {
+    margin: -20px 0 0 0;
+    font-size: 16px;
+    line-height: 18px;
+    color: #000000;
+    padding: 10px 1px;
+    border-radius: 5px;
+    position: relative; }
+    .account__form-link::after {
+      position: absolute;
+      top: 77%;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 1px;
+      display: block;
+      background-color: #000000; }
+    .account__form-link:hover::after {
+      display: none; }
+    .account__form-link:focus {
+      box-shadow: 0 0 2px 2px #999999; }
+  .account__form-btn {
+    margin: 8px 0 0 0;
+    width: 100%;
+    max-width: 138px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3D3D3D;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: uppercase; }
+    .account__form-btn:hover, .account__form-btn:focus {
+      box-shadow: 0 0 3px 3px #999999; }
+  .account__tabs-block#block03 {
+    margin: 0 0 0 117px; }
+  .account__orders-history-heading {
+    margin: 30px 0 0 0; }
+  .account__orders-history-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 11px 0; }
+  .account__orders-history-sub-title {
+    font-size: 16px;
+    line-height: 140%; }
+  .account__back-link {
+    margin: 49px 0 0 0;
+    width: 100%;
+    max-width: 232px;
+    min-height: 50px;
+    background-color: #3D3D3D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: uppercase;
+    border-radius: 5px; }
+
+.account-orders__heading {
+  min-height: 80px;
+  border: none;
+  border-bottom: 1px solid #CBCBCB;
+  margin: 0; }
+
+.account-orders__name {
+  color: #333333;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  line-height: 140%; }
+
+.account-orders__vendor-code {
+  font-size: 12px;
+  line-height: 14px;
+  color: #999999; }
+
+.account-orders__size, .account-orders__quantity {
+  font-size: 16px;
+  line-height: 140%;
+  color: #919191; }
+
+.account-orders__size-value {
+  font-size: 16px;
+  line-height: 140%;
+  margin: 0 0 0 26px;
+  color: #333333; }
+
+.account-orders__quantity-value {
+  font-size: 16px;
+  line-height: 140%;
+  margin: 0 0 0 29px;
+  color: #333333; }
+
+.account-orders__price, .account-orders__price-currency {
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: bold;
+  color: #333333; }
+
+.account-orders .ac-trigger {
+  width: 100%;
+  height: 100%;
+  padding: 30px 0 28px 0;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 140%;
+  transition: all 0.3s ease 0s; }
+  .account-orders .ac-trigger:focus {
+    color: #000000; }
+  .account-orders .ac-trigger::after {
+    content: 'Развернуть';
+    text-decoration: underline;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    transform: translate(0, -50%);
+    right: 0;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400; }
+  .account-orders .ac-trigger span {
+    margin: 0 0 0 44px; }
+
+.account-orders .ac-panel {
+  transition: all 0.3s ease 0s; }
+
+.account-orders .ac-content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  padding: 20px 0;
+  border-bottom: 1px solid #F3F3F3; }
+  .account-orders .ac-content-row__total {
+    border-top: 1px solid #CBCBCB;
+    padding: 30px 0 48px 0;
+    justify-content: flex-end;
+    height: 164px; }
+
+.account-orders .ac-content-col {
+  flex: 1 1 auto; }
+  .account-orders .ac-content-col:first-child {
+    flex: 0 0 433px; }
+  .account-orders .ac-content-col__items {
+    display: flex;
+    -moz-column-gap: 32px;
+         column-gap: 32px; }
+  .account-orders .ac-content-col__item:first-child {
+    flex: 0 0 107px; }
+  .account-orders .ac-content-col__item:last-child {
+    flex: 0 0 228px; }
+  .account-orders .ac-content-col__total {
+    flex: auto;
+    width: 100%;
+    max-width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 5px;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333333; }
+    .account-orders .ac-content-col__total .total__ammount,
+    .account-orders .ac-content-col__total .total__ammount-value {
+      margin-top: auto;
+      font-weight: bold; }
+
+.account-orders .img-box {
+  max-width: 107px;
+  width: 100%; }
+
+.account-orders .ac-content-col:last-child {
+  text-align: end; }
+
+.account-orders__heading.is-active .ac-trigger::after {
+  content: 'Свернуть'; }
+
+.account-orders__heading.is-active .ac-panel {
+  border-top: 1px solid #CBCBCB; }
 
 footer._hidden {
   display: none; }
@@ -1485,8 +1732,25 @@ footer._hidden {
     margin: 0; }
   .help__tabs-items {
     flex: 0 0 485px; }
-  .contacts {
-    margin: 15px 0 0 0; } }
+  .account__tabs {
+    -moz-column-gap: 20px;
+         column-gap: 20px; }
+  .account__nav {
+    flex: 0 0 255px; }
+  .account__tabs-items {
+    flex: 1 1 auto; }
+  .account__tabs-block#block01 {
+    margin: 0; }
+  .account-orders .ac-content-row,
+  .account-orders .ac-content-col__items {
+    gap: 10px; }
+  .account-orders .ac-content-row {
+    justify-content: flex-start;
+    flex-wrap: wrap; }
+  .account-orders .ac-content-col:first-child {
+    flex: 0 0 300px; }
+  .account-orders .ac-content-col__item:last-child {
+    flex: 0 0 180px; } }
 
 @media screen and (max-width: 1024px) {
   .section {
@@ -1631,7 +1895,29 @@ footer._hidden {
         font-size: 15px; }
     .footer-bottom__row {
       flex-wrap: wrap;
-      gap: 30px; } }
+      gap: 30px; }
+  .account {
+    margin: 15px 0 0 0; }
+    .account__tabs {
+      flex-direction: column;
+      align-items: center; }
+    .account__nav {
+      width: 100%;
+      max-width: 570px;
+      display: flex;
+      gap: 50px;
+      justify-content: space-between;
+      padding: 0 10px; }
+    .account__bonus-box {
+      margin: 0;
+      flex: 0 0 50%;
+      display: flex;
+      justify-content: flex-end; }
+    .account__tabs-items {
+      flex: 1 1 auto; }
+    .account__tabs-block#block01._active {
+      display: flex;
+      justify-content: center; } }
 
 @media screen and (max-width: 768px) {
   .sub-menu__list {
@@ -1669,6 +1955,23 @@ footer._hidden {
       font-size: 14px; }
   .contacts {
     margin: 15px 0 0 0; }
+  .account {
+    margin: 15px 0 0 0; }
+    .account .ac-trigger span {
+      margin: 0 15px; }
+  .account-orders .ac-content-col:last-child {
+    text-align: left; }
+  .account-orders .ac-trigger {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 30px 85px 10px 0;
+    gap: 10px; }
+    .account-orders .ac-trigger span {
+      margin: 0; }
+    .account-orders .ac-trigger::after {
+      transform: translate(0, 0); }
   .footer-top .subscribe {
     margin: 35px 0; }
   .footer-top .our-insta__title {
@@ -1804,6 +2107,25 @@ footer._hidden {
       display: none; }
   .size-table__tabs-switch._active {
     box-shadow: 0 0 2px 2px #3d3d3d; }
+  .account__tabs {
+    position: relative; }
+  .account__nav {
+    flex-direction: column-reverse;
+    margin-top: 180px; }
+  .account__bonus-box {
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; }
+  .account__tabs-switch:hover {
+    transform: none; }
+  .account__tabs-block#block03 {
+    margin: 0; }
+  .account-orders .ac-trigger {
+    font-size: 14px; }
+    .account-orders .ac-trigger::after {
+      font-size: 14px; }
   .footer-top .slider1__text {
     font-size: 15px; }
   .footer-top .our-insta__content {
