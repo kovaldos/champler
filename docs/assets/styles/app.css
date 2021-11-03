@@ -1481,6 +1481,9 @@ header._white {
   .favorite__slider {
     padding: 65px 0 0 0; }
 
+.search {
+  margin: 28px 0 0 0; }
+
 footer._hidden {
   display: none; }
 
@@ -1870,6 +1873,8 @@ footer._hidden {
       width: 100%; }
   .contacts {
     margin: 15px 0 0 0; }
+  .favorite {
+    margin: 15px 0 0 0; }
   .footer-top .subscribe {
     margin: 70px 0; }
     .footer-top .subscribe__form {
@@ -1923,7 +1928,9 @@ footer._hidden {
       flex: 1 1 auto; }
     .account__tabs-block#block01._active {
       display: flex;
-      justify-content: center; } }
+      justify-content: center; }
+  .search {
+    margin: 15px 0 0 0; } }
 
 @media screen and (max-width: 768px) {
   .sub-menu__list {
@@ -1978,6 +1985,10 @@ footer._hidden {
       margin: 0; }
     .account-orders .ac-trigger::after {
       transform: translate(0, 0); }
+  .favorite {
+    margin: 15px 0 0 0; }
+  .search {
+    margin: 15px 0 0 0; }
   .footer-top .subscribe {
     margin: 35px 0; }
   .footer-top .our-insta__title {
