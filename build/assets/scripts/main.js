@@ -124,12 +124,12 @@ document.addEventListener("DOMContentLoaded", () => {
               .classList.add("_hidden");
           }
           if (
-            document.title !== pageTitles[1] ||
-            document.title !== pageTitles[2] ||
-            document.title !== pageTitles[3] ||
-            document.title !== pageTitles[4] ||
-            document.title !== pageTitles[5] ||
-            document.title !== pageTitles[6]
+            
+            document.title == pageTitles[8] ||
+            document.title == pageTitles[9] ||
+            document.title == pageTitles[10] ||
+            document.title == pageTitles[11] ||
+            document.title == pageTitles[12]
           ) {
             document.querySelector(".footer-top").classList.add("_hidden");
             document
