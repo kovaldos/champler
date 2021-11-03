@@ -1,7 +1,7 @@
 extends ../template
 
 block variables
-	- var title = 'Мои данные'
+	- var title = 'Аккаунт'
 	- var contactForm = false
 
 block content
@@ -24,14 +24,14 @@ block content
 										.account__bonus
 											span 96
 											span &nbsp;баллов
-							.help__tabs-items.tabs__items
+							.help__tabs-items.account__tabs-items.tabs__items
 								.help__tabs-block.account__tabs-block.tabs__item#block01
 									form.account__form
 										input.account__form-input(type="text" placeholder="Фамилия")
 										input.account__form-input(type="text" placeholder="Имя" required)
 										input.account__form-input(type="text" placeholder="Отчество")
-										input.account__form-input(type="email" placeholder="Ваш e-mail" required)
-										input.account__form-input(type="tel" placeholder="Телефон" required)
+										input.account__form-input#email(type="email" placeholder="Ваш e-mail" required)
+										input.account__form-input#tel(type="tel" placeholder="Телефон" required)
 										label.account__form-label Изменить пароль
 											input.account__form-input(type="password" placeholder="Введите пароль" required)
 										input.account__form-input(type="password" placeholder="Повторите пароль" required)
@@ -41,18 +41,20 @@ block content
 										button.account__form-btn(type="submit") сохранить
 								.help__tabs-block.account__tabs-block.tabs__item#block02._active
 									.account-orders.accordion-container
-										.account-orders-heading.ac 
+										.account-orders__heading.ac 
 											button.ac-trigger Заказ №123456-12345
 												span от 24.03.2021
 											.ac-panel
 												.ac-content-row
-													.ac-content-col 
-														.img-box 
-															img.account-orders-img(src="./assets/images/orders-img-1.jpg", alt="Фото модели в образце продукции")
-													.ac-content-col 
-														h3.account-orders__name Футболка черная с логотипом
-														span.account-orders__vendor-code Артикул:&nbsp; 
-														span.account-orders__vendor-code 113263RS502
+													.ac-content-col
+														.ac-content-col__items
+															.ac-content-col__item
+																.img-box 
+																	img.account-orders-img(src="./assets/images/orders-img-1.jpg", alt="Фото модели в образце продукции")
+															.ac-content-col__item 
+																h3.account-orders__name Футболка черная с логотипом
+																span.account-orders__vendor-code Артикул:&nbsp; 
+																span.account-orders__vendor-code 113263RS502
 													.ac-content-col
 														span.account-orders__size Размер&nbsp;
 														span.account-orders__size-value S
@@ -60,8 +62,131 @@ block content
 														span.account-orders__quantity Количество&nbsp;
 														span.account-orders__quantity-value 1
 													.ac-content-col 
-														span.account-orders__price 4190
+														span.account-orders__price.number-spaced 4190
 														span.account-orders__price-currency &nbsp;&#8381; 
+												.ac-content-row
+													.ac-content-col
+														.ac-content-col__items
+															.ac-content-col__item
+																.img-box 
+																	img.account-orders-img(src="./assets/images/orders-img-1.jpg", alt="Фото модели в образце продукции")
+															.ac-content-col__item 
+																h3.account-orders__name Футболка черная с логотипом
+																span.account-orders__vendor-code Артикул:&nbsp; 
+																span.account-orders__vendor-code 113263RS502
+													.ac-content-col
+														span.account-orders__size Размер&nbsp;
+														span.account-orders__size-value S
+													.ac-content-col 
+														span.account-orders__quantity Количество&nbsp;
+														span.account-orders__quantity-value 1
+													.ac-content-col 
+														span.account-orders__price.number-spaced 4190
+														span.account-orders__price-currency &nbsp;&#8381; 
+												.ac-content-row
+													.ac-content-col
+														.ac-content-col__items
+															.ac-content-col__item
+																.img-box 
+																	img.account-orders-img(src="./assets/images/orders-img-1.jpg", alt="Фото модели в образце продукции")
+															.ac-content-col__item 
+																h3.account-orders__name Футболка черная с логотипом
+																span.account-orders__vendor-code Артикул:&nbsp; 
+																span.account-orders__vendor-code 113263RS502
+													.ac-content-col
+														span.account-orders__size Размер&nbsp;
+														span.account-orders__size-value S
+													.ac-content-col 
+														span.account-orders__quantity Количество&nbsp;
+														span.account-orders__quantity-value 1
+													.ac-content-col 
+														span.account-orders__price.number-spaced 4190
+														span.account-orders__price-currency &nbsp;&#8381; 
+												.ac-content-row.ac-content-row__total
+													.ac-content-col.ac-content-col__total 
+														.total__order Заказ
+														.total__delivery Доставка
+														.total__ammount Итого
+													.ac-content-col.ac-content-col__total  
+														.total__order-value 
+															span.number-spaced 8990
+															span &nbsp;&#8381;
+														.total__delivery-value 
+															span.number-spaced 400
+															span &nbsp;&#8381;
+														.total__ammount-value 
+															span.number-spaced 15390
+															span &nbsp;&#8381;
+										.account-orders__heading.ac 
+											button.ac-trigger Заказ №123456-12345
+												span от 24.03.2021
+											.ac-panel
+												.ac-content-row
+													.ac-content-col
+														.ac-content-col__items
+															.ac-content-col__item
+																.img-box 
+																	img.account-orders-img(src="./assets/images/orders-img-1.jpg", alt="Фото модели в образце продукции")
+															.ac-content-col__item 
+																h3.account-orders__name Футболка черная с логотипом
+																span.account-orders__vendor-code Артикул:&nbsp; 
+																span.account-orders__vendor-code 113263RS502
+													.ac-content-col
+														span.account-orders__size Размер&nbsp;
+														span.account-orders__size-value S
+													.ac-content-col 
+														span.account-orders__quantity Количество&nbsp;
+														span.account-orders__quantity-value 1
+													.ac-content-col 
+														span.account-orders__price.number-spaced 4190
+														span.account-orders__price-currency &nbsp;&#8381; 
+										.account-orders__heading.ac 
+											button.ac-trigger Заказ №123456-12345
+												span от 24.03.2021
+											.ac-panel
+												.ac-content-row
+													.ac-content-col
+														.ac-content-col__items
+															.ac-content-col__item
+																.img-box 
+																	img.account-orders-img(src="./assets/images/orders-img-1.jpg", alt="Фото модели в образце продукции")
+															.ac-content-col__item 
+																h3.account-orders__name Футболка черная с логотипом
+																span.account-orders__vendor-code Артикул:&nbsp; 
+																span.account-orders__vendor-code 113263RS502
+													.ac-content-col
+														span.account-orders__size Размер&nbsp;
+														span.account-orders__size-value S
+													.ac-content-col 
+														span.account-orders__quantity Количество&nbsp;
+														span.account-orders__quantity-value 1
+													.ac-content-col 
+														span.account-orders__price.number-spaced 4190
+														span.account-orders__price-currency &nbsp;&#8381; 
+										.account-orders__heading.ac 
+											button.ac-trigger Заказ №123456-12345
+												span от 24.03.2021
+											.ac-panel
+												.ac-content-row
+													.ac-content-col
+														.ac-content-col__items
+															.ac-content-col__item
+																.img-box 
+																	img.account-orders-img(src="./assets/images/orders-img-1.jpg", alt="Фото модели в образце продукции")
+															.ac-content-col__item 
+																h3.account-orders__name Футболка черная с логотипом
+																span.account-orders__vendor-code Артикул:&nbsp; 
+																span.account-orders__vendor-code 113263RS502
+													.ac-content-col
+														span.account-orders__size Размер&nbsp;
+														span.account-orders__size-value S
+													.ac-content-col 
+														span.account-orders__quantity Количество&nbsp;
+														span.account-orders__quantity-value 1
+													.ac-content-col 
+														span.account-orders__price.number-spaced 4190
+														span.account-orders__price-currency &nbsp;&#8381; 
+
 								.help__tabs-block.account__tabs-block.tabs__item#block03
 									.account__img-box 
 										svg.account__cart-img(width="108" height="108")

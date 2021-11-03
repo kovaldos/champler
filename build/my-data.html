@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Мои данные</title>
+    <title>Аккаунт</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -98,14 +98,14 @@
                     </div>
                   </div>
                 </nav>
-                <div class="help__tabs-items tabs__items">
+                <div class="help__tabs-items account__tabs-items tabs__items">
                   <div class="help__tabs-block account__tabs-block tabs__item" id="block01">
                     <form class="account__form">
                       <input class="account__form-input" type="text" placeholder="Фамилия">
                       <input class="account__form-input" type="text" placeholder="Имя" required>
                       <input class="account__form-input" type="text" placeholder="Отчество">
-                      <input class="account__form-input" type="email" placeholder="Ваш e-mail" required>
-                      <input class="account__form-input" type="tel" placeholder="Телефон" required>
+                      <input class="account__form-input" id="email" type="email" placeholder="Ваш e-mail" required>
+                      <input class="account__form-input" id="tel" type="tel" placeholder="Телефон" required>
                       <label class="account__form-label">Изменить пароль
                         <input class="account__form-input" type="password" placeholder="Введите пароль" required>
                       </label>
@@ -118,19 +118,125 @@
                   </div>
                   <div class="help__tabs-block account__tabs-block tabs__item _active" id="block02">
                     <div class="account-orders accordion-container">
-                      <div class="account-orders-heading ac"> 
+                      <div class="account-orders__heading ac"> 
                         <button class="ac-trigger">Заказ №123456-12345<span>от 24.03.2021</span></button>
                         <div class="ac-panel">
                           <div class="ac-content-row">
-                            <div class="ac-content-col"> 
-                              <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
-                            </div>
-                            <div class="ac-content-col"> 
-                              <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
+                            <div class="ac-content-col">
+                              <div class="ac-content-col__items">
+                                <div class="ac-content-col__item">
+                                  <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
+                                </div>
+                                <div class="ac-content-col__item"> 
+                                  <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
+                                </div>
+                              </div>
                             </div>
                             <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
                             <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__price">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
+                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
+                          </div>
+                          <div class="ac-content-row">
+                            <div class="ac-content-col">
+                              <div class="ac-content-col__items">
+                                <div class="ac-content-col__item">
+                                  <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
+                                </div>
+                                <div class="ac-content-col__item"> 
+                                  <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
+                            <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
+                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
+                          </div>
+                          <div class="ac-content-row">
+                            <div class="ac-content-col">
+                              <div class="ac-content-col__items">
+                                <div class="ac-content-col__item">
+                                  <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
+                                </div>
+                                <div class="ac-content-col__item"> 
+                                  <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
+                            <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
+                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
+                          </div>
+                          <div class="ac-content-row ac-content-row__total">
+                            <div class="ac-content-col ac-content-col__total"> 
+                              <div class="total__order">Заказ</div>
+                              <div class="total__delivery">Доставка</div>
+                              <div class="total__ammount">Итого</div>
+                            </div>
+                            <div class="ac-content-col ac-content-col__total"> 
+                              <div class="total__order-value"> <span class="number-spaced">8990</span><span>&nbsp;&#8381;</span></div>
+                              <div class="total__delivery-value"> <span class="number-spaced">400</span><span>&nbsp;&#8381;</span></div>
+                              <div class="total__ammount-value"> <span class="number-spaced">15390</span><span>&nbsp;&#8381;</span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-orders__heading ac"> 
+                        <button class="ac-trigger">Заказ №123456-12345<span>от 24.03.2021</span></button>
+                        <div class="ac-panel">
+                          <div class="ac-content-row">
+                            <div class="ac-content-col">
+                              <div class="ac-content-col__items">
+                                <div class="ac-content-col__item">
+                                  <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
+                                </div>
+                                <div class="ac-content-col__item"> 
+                                  <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
+                            <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
+                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-orders__heading ac"> 
+                        <button class="ac-trigger">Заказ №123456-12345<span>от 24.03.2021</span></button>
+                        <div class="ac-panel">
+                          <div class="ac-content-row">
+                            <div class="ac-content-col">
+                              <div class="ac-content-col__items">
+                                <div class="ac-content-col__item">
+                                  <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
+                                </div>
+                                <div class="ac-content-col__item"> 
+                                  <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
+                            <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
+                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-orders__heading ac"> 
+                        <button class="ac-trigger">Заказ №123456-12345<span>от 24.03.2021</span></button>
+                        <div class="ac-panel">
+                          <div class="ac-content-row">
+                            <div class="ac-content-col">
+                              <div class="ac-content-col__items">
+                                <div class="ac-content-col__item">
+                                  <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
+                                </div>
+                                <div class="ac-content-col__item"> 
+                                  <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
+                            <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
+                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
                           </div>
                         </div>
                       </div>

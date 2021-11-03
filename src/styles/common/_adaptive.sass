@@ -35,8 +35,32 @@
             flex: 0 0 485px
 
     // contacts page
-    .contacts
-        margin: 15px 0 0 0
+    // .contacts
+    //     margin: 15px 0 0 0
+
+    // my-data page 
+    .account
+        &__tabs
+            column-gap: 20px
+        &__nav
+            flex: 0 0 255px
+        &__tabs-items
+            flex: 1 1 auto
+        &__tabs-block#block01
+            margin: 0
+    .account-orders
+        .ac-content-row,
+        .ac-content-col__items
+            gap: 10px
+
+        .ac-content-row
+            justify-content: flex-start
+            flex-wrap: wrap
+        .ac-content-col:first-child
+            flex: 0 0 300px
+        .ac-content-col__item:last-child
+            flex: 0 0 180px
+
 
 @media screen and (max-width: 1024px)
     .section
@@ -219,6 +243,30 @@
             flex-wrap: wrap
             gap: 30px
 
+    // my-data page 
+    .account
+        margin: 15px 0 0 0
+        &__tabs
+            flex-direction: column
+            align-items: center
+        &__nav
+            width: 100%
+            max-width: 570px
+            display: flex
+            gap: 50px
+            justify-content: space-between
+            padding: 0 10px
+        &__bonus-box
+            margin: 0
+            flex: 0 0 50%
+            display: flex
+            justify-content: flex-end
+        &__tabs-items
+            flex: 1 1 auto
+        &__tabs-block#block01._active
+            display: flex
+            justify-content: center    
+
 @media screen and (max-width: 768px)
     .sub-menu
         &__list
@@ -267,6 +315,28 @@
     // contacts page
     .contacts
         margin: 15px 0 0 0
+
+    // my-data page
+
+    .account
+        margin: 15px 0 0 0
+        .ac-trigger
+            span
+                margin: 0 15px
+    .account-orders 
+        .ac-content-col:last-child
+            text-align: left
+        .ac-trigger
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+            flex-wrap: wrap
+            padding: 30px 85px 10px 0
+            gap: 10px
+            span
+                margin: 0
+            &::after
+                transform: translate(0, 0)
 
     //footer
     .footer-top
@@ -375,7 +445,7 @@
             row-gap: 20px
         &__nav
             overflow: auto
-            padding: 5px 0 
+            padding: 5px 0
         &__tabs-navbar
             flex-direction: row
             width: fit-content
@@ -415,6 +485,30 @@
                 display: none
         &__tabs-switch._active
             box-shadow: 0 0 2px 2px #3d3d3d
+
+    // my-data page 
+    .account
+        &__tabs
+            position: relative
+        &__nav
+            flex-direction: column-reverse
+            margin-top: 180px
+        &__bonus-box
+            justify-content: center
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+        &__tabs-switch
+            &:hover
+                transform: none
+        &__tabs-block#block03
+            margin: 0
+    .account-orders
+        .ac-trigger
+            font-size: 14px
+            &::after
+                font-size: 14px
 
     .footer-top
         .slider1

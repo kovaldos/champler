@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Футболка чёрная с логотипом",
         "Помощь",
         "Контакты",
-        "Мои данные",
+        "Аккаунт",
       ];
 
       headers.forEach((header) => {
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const tabItems = document.querySelectorAll(".tabs__link");
 const tabBlocks = document.querySelectorAll(".tabs__item");
 
-// tabItems.forEach(onTabClick);
+tabItems.forEach(onTabClick);
 
 function onTabClick(item) {
   item.addEventListener("click", (event) => {
@@ -251,15 +251,15 @@ if (iconMenu) {
 
 // Mask for subscribe Start
 
-// const emailMask = IMask(
-// 	document.querySelector('.subscribe__input'),
-// 	{
-// 		mask: [
-// 			{
-// 				mask: /^\S*@?\S*$/
-// 			}
-// 		]
-// 	});
+const inputTel = document.getElementById('tel');
+
+if (inputTel) {
+  var phoneMask = IMask(inputTel, {
+      mask: '+{7} (000) 000-00-00'
+    });
+}
+
+
 
 // Mask for subscribe End
 
@@ -462,8 +462,26 @@ if (myMap) {
 
 // y-maps End
 
-
 // Accordion Start
-new Accordion('.accordion-container');
+const accordion = document.querySelector(".accordion-container");
+if (accordion) {
+  new Accordion(accordion);
+}
 
 // Accordion End
+
+// Вставляем пробелы между разрядами цифр в ценах Старт
+
+const setSpaces = () => {
+  const numbers = document.querySelectorAll(".number-spaced");
+  if (numbers.length) {
+    numbers.forEach((number) => {
+      const spaced = number.innerHTML.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
+      number.innerHTML = spaced;
+    });
+  }
+};
+
+setSpaces();
+
+// Вставляем пробелы между разрядами цифр в ценах Конец
