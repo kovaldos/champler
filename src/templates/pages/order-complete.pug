@@ -1,0 +1,13 @@
+extends ../template
+
+block variables
+    - var title = 'Оформление заказа'
+
+block content
+    .wrapper
+        .container
+            section.section.order-complete
+                .order-complete__content     
+                    h1.section__title Заказ оформлен
+                    p.order-complete__text Наш менеджер свяжется с вами в ближайшее время
+                    a(href="home-page.html").order-complete__link вернуться на главную

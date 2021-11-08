@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "Контакты",
         "Аккаунт",
         "Избранное",
-        "Результат поиска"
+        "Результат поиска",
+		"Оформление заказа"
       ];
 
       headers.forEach((header) => {
@@ -99,7 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
           if (
             document.title == pageTitles[8] ||
             document.title == pageTitles[9] ||
-            document.title == pageTitles[10]
+            document.title == pageTitles[10] ||
+			document.title == pageTitles[13]
           ) {
             document.querySelector(".breadcrumbs__link._current").textContent =
               document.title;
@@ -107,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
               .querySelector(".header-bottom__banner")
               .classList.add("_hidden");
           }
+		  
         }
       });
 
@@ -129,7 +132,8 @@ document.addEventListener("DOMContentLoaded", () => {
             document.title == pageTitles[9] ||
             document.title == pageTitles[10] ||
             document.title == pageTitles[11] ||
-            document.title == pageTitles[12]
+            document.title == pageTitles[12] ||
+			document.title == pageTitles[13]
           ) {
             document.querySelector(".footer-top").classList.add("_hidden");
             document
@@ -262,6 +266,22 @@ const inputTel = document.getElementById("tel");
 
 if (inputTel) {
   var phoneMask = IMask(inputTel, {
+    mask: "+{7} (000) 000-00-00",
+  });
+}
+
+const signInInput = document.getElementById("sign-in-input");
+
+if (signInInput) {
+  var phoneMask = IMask(signInInput, {
+    mask: "+{7} (000) 000-00-00",
+  });
+}
+
+const signUpInput = document.getElementById("sign-up-input");
+
+if (signUpInput) {
+  var phoneMask = IMask(signUpInput, {
     mask: "+{7} (000) 000-00-00",
   });
 }
