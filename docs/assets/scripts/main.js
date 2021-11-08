@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "Аккаунт",
         "Избранное",
         "Результат поиска",
-		"Оформление заказа"
+		"Оформление заказа",
+		"Страница не найдена"
       ];
 
       headers.forEach((header) => {
@@ -101,7 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
             document.title == pageTitles[8] ||
             document.title == pageTitles[9] ||
             document.title == pageTitles[10] ||
-			document.title == pageTitles[13]
+			document.title == pageTitles[13] ||
+			document.title == pageTitles[14]
           ) {
             document.querySelector(".breadcrumbs__link._current").textContent =
               document.title;
@@ -133,7 +135,8 @@ document.addEventListener("DOMContentLoaded", () => {
             document.title == pageTitles[10] ||
             document.title == pageTitles[11] ||
             document.title == pageTitles[12] ||
-			document.title == pageTitles[13]
+			document.title == pageTitles[13] ||
+			document.title == pageTitles[14]
           ) {
             document.querySelector(".footer-top").classList.add("_hidden");
             document
