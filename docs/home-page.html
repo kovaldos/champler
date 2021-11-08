@@ -15,7 +15,7 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=aaf0ec15-8970-4357-b2ef-1c76ab7adb11&amp;lang=ru_RU"></script>
   </head>
   <body>
-    <header class="header-top">
+    <header class="header-top lock-padding">
       <div class="container header-top__container"> 
         <div class="header-top__menu menu">
           <div class="header-top__menu-icon menu__icon"><span> </span></div>
@@ -31,17 +31,17 @@
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="help.html">Помощь</a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="my-data.html">Аккаунт</a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="cart.html">Корзина</a></li>
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="search-result.html">Поиск</a></li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link modal__link" href="#modal01">Поиск</a></li>
             </ul>
           </nav>
         </div>
-        <div class="header-top__logo-box"> <a class="header-top__logo-link" href="home-page.html">
+        <div class="header-top__logo-box lock-padding"><a class="header-top__logo-link" href="home-page.html">
             <svg class="header-top__logo-img" width="150" height="46"> 
               <use xlink:href="./assets/images/sprite.svg#logo-white" alt="Champler logo"></use>
             </svg></a></div>
       </div>
     </header>
-    <header class="header-bottom">
+    <header class="header-bottom lock-padding">
       <section class="header-bottom__banner"> 
         <div class="header-bottom__img-box"><img class="header-bottom__img header-bottom__img_for-men" src="assets/images/header-bottom-bg-img.jpg" alt="Фото мужчины"><img class="header-bottom__img header-bottom__img_collections _hidden" src="assets/images/header-bottom-bg-img-2.jpg" alt="Фото мужчины с канатом"><img class="header-bottom__img header-bottom__img_kinds-of-sports _hidden" src="assets/images/header-bottom-bg-img-3.jpg" alt="Фото мужчины"></div>
         <div class="header-bottom__heading"> 
@@ -788,11 +788,73 @@
         </div>
       </div>
     </footer>
+    <div class="modal" id="modal01">
+      <div class="modal__body">
+        <div class="modal__content modal__search">
+          <button class="modal__close close-modal" href="#">
+            <svg width="24" height="24">
+              <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+            </svg>
+          </button>
+          <form class="modal__search-form" action="#">
+            <input type="search" placeholder="Что вы ищете?"><a class="modal__search-button" href="#">
+              <svg width="21" height="21">
+                <use xlink:href="./assets/images/sprite.svg#search-icon"></use>
+              </svg></a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal__sign-in" id="modal02">
+      <div class="modal__body modal__sign-in-body">
+        <div class="modal__content modal__sign-in-content">
+          <button class="modal__close close-modal" href="#">
+            <svg width="24" height="24">
+              <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+            </svg>
+          </button>
+          <p class="modal__title modal__sign-in-title">Вход</p>
+          <form class="modal__form modal__sign-in-form" action="#">
+            <input id="sign-in-input" type="tel" placeholder="Телефон" required>
+            <input type="password" placeholder="Пароль" required>
+            <div class="modal__btn-block modal__sign-in-btn-block">
+              <button class="modal__sign-in-btn-in" type="submit">Войти</button><a class="modal__link modal__sign-in-btn-up" href="#modal03">зарегистрироваться</a>
+            </div>
+            <div class="modal__sign-in-if-forget">
+              <p class="if-forget__text">Забыли пароль? <a class="if-forget__link" href="#"> Восстановить пароль</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-done" id="modal03">
+      <div class="modal__body modal__sign-up-body">
+        <div class="modal__content modal__sign-up-content">
+          <button class="modal__close close-modal" href="#">
+            <svg width="24" height="24">
+              <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+            </svg>
+          </button>
+          <p class="modal__title modal__sign-up-title">Регистрация</p>
+          <form class="modal__form" action="#">
+            <input type="text" name="sign-up" placeholder="Имя" required>
+            <input type="text" name="sign-up" placeholder="Фамилия">
+            <input id="sign-up-input" type="tel" placeholder="Телефон" required>
+            <input type="password" placeholder="Пароль" required>
+            <input type="password" placeholder="Повторите пароль" required>
+            <div class="modal__btn-block modal__sign-in-btn-block modal__sign-up-btn-block"><a class="modal__link modal__sign-in-btn-in modal__sign-up-btn-in" href="#modal02">Войти</a>
+              <button class="modal__sign-in-btn-up modal__sign-up-btn-up" type="submit">зарегистрироваться</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="assets/scripts/imask.min.js"></script>
     <script src="assets/scripts/accordion.min.js"></script>
     <script src="assets/scripts/swiper-bundle.min.js"></script>
     <script src="assets/scripts/medium-zoom.min.js"></script>
     <script src="assets/scripts/focus-visible.min.js"></script>
+    <script src="assets/scripts/modal.js"></script>
     <script src="assets/scripts/main.js"></script>
   </body>
 </html>
