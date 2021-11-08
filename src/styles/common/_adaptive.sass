@@ -19,6 +19,48 @@
         &__items
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
 
+    .good-card
+        margin: 15px 0 0 0
+        &__content
+            column-gap: 20px
+        &__images
+            padding: 0
+
+    .help
+        &__tabs
+            column-gap: 70px
+        &__nav
+            margin: 0
+        &__tabs-items
+            flex: 0 0 485px
+
+    // contacts page
+    // .contacts
+    //     margin: 15px 0 0 0
+
+    // my-data page 
+    .account
+        &__tabs
+            column-gap: 20px
+        &__nav
+            flex: 0 0 255px
+        &__tabs-items
+            flex: 1 1 auto
+        &__tabs-block#block01
+            margin: 0
+    .account-orders
+        .ac-content-row,
+        .ac-content-col__items
+            gap: 10px
+
+        .ac-content-row
+            justify-content: flex-start
+            flex-wrap: wrap
+        .ac-content-col:first-child
+            flex: 0 0 300px
+        .ac-content-col__item:last-child
+            flex: 0 0 180px
+
 @media screen and (max-width: 1024px)
     .section
         margin: 70px 0 0 0
@@ -43,7 +85,7 @@
             padding: 100px 40px
             margin: 0
             transition: all 0.5s ease 0s
-            z-index: 49
+            z-index: 14
         &__body._active
             left: 0
         &__list
@@ -93,10 +135,14 @@
                 bottom: 50%
                 transform: rotate(45deg) translate(0, 50%)
 
+    header._white
+        .header-top__logo-img._white
+            color: $color-White
+
     // main
     .main-banner
         margin: 0
-    
+
     .new-collection
         &__title
             font-size: 42px
@@ -105,6 +151,60 @@
         .slider4
             width: 1280px
 
+    //subcategory page
+    .goods
+        margin: 15px 0 0 0
+
+    .page-pagination
+        &__block
+            grid-template-columns: repeat(3, 1fr)
+        &__nav
+            grid-column-start: 2
+        &__link-btn
+            grid-column-start: 3
+
+    // good-card
+    .good-card
+        margin: 15px 0 0 0
+        &__content
+            flex-direction: column
+            column-gap: 0
+        &__info
+            margin: 20px 0 0 0
+        &__images,
+        &__info
+            flex: auto
+            width: 100%
+
+    // vertical slider
+    .slider-vertical
+        .swiper-button-prev,
+        .swiper-button-next
+            display: block
+
+    .slider-vertical
+        height: auto
+        min-height: 300px
+        max-width: 578px
+        width: 100%
+
+    // help page
+    .help
+        margin: 15px 0 0 0
+        &__tabs
+            column-gap: 30px
+        &__tabs-items,
+        &__nav
+            flex: auto
+            width: 100%
+
+    // contacts page
+    .contacts
+        margin: 15px 0 0 0
+
+    // favorite page
+    .favorite
+        margin: 15px 0 0 0
 
     // footer
     .footer-top
@@ -146,17 +246,33 @@
             flex-wrap: wrap
             gap: 30px
 
-    .goods
+    // my-data page 
+    .account
         margin: 15px 0 0 0
-
-    .page-pagination
-        &__block
-            grid-template-columns: repeat(3, 1fr)
+        &__tabs
+            flex-direction: column
+            align-items: center
         &__nav
-            grid-column-start: 2
-        &__link-btn
-            grid-column-start: 3
+            width: 100%
+            max-width: 570px
+            display: flex
+            gap: 50px
+            justify-content: space-between
+            padding: 0 10px
+        &__bonus-box
+            margin: 0
+            flex: 0 0 50%
+            display: flex
+            justify-content: flex-end
+        &__tabs-items
+            flex: 1 1 auto
+        &__tabs-block#block01._active
+            display: flex
+            justify-content: center
 
+    // search result page
+    .search
+        margin: 15px 0 0 0
 
 @media screen and (max-width: 768px)
     .sub-menu
@@ -181,6 +297,62 @@
                 height: 35px
                 left: 48.5%
 
+    //subcategory page  
+    .page-pagination
+        &__block
+            display: flex
+            flex-direction: column
+        &__nav
+            margin: 0 0 20px 0
+
+    // good-card page
+    .good-card
+        margin: 15px 0 0 0
+        &__content
+            margin: 20px 0 0 0
+
+    //help page
+    .help
+        margin: 15px 0 0 0
+        &__tabs-switch
+            font-size: $text-font-size-fablet
+        &__tabs-text
+            font-size: $text-font-size-mobile
+
+    // contacts page
+    .contacts
+        margin: 15px 0 0 0
+
+    // my-data page
+    .account
+        margin: 15px 0 0 0
+        .ac-trigger
+            span
+                margin: 0 15px
+    .account-orders
+        .ac-content-col:last-child
+            text-align: left
+        .ac-trigger
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+            flex-wrap: wrap
+            padding: 30px 85px 10px 0
+            gap: 10px
+            span
+                margin: 0
+            &::after
+                transform: translate(0, 0)
+
+    // favorite page
+    .favorite
+        margin: 15px 0 0 0
+
+    // search result page
+    .search
+        margin: 15px 0 0 0
+
+    //footer
     .footer-top
         .subscribe
             margin: 35px 0
@@ -194,13 +366,6 @@
                 margin: 10px 0 0 0
             &__link-btn
                 margin: 15px 0 0 0
-
-    .page-pagination
-        &__block
-            display: flex
-            flex-direction: column
-        &__nav
-            margin: 0 0 20px 0
 
 @media screen and (max-width: 640px)
     .container
@@ -245,24 +410,7 @@
             object-fit: none
             margin: 0 0 0 -45%
 
-    .footer-top
-        .slider1
-            &__text
-                font-size: $text-font-size-fablet
-        .our-insta
-            &__content
-                flex-direction: column
-            &__block
-                flex: auto
-                width: 100%
-                margin-bottom: 15px
-            &__link-btn
-                max-width: 100%
-
-    .footer-bottom
-        &__row
-            flex-direction: column
-
+    // subcategory page
     .goods
         &__content
             flex-direction: column
@@ -282,6 +430,117 @@
             max-width: 100%
             max-height: unset
 
+    //good-card page
+    .good-card
+        &__title
+            font-size: 24px
+        &__tabs
+            margin: 20px 0 0 0
+        &__nav
+            overflow-x: auto
+            height: 65px
+            padding: 5px 0 0 0
+        &__tabs-navbar
+            margin: 0 0 20px 0
+            padding: 6px 0 6px 5px
+            width: max-content
+        &__tabs-switch
+            font-size: 16px
+            min-width: max-content
+            margin: -6px 10px -6px 0
+
+    .slider-vertical
+        max-width: 610px
+
+    //help page
+    .help
+        &__tabs
+            flex-direction: column
+            row-gap: 20px
+        &__nav
+            overflow: auto
+            padding: 5px 0
+        &__tabs-navbar
+            flex-direction: row
+            width: fit-content
+            align-items: center
+            margin: 0
+            padding: 5px 0
+        &__tabs-switch
+            width: fit-content
+            margin: 0 10px
+            padding: 5px
+            white-space: nowrap
+            border-radius: 5px
+        &__tabs-switch._active
+            transform: translate(0, 0)
+            box-shadow: 0 0 2px 2px #3d3d3d
+            &::before
+                display: none
+
+    .size-table
+        &__nav
+            width: 100%
+            overflow: auto
+            margin: 0 0 15px 0
+            padding: 0 0 15px 0
+        &__tabs-navbar
+            width: fit-content
+            padding: 0
+            align-items: center
+            height: 40px
+            margin: 0
+        &__tabs-switch
+            align-items: center
+            white-space: nowrap
+            margin: 0 10px
+            padding: 5px
+            &::after
+                display: none
+        &__tabs-switch._active
+            box-shadow: 0 0 2px 2px #3d3d3d
+
+    // my-data page 
+    .account
+        &__tabs
+            position: relative
+        &__nav
+            flex-direction: column-reverse
+            margin-top: 180px
+        &__bonus-box
+            justify-content: center
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+        &__tabs-switch
+            &:hover
+                transform: none
+        &__tabs-block#block03
+            margin: 0
+    .account-orders
+        .ac-trigger
+            font-size: 14px
+            &::after
+                font-size: 14px
+
+    .footer-top
+        .slider1
+            &__text
+                font-size: $text-font-size-fablet
+        .our-insta
+            &__content
+                flex-direction: column
+            &__block
+                flex: auto
+                width: 100%
+                margin-bottom: 15px
+            &__link-btn
+                max-width: 100%
+
+    .footer-bottom
+        &__row
+            flex-direction: column
 
 @media screen and (max-width: 425px)
     .footer-top
