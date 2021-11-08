@@ -320,6 +320,26 @@ const swiper = new Swiper(".slider1", {
   },
 });
 
+  // slider inside slider1 Start
+  const swiperInner = new Swiper(".slider-inner", {
+    // Optional parameters
+    grabCursor: true,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    nested: true,
+    // If we need pagination
+    pagination: {
+      el: ".slider-inner__pagination",
+      type: "bullets"
+    },
+  });
+
+
+
+  // slider inside slider1 End
+
+
+
 // slider1 End
 
 // slider2 Start
@@ -393,11 +413,9 @@ const swiper4 = new Swiper(".slider4", {
   loop: true,
   slidesPerView: 4,
   slidesPerGroup: 1,
-  autoplay: false,
-  initialSlide: 0,
   spaceBetween: 10,
   navigation: {
-    nextEl: ".swiper-button-next",
+    nextEl: ".slider4__btn-next"
   },
 });
 
