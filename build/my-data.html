@@ -101,15 +101,17 @@
                 <div class="help__tabs-items account__tabs-items tabs__items">
                   <div class="help__tabs-block account__tabs-block tabs__item" id="block01">
                     <form class="account__form">
-                      <input class="account__form-input" type="text" placeholder="Фамилия">
-                      <input class="account__form-input" type="text" placeholder="Имя" required>
+                      <input class="account__form-input" type="text" placeholder="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{1,20}" title="Фамилия может содержать только русские или латинские буквы, быть не короче 1 и не длиннее 30 символов">
+                      <input class="account__form-input" type="text" placeholder="Имя" required pattern="[A-Za-zА-Яа-яЁё]{1,20}" title="Имя может содержать только русские или латинские буквы, быть не короче 1 и не длиннее 20 символов">
                       <input class="account__form-input" type="text" placeholder="Отчество">
-                      <input class="account__form-input" id="email" type="email" placeholder="Ваш e-mail" required>
+                      <input class="account__form-input" id="email" type="email" placeholder="Ваш e-mail" required pattern="/^([A-Za-z0-9_-.])+@([A-Za-z0-9_-.])+.([A-Za-z]{2,4})$/">
                       <input class="account__form-input" id="tel" type="tel" placeholder="Телефон" required>
                       <label class="account__form-label">Изменить пароль
-                        <input class="account__form-input" type="password" placeholder="Введите пароль" required>
+                        <input class="account__form-input" id="password" type="password" placeholder="Введите пароль" pattern="(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать хотя бы одну цифру и одну заглавную букву. Длина не менее 8 символов" required>
                       </label>
-                      <input class="account__form-input" type="password" placeholder="Повторите пароль" required>
+                      <label class="account__form-label_pass-check">
+                        <input class="account__form-input" id="passwordCheck" type="password" placeholder="Повторите пароль" pattern="(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать хотя бы одну цифру и одну заглавную букву. Длина не менее 8 символов" required><small class="pass-error _hidden">Пароли не совпадают</small>
+                      </label>
                       <label class="account__form-label">Адрес доставки по умолчанию
                         <input class="account__form-input" type="text" placeholder="г. Санкт-петербург, Заневский пр-т, д. 38, кв. 150">
                       </label><a class="account__form-link" href="#">добавить адрес</a>
@@ -196,7 +198,19 @@
                             </div>
                             <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
                             <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
+                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381;</span></div>
+                          </div>
+                          <div class="ac-content-row ac-content-row__total">
+                            <div class="ac-content-col ac-content-col__total"> 
+                              <div class="total__order">Заказ</div>
+                              <div class="total__delivery">Доставка</div>
+                              <div class="total__ammount">Итого</div>
+                            </div>
+                            <div class="ac-content-col ac-content-col__total"> 
+                              <div class="total__order-value"> <span class="number-spaced">8990</span><span>&nbsp;&#8381;</span></div>
+                              <div class="total__delivery-value"> <span class="number-spaced">400</span><span>&nbsp;&#8381;</span></div>
+                              <div class="total__ammount-value"> <span class="number-spaced">15390</span><span>&nbsp;&#8381;</span></div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -216,7 +230,19 @@
                             </div>
                             <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
                             <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
+                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381;</span></div>
+                          </div>
+                          <div class="ac-content-row ac-content-row__total">
+                            <div class="ac-content-col ac-content-col__total"> 
+                              <div class="total__order">Заказ</div>
+                              <div class="total__delivery">Доставка</div>
+                              <div class="total__ammount">Итого</div>
+                            </div>
+                            <div class="ac-content-col ac-content-col__total"> 
+                              <div class="total__order-value"> <span class="number-spaced">8990</span><span>&nbsp;&#8381;</span></div>
+                              <div class="total__delivery-value"> <span class="number-spaced">400</span><span>&nbsp;&#8381;</span></div>
+                              <div class="total__ammount-value"> <span class="number-spaced">15390</span><span>&nbsp;&#8381;</span></div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -236,7 +262,19 @@
                             </div>
                             <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
                             <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
+                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381;</span></div>
+                          </div>
+                          <div class="ac-content-row ac-content-row__total">
+                            <div class="ac-content-col ac-content-col__total"> 
+                              <div class="total__order">Заказ</div>
+                              <div class="total__delivery">Доставка</div>
+                              <div class="total__ammount">Итого</div>
+                            </div>
+                            <div class="ac-content-col ac-content-col__total"> 
+                              <div class="total__order-value"> <span class="number-spaced">8990</span><span>&nbsp;&#8381;</span></div>
+                              <div class="total__delivery-value"> <span class="number-spaced">400</span><span>&nbsp;&#8381;</span></div>
+                              <div class="total__ammount-value"> <span class="number-spaced">15390</span><span>&nbsp;&#8381;</span></div>
+                            </div>
                           </div>
                         </div>
                       </div>

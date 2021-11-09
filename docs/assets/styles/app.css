@@ -43,7 +43,8 @@ a:active {
   outline: none; }
 
 a:not([class]) {
-  text-decoration-skip-ink: auto; }
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto; }
 
 nav,
 footer,
@@ -103,7 +104,8 @@ ol:not[class] {
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
-  text-decoration-skip-ink: auto; }
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto; }
 
 /* Упрощаем работу с изображениями */
 img {
@@ -608,6 +610,9 @@ header._white {
     display: inline-block; }
 
 .fav-btn {
+  width: 100%;
+  height: 57px;
+  max-width: 57px;
   top: 0;
   left: 0;
   padding: 20px;
@@ -787,8 +792,10 @@ header._white {
   width: 100%; }
   .collection__heading {
     margin-bottom: 41px; }
-  .collection .slider4 {
+  .collection__slider {
     width: 1870px; }
+  .collection .slider4 {
+    width: 100%; }
     .collection .slider4 .swiper-button-next {
       right: 0;
       left: 74%;
@@ -821,18 +828,18 @@ header._white {
     .collection .slider4__img-box {
       overflow: hidden; }
       .collection .slider4__img-box img {
-        -webkit-transform: scale(100%);
-            -ms-transform: scale(100%);
-                transform: scale(100%);
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
         -webkit-transition: -webkit-transform 0.3s ease 0s;
         transition: -webkit-transform 0.3s ease 0s;
         -o-transition: transform 0.3s ease 0s;
         transition: transform 0.3s ease 0s;
         transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s; }
     .collection .slider4__item:hover > .slider4__img-box img {
-      -webkit-transform: scale(110%);
-          -ms-transform: scale(110%);
-              transform: scale(110%); }
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1); }
 
 .shoes {
   margin: 100px 0 0 0; }
@@ -1212,7 +1219,8 @@ header._white {
   .good-card__link-to-size-table {
     font-size: 16px;
     line-height: 18px;
-    text-decoration-line: underline;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
     color: #333333;
     padding: 10px;
     margin: -10px; }
@@ -2129,7 +2137,8 @@ footer._hidden {
     .footer-top .subscribe__agreement-text {
       font-size: 12px;
       line-height: 14px;
-      text-decoration-line: underline;
+      -webkit-text-decoration-line: underline;
+              text-decoration-line: underline;
       margin: 10px 5px 0 0;
       max-width: 343px;
       width: 100%; }
@@ -2776,7 +2785,7 @@ footer._hidden {
     margin: 0; }
   .new-collection__title {
     font-size: 42px; }
-  .collection .slider4 {
+  .collection__slider {
     width: 1280px; }
   .goods {
     margin: 15px 0 0 0; }
@@ -2931,11 +2940,11 @@ footer._hidden {
     margin: 0; }
   .swiper-container-horizontal > .swiper-pagination-fraction {
     max-width: 75%; }
-  .collection .slider4 {
+  .collection__slider {
     width: 1100px; }
-    .collection .slider4__item-link {
+    .collection__slider__item-link {
       font-size: 20px; }
-    .collection .slider4 .swiper-button-next {
+    .collection__slider .swiper-button-next {
       width: 35px;
       height: 35px;
       left: 48.5%; }

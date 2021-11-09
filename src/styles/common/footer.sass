@@ -4,7 +4,7 @@ footer._hidden
     display: none
 
 .footer-top
-    overflow-x: hidden
+    overflow: hidden
     .subscribe
         width: 100%
         min-height: 250px
@@ -21,7 +21,7 @@ footer._hidden
             display: flex
             align-items: center
             justify-content: flex-start
-            gap: 20px
+            // gap: 20px
             color: $color-White
             max-width: 1240px
             width: 100%
@@ -39,6 +39,7 @@ footer._hidden
             max-width: 400px
             margin: 10px 0 0 0
         &__block
+            margin-left: 20px
             flex: 1 1 auto
         &__input-block
             display: flex
@@ -91,9 +92,10 @@ footer._hidden
             display: flex
             justify-content: flex-start
             width: 100%
-            gap: 10px
+            // gap: 10px
         &__block
             flex: 0 0 470px
+            margin-right: 10px
         &__title
             font-weight: bold
             font-size: 36px
@@ -166,9 +168,12 @@ footer._hidden
     padding: 40px 0 38px 0
     &__row
         display: flex
-        gap: 10px
+        // gap: 10px
     &__col
         flex: 1 1 auto
+        margin-right: 10px
+    .col-5
+        margin-right: 0
     &__logo-box
         margin-bottom: 30px
     &__logo-link

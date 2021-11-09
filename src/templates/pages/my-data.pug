@@ -27,14 +27,16 @@ block content
 							.help__tabs-items.account__tabs-items.tabs__items
 								.help__tabs-block.account__tabs-block.tabs__item#block01
 									form.account__form
-										input.account__form-input(type="text" placeholder="Фамилия")
-										input.account__form-input(type="text" placeholder="Имя" required)
+										input.account__form-input(type="text" placeholder="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{1,20}" title="Фамилия может содержать только русские или латинские буквы, быть не короче 1 и не длиннее 30 символов")
+										input.account__form-input(type="text" placeholder="Имя" required pattern="[A-Za-zА-Яа-яЁё]{1,20}" title="Имя может содержать только русские или латинские буквы, быть не короче 1 и не длиннее 20 символов")
 										input.account__form-input(type="text" placeholder="Отчество")
-										input.account__form-input#email(type="email" placeholder="Ваш e-mail" required)
+										input.account__form-input#email(type="email" placeholder="Ваш e-mail" required pattern="/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/")
 										input.account__form-input#tel(type="tel" placeholder="Телефон" required)
 										label.account__form-label Изменить пароль
-											input.account__form-input(type="password" placeholder="Введите пароль" required)
-										input.account__form-input(type="password" placeholder="Повторите пароль" required)
+											input.account__form-input#password(type="password" placeholder="Введите пароль" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать хотя бы одну цифру и одну заглавную букву. Длина не менее 8 символов" required)
+										label.account__form-label_pass-check
+											input.account__form-input#passwordCheck(type="password" placeholder="Повторите пароль" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать хотя бы одну цифру и одну заглавную букву. Длина не менее 8 символов" required)
+											small.pass-error._hidden Пароли не совпадают
 										label.account__form-label Адрес доставки по умолчанию
 											input.account__form-input(type="text" placeholder="г. Санкт-петербург, Заневский пр-т, д. 38, кв. 150")
 										a.account__form-link(href="#") добавить адрес
@@ -139,7 +141,22 @@ block content
 														span.account-orders__quantity-value 1
 													.ac-content-col 
 														span.account-orders__price.number-spaced 4190
-														span.account-orders__price-currency &nbsp;&#8381; 
+														span.account-orders__price-currency &nbsp;&#8381;
+												.ac-content-row.ac-content-row__total
+													.ac-content-col.ac-content-col__total 
+														.total__order Заказ
+														.total__delivery Доставка
+														.total__ammount Итого
+													.ac-content-col.ac-content-col__total  
+														.total__order-value 
+															span.number-spaced 8990
+															span &nbsp;&#8381;
+														.total__delivery-value 
+															span.number-spaced 400
+															span &nbsp;&#8381;
+														.total__ammount-value 
+															span.number-spaced 15390
+															span &nbsp;&#8381;
 										.account-orders__heading.ac 
 											button.ac-trigger Заказ №123456-12345
 												span от 24.03.2021
@@ -162,7 +179,22 @@ block content
 														span.account-orders__quantity-value 1
 													.ac-content-col 
 														span.account-orders__price.number-spaced 4190
-														span.account-orders__price-currency &nbsp;&#8381; 
+														span.account-orders__price-currency &nbsp;&#8381;
+												.ac-content-row.ac-content-row__total
+													.ac-content-col.ac-content-col__total 
+														.total__order Заказ
+														.total__delivery Доставка
+														.total__ammount Итого
+													.ac-content-col.ac-content-col__total  
+														.total__order-value 
+															span.number-spaced 8990
+															span &nbsp;&#8381;
+														.total__delivery-value 
+															span.number-spaced 400
+															span &nbsp;&#8381;
+														.total__ammount-value 
+															span.number-spaced 15390
+															span &nbsp;&#8381;
 										.account-orders__heading.ac 
 											button.ac-trigger Заказ №123456-12345
 												span от 24.03.2021
@@ -185,8 +217,22 @@ block content
 														span.account-orders__quantity-value 1
 													.ac-content-col 
 														span.account-orders__price.number-spaced 4190
-														span.account-orders__price-currency &nbsp;&#8381; 
-
+														span.account-orders__price-currency &nbsp;&#8381;
+												.ac-content-row.ac-content-row__total
+													.ac-content-col.ac-content-col__total 
+														.total__order Заказ
+														.total__delivery Доставка
+														.total__ammount Итого
+													.ac-content-col.ac-content-col__total  
+														.total__order-value 
+															span.number-spaced 8990
+															span &nbsp;&#8381;
+														.total__delivery-value 
+															span.number-spaced 400
+															span &nbsp;&#8381;
+														.total__ammount-value 
+															span.number-spaced 15390
+															span &nbsp;&#8381;
 								.help__tabs-block.account__tabs-block.tabs__item#block03
 									.account__img-box 
 										svg.account__cart-img(width="108" height="108")

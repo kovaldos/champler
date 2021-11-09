@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "Контакты",
         "Аккаунт",
         "Избранное",
-        "Результат поиска",
-		"Оформление заказа",
-		"Страница не найдена"
+        "Поиск",
+        "Оформление заказа",
+        "Страница не найдена",
       ];
 
       headers.forEach((header) => {
@@ -46,11 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
               .querySelector(".sub-menu__list_for-men")
               .classList.add("_hidden");
             document
-              .querySelector(".sub-menu__list_collections")
-              .classList.remove("_hidden");
-            document
               .querySelector(".header-bottom__img_for-men")
               .classList.add("_hidden");
+            document
+              .querySelector(".sub-menu__list_collections")
+              .classList.remove("_hidden");
             document
               .querySelector(".header-bottom__img_collections")
               .classList.remove("_hidden");
@@ -64,11 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
               .querySelector(".sub-menu__list_for-men")
               .classList.add("_hidden");
             document
-              .querySelector(".sub-menu__list_kinds-of-sports")
-              .classList.remove("_hidden");
-            document
               .querySelector(".header-bottom__img_for-men")
               .classList.add("_hidden");
+            document
+              .querySelector(".sub-menu__list_kinds-of-sports")
+              .classList.remove("_hidden");
             document
               .querySelector(".header-bottom__img_kinds-of-sports")
               .classList.remove("_hidden");
@@ -91,19 +91,25 @@ document.addEventListener("DOMContentLoaded", () => {
               breadCrumps.appendChild(breadcrumpsItem);
             }
           }
-          if (document.title == pageTitles[7] || document.title == pageTitles[12]) {
+          if (
+            document.title == pageTitles[7] ||
+            document.title == pageTitles[12]
+          ) {
             document.querySelector(".breadcrumbs__link._current").textContent =
               document.title;
             document
               .querySelector(".header-bottom__banner")
+              .classList.add("_hidden");
+            document
+              .querySelector(".header-bottom .sub-menu")
               .classList.add("_hidden");
           }
           if (
             document.title == pageTitles[8] ||
             document.title == pageTitles[9] ||
             document.title == pageTitles[10] ||
-			document.title == pageTitles[13] ||
-			document.title == pageTitles[14]
+            document.title == pageTitles[13] ||
+            document.title == pageTitles[14]
           ) {
             document.querySelector(".breadcrumbs__link._current").textContent =
               document.title;
@@ -111,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
               .querySelector(".header-bottom__banner")
               .classList.add("_hidden");
           }
-		  
         }
       });
 
@@ -124,19 +129,15 @@ document.addEventListener("DOMContentLoaded", () => {
             document
               .querySelector(".footer-top .news-promo")
               .classList.add("_hidden");
-            document
-              .querySelector(".header-bottom .sub-menu")
-              .classList.add("_hidden");
           }
           if (
-            
             document.title == pageTitles[8] ||
             document.title == pageTitles[9] ||
             document.title == pageTitles[10] ||
             document.title == pageTitles[11] ||
             document.title == pageTitles[12] ||
-			document.title == pageTitles[13] ||
-			document.title == pageTitles[14]
+            document.title == pageTitles[13] ||
+            document.title == pageTitles[14]
           ) {
             document.querySelector(".footer-top").classList.add("_hidden");
             document
@@ -291,6 +292,27 @@ if (signUpInput) {
 
 // Mask for phone number End
 
+// check password
+
+const passInput = document.getElementById("password");
+const passCheckInput = document.getElementById("passwordCheck");
+if (passInput && passCheckInput) {
+  const passError = document.querySelector('.pass-error');
+  passInput.addEventListener("change", () => {
+    passCheckInput.addEventListener("change", () => {
+      if (passCheckInput.value !== passInput.value) {
+        passInput.classList.add("not-the-same");
+        passCheckInput.classList.add("not-the-same");
+        passError.classList.remove('_hidden')
+      } else {
+        passInput.classList.remove("not-the-same");
+        passCheckInput.classList.remove("not-the-same");
+        passError.classList.add('_hidden')
+      }
+    });
+  });
+}
+
 // slider1 Start
 
 const swiper = new Swiper(".slider1", {
@@ -320,25 +342,21 @@ const swiper = new Swiper(".slider1", {
   },
 });
 
-  // slider inside slider1 Start
-  // const swiperInner = new Swiper(".slider-inner", {
-  //   // Optional parameters
-  //   grabCursor: true,
-  //   slidesPerView: 1,
-  //   slidesPerGroup: 1,
-  //   nested: true,
-  //   // If we need pagination
-  //   pagination: {
-  //     el: ".slider-inner__pagination",
-  //     type: "bullets"
-  //   },
-  // });
+// slider inside slider1 Start
+// const swiperInner = new Swiper(".slider-inner", {
+//   // Optional parameters
+//   grabCursor: true,
+//   slidesPerView: 1,
+//   slidesPerGroup: 1,
+//   nested: true,
+//   // If we need pagination
+//   pagination: {
+//     el: ".slider-inner__pagination",
+//     type: "bullets"
+//   },
+// });
 
-
-
-  // slider inside slider1 End
-
-
+// slider inside slider1 End
 
 // slider1 End
 
@@ -415,7 +433,7 @@ const swiper4 = new Swiper(".slider4", {
   invert: true,
   loopFillGroupWithBlank: true,
   navigation: {
-    nextEl: ".slider4__btn-next"
+    nextEl: ".slider4__btn-next",
   },
 });
 
@@ -492,7 +510,7 @@ const slidesQuantity = swiperFavorite.slides.length;
 
 if (slidesQuantity > 4) {
   navigationShow(swiperFavorite);
-} 
+}
 
 // favorite slider End
 

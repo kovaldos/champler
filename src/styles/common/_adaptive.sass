@@ -22,15 +22,15 @@
     .good-card
         margin: 15px 0 0 0
         &__content
-            column-gap: 20px
+            // column-gap: 20px
         &__images
             padding: 0
 
     .help
         &__tabs
-            column-gap: 70px
+            // column-gap: 70px
         &__nav
-            margin: 0
+            margin: 0 70px 0 0 
         &__tabs-items
             flex: 0 0 485px
 
@@ -41,7 +41,7 @@
     // my-data page 
     .account
         &__tabs
-            column-gap: 20px
+            // column-gap: 20px
         &__nav
             flex: 0 0 255px
         &__tabs-items
@@ -51,10 +51,10 @@
     .account-orders
         .ac-content-row,
         .ac-content-col__items
-            gap: 10px
+            // gap: 10px
 
         .ac-content-row
-            justify-content: flex-start
+
             flex-wrap: wrap
         .ac-content-col:first-child
             flex: 0 0 300px
@@ -168,7 +168,7 @@
         margin: 15px 0 0 0
         &__content
             flex-direction: column
-            column-gap: 0
+            // column-gap: 0
         &__info
             margin: 20px 0 0 0
         &__images,
@@ -192,11 +192,12 @@
     .help
         margin: 15px 0 0 0
         &__tabs
-            column-gap: 30px
+            // column-gap: 30px
         &__tabs-items,
         &__nav
             flex: auto
             width: 100%
+            margin: 0 25px 0 0
 
     // contacts page
     .contacts
@@ -217,7 +218,6 @@
             &__form
                 flex-direction: column
                 align-items: flex-start
-                gap: 0
                 padding: 15px 0
             &__block
                 flex: auto
@@ -248,7 +248,11 @@
                 font-size: $text-font-size-fablet
         &__row
             flex-wrap: wrap
-            gap: 30px
+            // gap: 30px
+        &__col
+            margin-bottom: 30px
+        .col-5
+            margin-bottom: 0
 
     // my-data page 
     .account
@@ -260,7 +264,7 @@
             width: 100%
             max-width: 570px
             display: flex
-            gap: 50px
+            // gap: 50px
             justify-content: space-between
             padding: 0 10px
         &__bonus-box
@@ -340,15 +344,17 @@
     .account-orders
         .ac-content-col:last-child
             text-align: left
+        .ac-content-col__total:last-child
+            text-align: right
         .ac-trigger
             display: flex
             justify-content: flex-start
             align-items: flex-start
             flex-wrap: wrap
             padding: 30px 85px 10px 0
-            gap: 10px
+            // gap: 10px
             span
-                margin: 0
+                margin: 0 0 0 15px
             &::after
                 transform: translate(0, 0)
 
@@ -389,6 +395,7 @@
     .section
         &__title
             font-size: $section-title-mobile
+            max-width: 220px
     .swiper-container-horizontal>.swiper-pagination-fraction
         top: 28px
         max-width: 65%
@@ -455,15 +462,15 @@
         &__nav
             overflow-x: auto
             height: 65px
-            padding: 5px 0 0 0
+            padding: 5px 0 0 5px
         &__tabs-navbar
             margin: 0 0 20px 0
-            padding: 6px 0 6px 5px
+            padding: 6px 0
             width: max-content
         &__tabs-switch
             font-size: 16px
             min-width: max-content
-            margin: -6px 10px -6px 0
+            margin: -6px 6px -6px 0
 
     .slider-vertical
         max-width: 610px
@@ -472,10 +479,11 @@
     .help
         &__tabs
             flex-direction: column
-            row-gap: 20px
+            // row-gap: 20px
         &__nav
             overflow: auto
             padding: 5px 0
+            margin-bottom: 20px
         &__tabs-navbar
             flex-direction: row
             width: fit-content
@@ -559,13 +567,19 @@
             flex-direction: column
 
 @media screen and (max-width: 425px)
+    
+    // contacts page
+    .contacts
+        &__cols
+            grid-gap: 15px
 
     .not-found
         &__content
-            gap: 30px
+            // gap: 30px
         &__title
             font-size: 27px
             line-height: 110%
+            margin-bottom: 20px
         &__text
             font-size: 22px
             line-height: 120%
@@ -590,10 +604,12 @@
         &__content
             padding: 20px 10px
         &__form
-            gap: 20px
+            // gap: 20px
         &__btn-block
             flex-wrap: wrap
-            gap: 20px
+            // gap: 20px
             button,
             a
                 max-width: 100%
+        &__sign-in-btn-in
+            margin-bottom: 20px
