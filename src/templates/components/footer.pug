@@ -7,7 +7,7 @@ footer.footer-top
                     p.subscribe__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, laboriosam?
                 .subscribe__block 
                     .subscribe__input-block
-                        input.subscribe__input(type="email" required placeholder="Ваш email")
+                        input.subscribe__input(type="email" required placeholder="Ваш email" pattern="/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/")
                         button.subscribe__btn(type="submit") подписаться
                     .subscribe__agreement
                         .subscribe__agreement-text Подписываясь на рассылку, вы соглашаетесь с условиями 

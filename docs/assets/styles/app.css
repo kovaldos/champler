@@ -2469,7 +2469,10 @@ footer._hidden {
       font-size: 16px;
       line-height: 140%;
       background-color: #3D3D3D;
-      color: #ffffff; }
+      color: #ffffff;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none; }
   .modal__search-button {
     position: absolute;
     top: 50%;

@@ -158,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Сделать нормальные Хлебные крошки
 // Сделать добавление в избранное
 
+
 // Переключение табов Start
 
 const tabItems = document.querySelectorAll(".tabs__link");
@@ -297,17 +298,17 @@ if (signUpInput) {
 const passInput = document.getElementById("password");
 const passCheckInput = document.getElementById("passwordCheck");
 if (passInput && passCheckInput) {
-  const passError = document.querySelector('.pass-error');
+  const passError = document.querySelector(".pass-error");
   passInput.addEventListener("change", () => {
     passCheckInput.addEventListener("change", () => {
       if (passCheckInput.value !== passInput.value) {
         passInput.classList.add("not-the-same");
         passCheckInput.classList.add("not-the-same");
-        passError.classList.remove('_hidden')
+        passError.classList.remove("_hidden");
       } else {
         passInput.classList.remove("not-the-same");
         passCheckInput.classList.remove("not-the-same");
-        passError.classList.add('_hidden')
+        passError.classList.add("_hidden");
       }
     });
   });
