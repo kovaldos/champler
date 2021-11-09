@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Аккаунт</title>
+    <title>Поиск</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,214 +82,93 @@
     </header>
     <div class="wrapper">
       <main class="main">
-        <section class="section account">
-          <div class="container account__container">
+        <section class="section search">
+          <div class="container search__container">
             <div class="section__heading">
-              <h1 class="section__title">Аккаунт</h1>
+              <h1 class="section__title">По запросу <span>"</span><span class="search__result-span">мужская одежда</span><span>" </span><span>найдено:</span></h1>
             </div>
-            <div class="account__content">
-              <div class="help__tabs account__tabs tabs">
-                <nav class="help__nav account__nav">
-                  <div class="help__tabs-navbar account__tabs-navbar tabs__navbar"><a class="help__tabs-switch account__tabs-switch tabs__link" href="#block01"> Мои данные</a><a class="help__tabs-switch account__tabs-switch tabs__link _active" href="#block02"> Текущие заказы</a><a class="help__tabs-switch account__tabs-switch tabs__link" href="#block03">История заказов</a></div>
-                  <div class="account__bonus-box">
-                    <div class="account__bonus-content"> 
-                      <h2 class="account__bonus-title">У вас на счету:</h2>
-                      <div class="account__bonus"><span>96</span><span>&nbsp;баллов</span></div>
-                    </div>
+            <div class="search__content">
+              <div class="section__heading slider__heading"> 
+                <h1 class="section__title">Sale до 50%</h1><a class="section__link" href="#">Смотреть все</a>
+              </div>
+              <div class="sale__slider">
+                <div class="swiper-container slider3 favorite__slider search__slider">
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev">
+                    <svg class="slider3__btn-prev" width="50" height="50">
+                      <use xlink:href="./assets/images/sprite.svg#swiper-arrow-prev" alt="Кнопка влево"></use>
+                    </svg>
                   </div>
-                </nav>
-                <div class="help__tabs-items account__tabs-items tabs__items">
-                  <div class="help__tabs-block account__tabs-block tabs__item" id="block01">
-                    <form class="account__form">
-                      <input class="account__form-input" type="text" placeholder="Фамилия" pattern="[A-Za-zА-Яа-яЁё]{1,20}" title="Фамилия может содержать только русские или латинские буквы, быть не короче 1 и не длиннее 30 символов">
-                      <input class="account__form-input" type="text" placeholder="Имя" required pattern="[A-Za-zА-Яа-яЁё]{1,20}" title="Имя может содержать только русские или латинские буквы, быть не короче 1 и не длиннее 20 символов">
-                      <input class="account__form-input" type="text" placeholder="Отчество">
-                      <input class="account__form-input" id="email" type="email" placeholder="Ваш e-mail" required pattern="/^([A-Za-z0-9_-.])+@([A-Za-z0-9_-.])+.([A-Za-z]{2,4})$/">
-                      <input class="account__form-input" id="tel" type="tel" placeholder="Телефон" required>
-                      <label class="account__form-label">Изменить пароль
-                        <input class="account__form-input" id="password" type="password" placeholder="Введите пароль" pattern="(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать хотя бы одну цифру и одну заглавную букву. Длина не менее 8 символов" required>
-                      </label>
-                      <label class="account__form-label_pass-check">
-                        <input class="account__form-input" id="passwordCheck" type="password" placeholder="Повторите пароль" pattern="(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать хотя бы одну цифру и одну заглавную букву. Длина не менее 8 символов" required><small class="pass-error _hidden">Пароли не совпадают</small>
-                      </label>
-                      <label class="account__form-label">Адрес доставки по умолчанию
-                        <input class="account__form-input" type="text" placeholder="г. Санкт-петербург, Заневский пр-т, д. 38, кв. 150">
-                      </label><a class="account__form-link" href="#">добавить адрес</a>
-                      <button class="account__form-btn" type="submit">сохранить</button>
-                    </form>
+                  <div class="swiper-button-next">
+                    <svg class="slider3__btn-next" width="50" height="50">
+                      <use xlink:href="./assets/images/sprite.svg#swiper-arrow-next" alt="Кнопка вправо"></use>
+                    </svg>
                   </div>
-                  <div class="help__tabs-block account__tabs-block tabs__item _active" id="block02">
-                    <div class="account-orders accordion-container">
-                      <div class="account-orders__heading ac"> 
-                        <button class="ac-trigger">Заказ №123456-12345<span>от 24.03.2021</span></button>
-                        <div class="ac-panel">
-                          <div class="ac-content-row">
-                            <div class="ac-content-col">
-                              <div class="ac-content-col__items">
-                                <div class="ac-content-col__item">
-                                  <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
-                                </div>
-                                <div class="ac-content-col__item"> 
-                                  <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
-                          </div>
-                          <div class="ac-content-row">
-                            <div class="ac-content-col">
-                              <div class="ac-content-col__items">
-                                <div class="ac-content-col__item">
-                                  <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
-                                </div>
-                                <div class="ac-content-col__item"> 
-                                  <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
-                          </div>
-                          <div class="ac-content-row">
-                            <div class="ac-content-col">
-                              <div class="ac-content-col__items">
-                                <div class="ac-content-col__item">
-                                  <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
-                                </div>
-                                <div class="ac-content-col__item"> 
-                                  <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381; </span></div>
-                          </div>
-                          <div class="ac-content-row ac-content-row__total">
-                            <div class="ac-content-col ac-content-col__total"> 
-                              <div class="total__order">Заказ</div>
-                              <div class="total__delivery">Доставка</div>
-                              <div class="total__ammount">Итого</div>
-                            </div>
-                            <div class="ac-content-col ac-content-col__total"> 
-                              <div class="total__order-value"> <span class="number-spaced">8990</span><span>&nbsp;&#8381;</span></div>
-                              <div class="total__delivery-value"> <span class="number-spaced">400</span><span>&nbsp;&#8381;</span></div>
-                              <div class="total__ammount-value"> <span class="number-spaced">15390</span><span>&nbsp;&#8381;</span></div>
-                            </div>
-                          </div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="slider3__item">
+                        <div class="add-to-cart__box"> <a class="add-to-cart__link" href="#">Добавить в корзину  </a></div>
+                        <div class="slider3__fav-img-box fav-btn _active">
+                          <svg class="slider3__fav-img" width="17" height="16">
+                            <use xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка"></use>
+                          </svg>
                         </div>
-                      </div>
-                      <div class="account-orders__heading ac"> 
-                        <button class="ac-trigger">Заказ №123456-12345<span>от 24.03.2021</span></button>
-                        <div class="ac-panel">
-                          <div class="ac-content-row">
-                            <div class="ac-content-col">
-                              <div class="ac-content-col__items">
-                                <div class="ac-content-col__item">
-                                  <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
-                                </div>
-                                <div class="ac-content-col__item"> 
-                                  <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381;</span></div>
-                          </div>
-                          <div class="ac-content-row ac-content-row__total">
-                            <div class="ac-content-col ac-content-col__total"> 
-                              <div class="total__order">Заказ</div>
-                              <div class="total__delivery">Доставка</div>
-                              <div class="total__ammount">Итого</div>
-                            </div>
-                            <div class="ac-content-col ac-content-col__total"> 
-                              <div class="total__order-value"> <span class="number-spaced">8990</span><span>&nbsp;&#8381;</span></div>
-                              <div class="total__delivery-value"> <span class="number-spaced">400</span><span>&nbsp;&#8381;</span></div>
-                              <div class="total__ammount-value"> <span class="number-spaced">15390</span><span>&nbsp;&#8381;</span></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="account-orders__heading ac"> 
-                        <button class="ac-trigger">Заказ №123456-12345<span>от 24.03.2021</span></button>
-                        <div class="ac-panel">
-                          <div class="ac-content-row">
-                            <div class="ac-content-col">
-                              <div class="ac-content-col__items">
-                                <div class="ac-content-col__item">
-                                  <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
-                                </div>
-                                <div class="ac-content-col__item"> 
-                                  <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381;</span></div>
-                          </div>
-                          <div class="ac-content-row ac-content-row__total">
-                            <div class="ac-content-col ac-content-col__total"> 
-                              <div class="total__order">Заказ</div>
-                              <div class="total__delivery">Доставка</div>
-                              <div class="total__ammount">Итого</div>
-                            </div>
-                            <div class="ac-content-col ac-content-col__total"> 
-                              <div class="total__order-value"> <span class="number-spaced">8990</span><span>&nbsp;&#8381;</span></div>
-                              <div class="total__delivery-value"> <span class="number-spaced">400</span><span>&nbsp;&#8381;</span></div>
-                              <div class="total__ammount-value"> <span class="number-spaced">15390</span><span>&nbsp;&#8381;</span></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="account-orders__heading ac"> 
-                        <button class="ac-trigger">Заказ №123456-12345<span>от 24.03.2021</span></button>
-                        <div class="ac-panel">
-                          <div class="ac-content-row">
-                            <div class="ac-content-col">
-                              <div class="ac-content-col__items">
-                                <div class="ac-content-col__item">
-                                  <div class="img-box"> <img class="account-orders-img" src="./assets/images/orders-img-1.jpg" alt="Фото модели в образце продукции"></div>
-                                </div>
-                                <div class="ac-content-col__item"> 
-                                  <h3 class="account-orders__name">Футболка черная с логотипом</h3><span class="account-orders__vendor-code">Артикул:&nbsp; </span><span class="account-orders__vendor-code">113263RS502</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="ac-content-col"><span class="account-orders__size">Размер&nbsp;</span><span class="account-orders__size-value">S</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__quantity">Количество&nbsp;</span><span class="account-orders__quantity-value">1</span></div>
-                            <div class="ac-content-col"> <span class="account-orders__price number-spaced">4190</span><span class="account-orders__price-currency">&nbsp;&#8381;</span></div>
-                          </div>
-                          <div class="ac-content-row ac-content-row__total">
-                            <div class="ac-content-col ac-content-col__total"> 
-                              <div class="total__order">Заказ</div>
-                              <div class="total__delivery">Доставка</div>
-                              <div class="total__ammount">Итого</div>
-                            </div>
-                            <div class="ac-content-col ac-content-col__total"> 
-                              <div class="total__order-value"> <span class="number-spaced">8990</span><span>&nbsp;&#8381;</span></div>
-                              <div class="total__delivery-value"> <span class="number-spaced">400</span><span>&nbsp;&#8381;</span></div>
-                              <div class="total__ammount-value"> <span class="number-spaced">15390</span><span>&nbsp;&#8381;</span></div>
-                            </div>
+                        <div class="slider3__img-box"><img class="slider3__img" src="assets/images/slider3-img-1.jpg" alt="Картинка в слайде"></div>
+                        <div class="slider3__text-block"> 
+                          <div class="slider3__text-box">
+                            <p class="slider3__text">Кроссовки черные на высокой подошве с молнией </p><span class="slider3__price number-spaced">3500</span><span class="slider3__currency">&nbsp; &#8381;</span>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="help__tabs-block account__tabs-block tabs__item" id="block03">
-                    <div class="account__img-box"> 
-                      <svg class="account__cart-img" width="108" height="108">
-                        <use xlink:href="./assets/images/sprite.svg#shopping-bag-1" alt="Рисунок корзины для покупок"></use>
-                      </svg>
+                    <div class="swiper-slide">
+                      <div class="slider3__item">
+                        <div class="add-to-cart__box"> <a class="add-to-cart__link" href="#">Добавить в корзину </a></div>
+                        <div class="slider3__fav-img-box fav-btn _active"> 
+                          <svg class="slider3__fav-img" width="17" height="16">
+                            <use xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка"></use>
+                          </svg>
+                        </div>
+                        <div class="slider3__img-box"><img class="slider3__img" src="assets/images/slider3-img-2.jpg" alt="Картинка в слайде"></div>
+                        <div class="slider3__text-block"> 
+                          <div class="slider3__text-box">
+                            <p class="slider3__text">Кроссовки черные на высокой подошве с молнией</p><span class="slider3__price number-spaced">3500</span><span class="slider3__currency">&nbsp; &#8381; </span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="account__orders-history-heading"> 
-                      <h2 class="account__orders-history-title">Заказов нет</h2>
-                      <h3 class="account__orders-history-sub-title">Чтобы сделать заказ добавьте вещи в корзину</h3>
-                    </div><a class="account__back-link" href="home-page.html">Вернуться на главную</a>
+                    <div class="swiper-slide">
+                      <div class="slider3__item">
+                        <div class="add-to-cart__box"> <a class="add-to-cart__link" href="#">Добавить в корзину </a></div>
+                        <div class="slider3__fav-img-box fav-btn _active">
+                          <svg class="slider3__fav-img" width="17" height="16">
+                            <use xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка"></use>
+                          </svg>
+                        </div>
+                        <div class="slider3__img-box"><img class="slider3__img" src="assets/images/slider3-img-3.jpg" alt="Картинка в слайде"></div>
+                        <div class="slider3__text-block"> 
+                          <div class="slider3__text-box">
+                            <p class="slider3__text">Кроссовки черные на высокой подошве с молнией</p><span class="slider3__price number-spaced">3500</span><span class="slider3__currency">&nbsp; &#8381;</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slider3__item">
+                        <div class="add-to-cart__box"> <a class="add-to-cart__link" href="#">Добавить в корзину </a></div>
+                        <div class="slider3__fav-img-box fav-btn _active">
+                          <svg class="slider3__fav-img" width="17" height="16">
+                            <use xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка"></use>
+                          </svg>
+                        </div>
+                        <div class="slider3__img-box"><img class="slider3__img" src="assets/images/slider3-img-4.jpg" alt="Картинка в слайде"></div>
+                        <div class="slider3__text-block"> 
+                          <div class="slider3__text-box">
+                            <p class="slider3__text">Кроссовки черные на высокой подошве с молнией</p><span class="slider3__price number-spaced">3500</span><span class="slider3__currency">&nbsp; &#8381;</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
