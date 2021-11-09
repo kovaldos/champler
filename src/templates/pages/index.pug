@@ -4,7 +4,7 @@ block variables
     - var title = 'Карта сайта'
 
 block content
-    .map
+    .map.wrapper
         .container
             .map__logo-box 
                 a.header__logo-link(href="#")
@@ -47,9 +47,21 @@ block content
                             a.map-table__link(href="cart.html" target="_blank") Корзина
                         td
                             a.map-table__link(href="order.html" target="_blank") Оформление заказа
+                        td
+                            a.map-table__link(href="order-complete.html" target="_blank") Заказ оформлен
                     tr
                         td
                             a.map-table__link(href="favorite.html" target="_blank") Избранное
                     tr
                         td
                             a.map-table__link(href="search-result.html" target="_blank") Результат поиска
+                        td
+                            a.map-table__link.modal__link(href="#modal01") Поисковая строка (modal)
+                    tr
+                        td
+                            a.map-table__link.modal__link(href="#modal02") Вход (modal)
+                        td
+                            a.map-table__link.modal__link(href="#modal03") Регистрация (modal)
+                    tr
+                        td
+                            a.map-table__link(href="not-found.html" target="_blank") 404

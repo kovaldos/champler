@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "Контакты",
         "Аккаунт",
         "Избранное",
-        "Результат поиска"
+        "Результат поиска",
+		"Оформление заказа",
+		"Страница не найдена"
       ];
 
       headers.forEach((header) => {
@@ -99,7 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
           if (
             document.title == pageTitles[8] ||
             document.title == pageTitles[9] ||
-            document.title == pageTitles[10]
+            document.title == pageTitles[10] ||
+			document.title == pageTitles[13] ||
+			document.title == pageTitles[14]
           ) {
             document.querySelector(".breadcrumbs__link._current").textContent =
               document.title;
@@ -107,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
               .querySelector(".header-bottom__banner")
               .classList.add("_hidden");
           }
+		  
         }
       });
 
@@ -129,7 +134,9 @@ document.addEventListener("DOMContentLoaded", () => {
             document.title == pageTitles[9] ||
             document.title == pageTitles[10] ||
             document.title == pageTitles[11] ||
-            document.title == pageTitles[12]
+            document.title == pageTitles[12] ||
+			document.title == pageTitles[13] ||
+			document.title == pageTitles[14]
           ) {
             document.querySelector(".footer-top").classList.add("_hidden");
             document
@@ -266,6 +273,22 @@ if (inputTel) {
   });
 }
 
+const signInInput = document.getElementById("sign-in-input");
+
+if (signInInput) {
+  var phoneMask = IMask(signInInput, {
+    mask: "+{7} (000) 000-00-00",
+  });
+}
+
+const signUpInput = document.getElementById("sign-up-input");
+
+if (signUpInput) {
+  var phoneMask = IMask(signUpInput, {
+    mask: "+{7} (000) 000-00-00",
+  });
+}
+
 // Mask for phone number End
 
 // slider1 Start
@@ -296,6 +319,26 @@ const swiper = new Swiper(".slider1", {
     },
   },
 });
+
+  // slider inside slider1 Start
+  const swiperInner = new Swiper(".slider-inner", {
+    // Optional parameters
+    grabCursor: true,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    nested: true,
+    // If we need pagination
+    pagination: {
+      el: ".slider-inner__pagination",
+      type: "bullets"
+    },
+  });
+
+
+
+  // slider inside slider1 End
+
+
 
 // slider1 End
 
@@ -370,11 +413,9 @@ const swiper4 = new Swiper(".slider4", {
   loop: true,
   slidesPerView: 4,
   slidesPerGroup: 1,
-  autoplay: false,
-  initialSlide: 0,
   spaceBetween: 10,
   navigation: {
-    nextEl: ".swiper-button-next",
+    nextEl: ".slider4__btn-next"
   },
 });
 

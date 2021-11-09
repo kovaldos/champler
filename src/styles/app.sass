@@ -14,7 +14,8 @@ body
 	display: flex
 	flex-direction: column
 
-body._lock
+body._lock,
+body._locked
 	overflow: hidden
 
 button
@@ -46,7 +47,10 @@ button
 @import ./pages/my-data
 @import ./pages/favorite
 @import ./pages/search-result
+@import ./pages/order-complete
+@import ./pages/not-found
 @import ./common/footer
+@import ./common/modal
 @import ./common/_adaptive
 
 // @media screen and (max-width: 1274px) {

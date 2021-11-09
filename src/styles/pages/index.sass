@@ -24,15 +24,47 @@
     left: auto
 .swiper-button-prev
     right: 70px
+    &::after
+        display: none
 
 .swiper-button-next
     right: 0
+    &::after
+        display: none
 
 .slider3__btn-next,
 .slider3__btn-prev
     width: 100%
     height: 100%
 
+.slider-inner
+    max-width: 100%
+    width: inherit
+    &__pagination.swiper-pagination-bullets
+        position: absolute
+        z-index: 1
+        left: 0
+        bottom: 20px
+        text-align: center
+        .swiper-pagination-bullet
+            width: 10px
+            height: 10px
+            background: #C4C4C4
+            border-radius: 10px
+            transition: all 0.3s ease 0s
+        .swiper-pagination-bullet-active
+            width: 30px
+
+.slider-inner
+    &__item
+        max-width: 100%
+        width: inherit
+        display: flex
+        justify-content: center
+        align-items: center
+    &__img
+        max-width: 100%
+        width: inherit
 .section
     width: 100%
     margin: 150px 0 0 0
@@ -125,14 +157,18 @@
 .fav-btn._active
     .slider3__fav-img
         color: $color-Black
-        
+
 .sale
     margin: 80px 0 0 0
 
 .slider3
     padding: 90px 0 0 0
+    &__img-box
+        transition: all 0.3s ease 0s
     &__item
         position: relative
+        width: inherit
+
         &:hover> .add-to-cart__box
             visibility: visible
             opacity: 1
@@ -141,7 +177,7 @@
             .slider3__img-box
                 filter: brightness(0.7)
                 z-index: 0
-                transition: all 0.3s ease 0s
+                transform: scaleX(-1)// временное решение ToDo по ховеру должна появляться фотография обратной стороны
 
     .add-to-cart
         &__box
