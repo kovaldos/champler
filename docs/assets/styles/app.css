@@ -758,7 +758,7 @@ header._white {
 .fav-btn:hover > .goods__fav-img {
   transform: scale(115%); }
 
-.fav-btn:active > .goods__fav-img {
+.fav-btn._active .goods__fav-img {
   color: #000000; }
 
 .page-pagination__block {
