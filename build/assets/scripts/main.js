@@ -321,18 +321,18 @@ const swiper = new Swiper(".slider1", {
 });
 
   // slider inside slider1 Start
-  const swiperInner = new Swiper(".slider-inner", {
-    // Optional parameters
-    grabCursor: true,
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    nested: true,
-    // If we need pagination
-    pagination: {
-      el: ".slider-inner__pagination",
-      type: "bullets"
-    },
-  });
+  // const swiperInner = new Swiper(".slider-inner", {
+  //   // Optional parameters
+  //   grabCursor: true,
+  //   slidesPerView: 1,
+  //   slidesPerGroup: 1,
+  //   nested: true,
+  //   // If we need pagination
+  //   pagination: {
+  //     el: ".slider-inner__pagination",
+  //     type: "bullets"
+  //   },
+  // });
 
 
 
@@ -408,12 +408,12 @@ const swiper3 = new Swiper(".slider3", {
 // slider4 Start
 
 const swiper4 = new Swiper(".slider4", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
   slidesPerView: 4,
   slidesPerGroup: 1,
   spaceBetween: 10,
+  loop: true,
+  invert: true,
+  loopFillGroupWithBlank: true,
   navigation: {
     nextEl: ".slider4__btn-next"
   },
