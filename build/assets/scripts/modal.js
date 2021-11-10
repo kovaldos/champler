@@ -103,4 +103,33 @@ if (modalLinks && body && lockPadding && unlock && timeout) {
             modalClose(modalActive);
         }
     });
+
 }
+
+// модалка при подписке на новости Старт
+
+const subscribeForms = document.querySelectorAll('.subscribe__form');
+
+if (subscribeForms.length) {
+    const popupSubscribe = document.getElementById('modal04');
+    subscribeForms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            popupSubscribe.classList.add('_active');
+            body.classList.add('_locked');
+            document.querySelector('.modal__subscribe-body').addEventListener('click', () => {
+                popupSubscribe.classList.remove('_active');
+                body.classList.remove('_locked');
+            })
+            e.preventDefault();
+            setTimeout(() => {
+                form.reset();
+            }, 500)
+        })
+    })
+
+}
+
+
+// модалка при подписке на новости Конец
+
+

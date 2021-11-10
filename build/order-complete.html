@@ -30,7 +30,14 @@
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="contacts.html">Контакты</a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="help.html">Помощь</a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="my-data.html">Аккаунт</a></li>
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link cart-link" href="cart.html">Корзина<span class="cart-link-span">1</span></a></li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link cart-link" href="cart.html">Корзина
+                  <div class="cart-img-block">
+                    <div class="cart-img-box"> 
+                      <svg class="cart-img" width="25" height="25"> 
+                        <use xlink:href="./assets/images/sprite.svg#shopping-bag" alt="cart icon"></use>
+                      </svg><span class="cart-img-block__span">2</span>
+                    </div>
+                  </div></a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link modal__link" href="#modal01">Поиск</a></li>
             </ul>
           </nav>
@@ -260,9 +267,9 @@
             </ul>
           </div>
           <div class="footer-bottom__col col-5"><a class="footer-bottom__link" href="#">Новости и акции</a>
-            <form class="footer-bottom__form" action="#">
+            <form class="footer-bottom__form subscribe__form" action="#">
               <div class="footer-bottom__input-block">
-                <input class="footer-bottom__input" type="email" required placeholder="Подписаться на новости">
+                <input class="footer-bottom__input" type="email" required placeholder="Подписаться на новости" pattern="/^([A-Za-z0-9_-.])+@([A-Za-z0-9_-.])+.([A-Za-z]{2,4})$/">
                 <button class="footer-bottom__btn" type="submit">
                   <svg width="10" height="10">
                     <use xlink:href="./assets/images/sprite.svg#footer-subscribe-arrow" alt="Срелка вправо"></use>
@@ -275,64 +282,103 @@
         </div>
       </div>
     </footer>
-    <div class="modal" id="modal01">
-      <div class="modal__body">
-        <div class="modal__content modal__search">
-          <button class="modal__close close-modal" href="#">
-            <svg width="24" height="24">
-              <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
-            </svg>
-          </button>
-          <form class="modal__search-form" action="#">
-            <input type="search" placeholder="Что вы ищете?"><a class="modal__search-button" href="#">
-              <svg width="21" height="21">
-                <use xlink:href="./assets/images/sprite.svg#search-icon"></use>
-              </svg></a>
-          </form>
+    <div class="modals">
+      <div class="modal" id="modal01">
+        <div class="modal__body">
+          <div class="modal__content modal__search">
+            <button class="modal__close close-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+              </svg>
+            </button>
+            <form class="modal__search-form" action="#">
+              <input type="search" placeholder="Что вы ищете?"><a class="modal__search-button" href="#">
+                <svg width="21" height="21">
+                  <use xlink:href="./assets/images/sprite.svg#search-icon"></use>
+                </svg></a>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="modal modal__sign-in" id="modal02">
-      <div class="modal__body modal__sign-in-body">
-        <div class="modal__content modal__sign-in-content">
-          <button class="modal__close close-modal" href="#">
-            <svg width="24" height="24">
-              <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
-            </svg>
-          </button>
-          <p class="modal__title modal__sign-in-title">Вход</p>
-          <form class="modal__form modal__sign-in-form" action="#">
-            <input id="sign-in-input" type="tel" placeholder="Телефон" required>
-            <input type="password" placeholder="Пароль" required>
-            <div class="modal__btn-block modal__sign-in-btn-block">
-              <button class="modal__sign-in-btn-in" type="submit">Войти</button><a class="modal__link modal__sign-in-btn-up" href="#modal03">зарегистрироваться</a>
-            </div>
-            <div class="modal__sign-in-if-forget">
-              <p class="if-forget__text">Забыли пароль? <a class="if-forget__link" href="#"> Восстановить пароль</a></p>
-            </div>
-          </form>
+      <div class="modal modal__sign-in" id="modal02">
+        <div class="modal__body modal__sign-in-body">
+          <div class="modal__content modal__sign-in-content">
+            <button class="modal__close close-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+              </svg>
+            </button>
+            <p class="modal__title modal__sign-in-title">Вход</p>
+            <form class="modal__form modal__sign-in-form" action="#">
+              <input id="sign-in-input" type="tel" placeholder="Телефон" required>
+              <input type="password" placeholder="Пароль" required>
+              <div class="modal__btn-block modal__sign-in-btn-block">
+                <button class="modal__sign-in-btn-in" type="submit">Войти</button><a class="modal__link modal__sign-in-btn-up" href="#modal03">зарегистрироваться</a>
+              </div>
+              <div class="modal__sign-in-if-forget">
+                <p class="if-forget__text">Забыли пароль? <a class="if-forget__link" href="#"> Восстановить пароль</a></p>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="modal modal-done" id="modal03">
-      <div class="modal__body modal__sign-up-body">
-        <div class="modal__content modal__sign-up-content">
-          <button class="modal__close close-modal" href="#">
-            <svg width="24" height="24">
-              <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
-            </svg>
-          </button>
-          <p class="modal__title modal__sign-up-title">Регистрация</p>
-          <form class="modal__form" action="#">
-            <input type="text" name="sign-up" placeholder="Имя" required>
-            <input type="text" name="sign-up" placeholder="Фамилия">
-            <input id="sign-up-input" type="tel" placeholder="Телефон" required>
-            <input type="password" placeholder="Пароль" required>
-            <input type="password" placeholder="Повторите пароль" required>
-            <div class="modal__btn-block modal__sign-in-btn-block modal__sign-up-btn-block"><a class="modal__link modal__sign-in-btn-in modal__sign-up-btn-in" href="#modal02">Войти</a>
-              <button class="modal__sign-in-btn-up modal__sign-up-btn-up" type="submit">зарегистрироваться</button>
+      <div class="modal modal__sign-up" id="modal03">
+        <div class="modal__body modal__sign-up-body">
+          <div class="modal__content modal__sign-up-content">
+            <button class="modal__close close-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+              </svg>
+            </button>
+            <p class="modal__title modal__sign-up-title">Регистрация</p>
+            <form class="modal__form" action="#">
+              <input type="text" name="sign-up" placeholder="Имя" required>
+              <input type="text" name="sign-up" placeholder="Фамилия">
+              <input id="sign-up-input" type="tel" placeholder="Телефон" required>
+              <input type="password" placeholder="Пароль" required>
+              <input type="password" placeholder="Повторите пароль" required>
+              <div class="modal__btn-block modal__sign-in-btn-block modal__sign-up-btn-block"><a class="modal__link modal__sign-in-btn-in modal__sign-up-btn-in" href="#modal02">Войти</a>
+                <button class="modal__sign-in-btn-up modal__sign-up-btn-up" type="submit">зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal__subscribe" id="modal04">
+        <div class="modal__body modal__subscribe-body">
+          <div class="modal__content modal__subscribe-content">
+            <button class="modal__close close-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+              </svg>
+            </button>
+            <div class="modal__subscribe-text-box">
+              <p class="modal__title">Спасибо!</p>
+              <p class="modal__subscribe-text">Вы подписались на рассылку новостей от Champler.</p>
             </div>
-          </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal__reviews" id="modal05">
+        <div class="modal__body modal__reviews-body">
+          <div class="modal__content modal__reviews-content">
+            <button class="modal__close close-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+              </svg>
+            </button>
+            <p class="modal__title modal__reviews-title">Ваш отзыв</p>
+            <form class="modal__form" action="#">
+              <input type="text" name="reviews" placeholder="Имя" required>
+              <input type="text" name="reviews" placeholder="Возраст" required>
+              <input type="text" placeholder="Населенный пункт" name="reviews" required>
+              <input type="text" placeholder="Название отзыва" name="reviews" required>
+              <textarea name="reviews" cols="30" rows="2" placeholder="текст отзыва" required></textarea>
+              <div class="modal__reviews-btn-block">
+                <button class="modal__reviews-btn" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

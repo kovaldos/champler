@@ -30,7 +30,14 @@
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="contacts.html">Контакты</a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="help.html">Помощь</a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="my-data.html">Аккаунт</a></li>
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link cart-link" href="cart.html">Корзина<span class="cart-link-span">1</span></a></li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link cart-link" href="cart.html">Корзина
+                  <div class="cart-img-block">
+                    <div class="cart-img-box"> 
+                      <svg class="cart-img" width="25" height="25"> 
+                        <use xlink:href="./assets/images/sprite.svg#shopping-bag" alt="cart icon"></use>
+                      </svg><span class="cart-img-block__span">2</span>
+                    </div>
+                  </div></a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link modal__link" href="#modal01">Поиск</a></li>
             </ul>
           </nav>
@@ -160,7 +167,7 @@
                     <button class="good-card__btn" type="submit">добавить в корзину</button>
                   </form>
                 </div>
-                <div class="good-card__size-table"> <a class="good-card__link-to-size-table" href="#">Таблица размеров</a></div>
+                <div class="good-card__size-table"> <a class="good-card__link-to-size-table" href="help.html">Таблица размеров</a></div>
                 <div class="good-card__benefits"> 
                   <div class="good-card__benefit"> 
                     <div class="good-card__benefit-img-box">
@@ -197,17 +204,82 @@
                 </div>
                 <div class="good-card__tabs tabs">
                   <nav class="good-card__nav">
-                    <div class="good-card__tabs-navbar"><a class="good-card__tabs-switch tabs__link" href="#block01"> Описание</a><a class="good-card__tabs-switch tabs__link" href="#block02"> Задать вопрос</a><a class="good-card__tabs-switch tabs__link" href="#block03"> Отзывы</a><a class="good-card__tabs-switch tabs__link" href="#block04"> Доставка</a></div>
+                    <div class="good-card__tabs-navbar"><a class="good-card__tabs-switch tabs__link" href="#block01"> Описание</a><a class="good-card__tabs-switch tabs__link" href="#block02">О модели</a><a class="good-card__tabs-switch tabs__link" href="#block03"> Отзывы</a><a class="good-card__tabs-switch tabs__link" href="#block04"> Доставка</a></div>
                   </nav>
                   <div class="good-card__tabs-block tabs__item" id="block01">  
                     <p class="good-card__tabs-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam commodi reiciendis quasi corporis quos dolorem quaerat consectetur nemo fuga, eligendi veniam sapiente quisquam</p>
                     <p class="good-card__tabs-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis labore vel error debitis commodi sint dolores quas a porro illum.</p>
                   </div>
                   <div class="good-card__tabs-block tabs__item" id="block02">
-                    <p class="good-card__tabs-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut vitae architecto error cumque exercitationem voluptatum neque magni impedit, placeat eos sit, laudantium voluptatibus enim quibusdam totam similique numquam fuga autem.</p>
+                    <div class="good-card__about-model">
+                      <div class="good-card__about-model-item"> 
+                        <p class="good-card__tabs-text">Lorem ipsum dolor</p>
+                        <p class="good-card__tabs-text">Lorem ipsum dolor</p>
+                        <p class="good-card__tabs-text">Lorem ipsum dolor</p>
+                      </div>
+                      <div class="good-card__about-model-item"> 
+                        <p class="good-card__tabs-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <p class="good-card__tabs-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <p class="good-card__tabs-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="good-card__tabs-block tabs__item" id="block03">   
-                    <p class="good-card__tabs-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At veritatis alias recusandae corrupti voluptatem quidem culpa ducimus vero modi deserunt?</p>
+                  <div class="good-card__tabs-block tabs__item" id="block03">
+                    <div class="good-card__reviews-block">
+                      <div class="good-card__reviews-slider">
+                        <div class="swiper-container reviews-slider__container">
+                          <div class="swiper-button-prev reviews-slider__button-prev">
+                            <svg class="reviews-slider__btn-prev" width="50" height="50">
+                              <use xlink:href="./assets/images/sprite.svg#swiper-arrow-prev" alt="Кнопка влево"></use>
+                            </svg>
+                          </div>
+                          <div class="swiper-button-next reviews-slider__button-next">
+                            <svg class="reviews-slider__btn-next" width="50" height="50">
+                              <use xlink:href="./assets/images/sprite.svg#swiper-arrow-next" alt="Кнопка вправо"></use>
+                            </svg>
+                          </div>
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="reviews-slider__item">
+                                <div class="good-reviews-row-item-user"><span class="user-name">Татьяна</span><span class="user-age">27 лет</span><span class="user-from">Санкт-Петербург</span></div>
+                                <div class="good-reviews-row-item-review-box">
+                                  <h3 class="good-reviews-row-item-title">Супер!</h3>
+                                  <p class="good-reviews-row-item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut libero sit ducimus totam! Labore corporis dolore aliquam aspernatur velit eaque unde officia consectetur error </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="reviews-slider__item">
+                                <div class="good-reviews-row-item-user"><span class="user-name">Анна</span><span class="user-age">27 лет</span><span class="user-from">Санкт-Петербург</span></div>
+                                <div class="good-reviews-row-item-review-box">
+                                  <h3 class="good-reviews-row-item-title">Супер!</h3>
+                                  <p class="good-reviews-row-item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut libero sit ducimus totam! Labore corporis dolore aliquam aspernatur velit eaque unde officia consectetur error natus ut ullam accusamus, deleniti minus delectus ea laborum eum. Necessitatibus, unde sunt fugit labore magni excepturi ipsa incidunt maxime ex impedit perferendis autem possimus animi. </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="reviews-slider__item">
+                                <div class="good-reviews-row-item-user"><span class="user-name">Иван</span><span class="user-age">27 лет</span><span class="user-from">Санкт-Петербург</span></div>
+                                <div class="good-reviews-row-item-review-box">
+                                  <h3 class="good-reviews-row-item-title">Супер!</h3>
+                                  <p class="good-reviews-row-item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut libero sit ducimus totam! Labore corporis dolore aliquam aspernatur velit eaque unde officia consectetur error natus ut ullam accusamus, deleniti minus delectus ea laborum eum. Necessitatibus, unde sunt fugit labore magni excepturi ipsa incidunt maxime ex impedit perferendis autem possimus animi.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="reviews-slider__item">
+                                <div class="good-reviews-row-item-user"><span class="user-name">Иван</span><span class="user-age">27 лет</span><span class="user-from">Санкт-Петербург</span></div>
+                                <div class="good-reviews-row-item-review-box">
+                                  <h3 class="good-reviews-row-item-title">Супер!</h3>
+                                  <p class="good-reviews-row-item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut libero sit ducimus totam! Labore corporis dolore aliquam aspernatur velit eaque unde officia consectetur error natus ut ullam accusamus, deleniti minus delectus ea laborum eum. Necessitatibus, unde sunt fugit labore magni excepturi ipsa incidunt maxime ex impedit perferendis autem possimus animi.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="good-card__reviews-btn-block"><a class="modal__link good-card__reviews-btn" href="#modal05">Добавить отзыв</a></div>
+                    </div>
                   </div>
                   <div class="good-card__tabs-block tabs__item" id="block04">   
                     <p class="good-card__tabs-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati illo aspernatur qui? Cumque deserunt commodi mollitia dolores placeat ducimus vel consequuntur expedita esse ex! Sequi! </p>
@@ -541,9 +613,9 @@
             </ul>
           </div>
           <div class="footer-bottom__col col-5"><a class="footer-bottom__link" href="#">Новости и акции</a>
-            <form class="footer-bottom__form" action="#">
+            <form class="footer-bottom__form subscribe__form" action="#">
               <div class="footer-bottom__input-block">
-                <input class="footer-bottom__input" type="email" required placeholder="Подписаться на новости">
+                <input class="footer-bottom__input" type="email" required placeholder="Подписаться на новости" pattern="/^([A-Za-z0-9_-.])+@([A-Za-z0-9_-.])+.([A-Za-z]{2,4})$/">
                 <button class="footer-bottom__btn" type="submit">
                   <svg width="10" height="10">
                     <use xlink:href="./assets/images/sprite.svg#footer-subscribe-arrow" alt="Срелка вправо"></use>
@@ -556,64 +628,103 @@
         </div>
       </div>
     </footer>
-    <div class="modal" id="modal01">
-      <div class="modal__body">
-        <div class="modal__content modal__search">
-          <button class="modal__close close-modal" href="#">
-            <svg width="24" height="24">
-              <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
-            </svg>
-          </button>
-          <form class="modal__search-form" action="#">
-            <input type="search" placeholder="Что вы ищете?"><a class="modal__search-button" href="#">
-              <svg width="21" height="21">
-                <use xlink:href="./assets/images/sprite.svg#search-icon"></use>
-              </svg></a>
-          </form>
+    <div class="modals">
+      <div class="modal" id="modal01">
+        <div class="modal__body">
+          <div class="modal__content modal__search">
+            <button class="modal__close close-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+              </svg>
+            </button>
+            <form class="modal__search-form" action="#">
+              <input type="search" placeholder="Что вы ищете?"><a class="modal__search-button" href="#">
+                <svg width="21" height="21">
+                  <use xlink:href="./assets/images/sprite.svg#search-icon"></use>
+                </svg></a>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="modal modal__sign-in" id="modal02">
-      <div class="modal__body modal__sign-in-body">
-        <div class="modal__content modal__sign-in-content">
-          <button class="modal__close close-modal" href="#">
-            <svg width="24" height="24">
-              <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
-            </svg>
-          </button>
-          <p class="modal__title modal__sign-in-title">Вход</p>
-          <form class="modal__form modal__sign-in-form" action="#">
-            <input id="sign-in-input" type="tel" placeholder="Телефон" required>
-            <input type="password" placeholder="Пароль" required>
-            <div class="modal__btn-block modal__sign-in-btn-block">
-              <button class="modal__sign-in-btn-in" type="submit">Войти</button><a class="modal__link modal__sign-in-btn-up" href="#modal03">зарегистрироваться</a>
-            </div>
-            <div class="modal__sign-in-if-forget">
-              <p class="if-forget__text">Забыли пароль? <a class="if-forget__link" href="#"> Восстановить пароль</a></p>
-            </div>
-          </form>
+      <div class="modal modal__sign-in" id="modal02">
+        <div class="modal__body modal__sign-in-body">
+          <div class="modal__content modal__sign-in-content">
+            <button class="modal__close close-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+              </svg>
+            </button>
+            <p class="modal__title modal__sign-in-title">Вход</p>
+            <form class="modal__form modal__sign-in-form" action="#">
+              <input id="sign-in-input" type="tel" placeholder="Телефон" required>
+              <input type="password" placeholder="Пароль" required>
+              <div class="modal__btn-block modal__sign-in-btn-block">
+                <button class="modal__sign-in-btn-in" type="submit">Войти</button><a class="modal__link modal__sign-in-btn-up" href="#modal03">зарегистрироваться</a>
+              </div>
+              <div class="modal__sign-in-if-forget">
+                <p class="if-forget__text">Забыли пароль? <a class="if-forget__link" href="#"> Восстановить пароль</a></p>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="modal modal-done" id="modal03">
-      <div class="modal__body modal__sign-up-body">
-        <div class="modal__content modal__sign-up-content">
-          <button class="modal__close close-modal" href="#">
-            <svg width="24" height="24">
-              <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
-            </svg>
-          </button>
-          <p class="modal__title modal__sign-up-title">Регистрация</p>
-          <form class="modal__form" action="#">
-            <input type="text" name="sign-up" placeholder="Имя" required>
-            <input type="text" name="sign-up" placeholder="Фамилия">
-            <input id="sign-up-input" type="tel" placeholder="Телефон" required>
-            <input type="password" placeholder="Пароль" required>
-            <input type="password" placeholder="Повторите пароль" required>
-            <div class="modal__btn-block modal__sign-in-btn-block modal__sign-up-btn-block"><a class="modal__link modal__sign-in-btn-in modal__sign-up-btn-in" href="#modal02">Войти</a>
-              <button class="modal__sign-in-btn-up modal__sign-up-btn-up" type="submit">зарегистрироваться</button>
+      <div class="modal modal__sign-up" id="modal03">
+        <div class="modal__body modal__sign-up-body">
+          <div class="modal__content modal__sign-up-content">
+            <button class="modal__close close-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+              </svg>
+            </button>
+            <p class="modal__title modal__sign-up-title">Регистрация</p>
+            <form class="modal__form" action="#">
+              <input type="text" name="sign-up" placeholder="Имя" required>
+              <input type="text" name="sign-up" placeholder="Фамилия">
+              <input id="sign-up-input" type="tel" placeholder="Телефон" required>
+              <input type="password" placeholder="Пароль" required>
+              <input type="password" placeholder="Повторите пароль" required>
+              <div class="modal__btn-block modal__sign-in-btn-block modal__sign-up-btn-block"><a class="modal__link modal__sign-in-btn-in modal__sign-up-btn-in" href="#modal02">Войти</a>
+                <button class="modal__sign-in-btn-up modal__sign-up-btn-up" type="submit">зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal__subscribe" id="modal04">
+        <div class="modal__body modal__subscribe-body">
+          <div class="modal__content modal__subscribe-content">
+            <button class="modal__close close-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+              </svg>
+            </button>
+            <div class="modal__subscribe-text-box">
+              <p class="modal__title">Спасибо!</p>
+              <p class="modal__subscribe-text">Вы подписались на рассылку новостей от Champler.</p>
             </div>
-          </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal__reviews" id="modal05">
+        <div class="modal__body modal__reviews-body">
+          <div class="modal__content modal__reviews-content">
+            <button class="modal__close close-modal" href="#">
+              <svg width="24" height="24">
+                <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+              </svg>
+            </button>
+            <p class="modal__title modal__reviews-title">Ваш отзыв</p>
+            <form class="modal__form" action="#">
+              <input type="text" name="reviews" placeholder="Имя" required>
+              <input type="text" name="reviews" placeholder="Возраст" required>
+              <input type="text" placeholder="Населенный пункт" name="reviews" required>
+              <input type="text" placeholder="Название отзыва" name="reviews" required>
+              <textarea name="reviews" cols="30" rows="2" placeholder="текст отзыва" required></textarea>
+              <div class="modal__reviews-btn-block">
+                <button class="modal__reviews-btn" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
