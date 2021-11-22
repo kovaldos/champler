@@ -63,14 +63,14 @@
                 flex-shrink: 0
                 flex-grow: 0
                 border-radius: 100%
-                background: url('/assets/images/svg/black-circle.svg')
+                background: url('../images/svg/black-circle.svg')
                 background-repeat: no-repeat
                 background-position: center center
                 background-size: 100%
 
         .span02
             &::before
-                background: url('/assets/images/svg/white-circle.svg')
+                background: url('../images/svg/white-circle.svg')
         input:not(:disabled):not(:checked)+span:hover::before
             box-shadow: 0px 0px 3px 3px $color-Gray_3
         /* стили для чекбокса, находящегося в фокусе */
@@ -167,8 +167,8 @@
         margin: -6px
         color: $color-Black
         border-radius: 5px
-        &:hover
-            box-shadow: 0 0 2px 2px $color-graphite
+        // &:hover
+        //     box-shadow: 0 0 2px 2px $color-graphite
         &::after
             content: ''
             display: block
@@ -185,11 +185,70 @@
         &::after
             visibility: visible
             opacity: 1
+    &__about-model
+        min-height: 150px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 15px
+    &__about-model-item
+        display: grid
+        grid-template-rows: repeat(auto-fit, minmax(50px, 1fr))
     &__tabs-text
         font-size: 16px
         line-height: 140%
         color: $color-Black
         padding: 0 0 5px 0
+    &__reviews-block
+        width: 100%
+    &__reviews-slider
+        width: 100%
+        max-width: 675px
+    .reviews-slider
+        &__container
+            padding: 50px 0 20px 0
+        &__button-prev,
+        &__button-next
+            width: 30px
+            height: 30px
+        &__button-prev
+            right: 45px
+        &__item
+            padding: 0 15px 0 0
+    .good-reviews-row-item-user
+        margin-bottom: 15px
+        min-height: 32px
+        display: flex
+        flex-wrap: wrap
+        span
+            padding: 10px 10px 0 0
+            white-space: nowrap
+        .user-name
+            font-weight: bold
+            font-size: 1.1em
+    .good-reviews-row-item-review-box
+        min-height: 100px
+    .good-reviews-row-item-title
+        font-size: 1.1em
+        line-height: 140%
+        min-height: 24px
+    .good-reviews-row-item-text
+        margin-top: 10px
+        line-height: 120%
+    &__reviews-btn
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        max-width: 159px
+        min-height: 50px
+        border-radius: 5px
+        background-color: #3D3D3D
+        color: #ffffff
+        font-size: 14px
+        line-height: 150%
+        text-transform: uppercase
+        margin: 20px 0
+
 .tabs
     &__item
         display: none
@@ -214,4 +273,4 @@
         z-index: 10
 
 .additional
-    margin: 0 0 0 0
+    margin: 50px 0 0 0

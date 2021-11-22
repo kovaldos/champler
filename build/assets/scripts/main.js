@@ -516,6 +516,45 @@ if (slidesQuantity > 4) {
 
 // favorite slider End
 
+// reviews slider Start
+
+const reviewsSwiper = new Swiper(".reviews-slider__container", {
+  watchOverflow: true,
+  direction: "horizontal",
+  slidesPerGroup: 1,
+  initialSlide: 0,
+  spaceBetween: 10,
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+  
+  navigation: {
+    nextEl: ".reviews-slider__button-next",
+    prevEl: ".reviews-slider__button-prev",
+  },
+  breakpoints: {
+    425: {
+      slidesPerView: 1,
+     
+    },
+    640: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+
+  },
+});
+
+const reviewsQuantity = reviewsSwiper.slides.length;
+
+if (reviewsQuantity > 4) {
+  navigationShow(reviewsSwiper);
+}
+
+// reviews slider End
+
+
+
 // favorite toggle Start
 
 const addToFav = () => {
@@ -688,3 +727,4 @@ setSpaces();
 	};
 
 	select();
+

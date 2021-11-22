@@ -138,9 +138,9 @@ footer.footer-bottom
                         a.footer-bottom__link(href="#") Контакты
             .footer-bottom__col.col-5
                 a.footer-bottom__link(href="#") Новости и акции
-                form.footer-bottom__form(action="#")
+                form.footer-bottom__form.subscribe__form(action="#")
                     .footer-bottom__input-block
-                        input.footer-bottom__input(type="email" required placeholder="Подписаться на новости")
+                        input.footer-bottom__input(type="email" required placeholder="Подписаться на новости" pattern="/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/")
                         button.footer-bottom__btn(type="submit")
                             svg(width="10" height="10")
                                 use(xlink:href="./assets/images/sprite.svg#footer-subscribe-arrow" alt="Срелка вправо")

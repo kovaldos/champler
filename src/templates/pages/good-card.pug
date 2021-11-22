@@ -72,7 +72,7 @@ block content
                                                 path(d="M8.99996 12C8.82472 12.0003 8.6549 11.9393 8.51996 11.8275L4.01996 8.07746C3.8668 7.95016 3.77048 7.76723 3.7522 7.56891C3.73391 7.37059 3.79516 7.17312 3.92246 7.01996C4.04977 6.8668 4.2327 6.77048 4.43102 6.7522C4.62934 6.73391 4.8268 6.79516 4.97996 6.92246L8.99996 10.2825L13.02 7.04246C13.0967 6.98016 13.185 6.93364 13.2797 6.90557C13.3745 6.87749 13.4738 6.86842 13.5721 6.87888C13.6704 6.88933 13.7656 6.9191 13.8523 6.96648C13.9391 7.01386 14.0156 7.07792 14.0775 7.15496C14.1461 7.23208 14.1982 7.32255 14.2303 7.4207C14.2624 7.51886 14.2738 7.62258 14.264 7.72538C14.2541 7.82818 14.2231 7.92783 14.173 8.0181C14.1228 8.10837 14.0546 8.1873 13.9725 8.24996L9.47246 11.8725C9.33365 11.9666 9.16729 12.0115 8.99996 12Z" fill="black")
                                     button.good-card__btn(type="submit") добавить в корзину
                             .good-card__size-table 
-                                a.good-card__link-to-size-table(href="#") Таблица размеров
+                                a.good-card__link-to-size-table(href="help.html") Таблица размеров
                             .good-card__benefits 
                                 .good-card__benefit 
                                     .good-card__benefit-img-box
@@ -98,16 +98,71 @@ block content
                                 nav.good-card__nav
                                     .good-card__tabs-navbar
                                         a.good-card__tabs-switch.tabs__link(href="#block01")  Описание
-                                        a.good-card__tabs-switch.tabs__link(href="#block02")  Задать вопрос
+                                        a.good-card__tabs-switch.tabs__link(href="#block02") О модели
                                         a.good-card__tabs-switch.tabs__link(href="#block03")  Отзывы
                                         a.good-card__tabs-switch.tabs__link(href="#block04")  Доставка
                                 .good-card__tabs-block.tabs__item#block01   
                                     p.good-card__tabs-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam commodi reiciendis quasi corporis quos dolorem quaerat consectetur nemo fuga, eligendi veniam sapiente quisquam
                                     p.good-card__tabs-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis labore vel error debitis commodi sint dolores quas a porro illum.
                                 .good-card__tabs-block.tabs__item#block02
-                                    p.good-card__tabs-text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut vitae architecto error cumque exercitationem voluptatum neque magni impedit, placeat eos sit, laudantium voluptatibus enim quibusdam totam similique numquam fuga autem.
-                                .good-card__tabs-block.tabs__item#block03    
-                                    p.good-card__tabs-text Lorem ipsum dolor sit amet consectetur adipisicing elit. At veritatis alias recusandae corrupti voluptatem quidem culpa ducimus vero modi deserunt?
+                                    .good-card__about-model
+                                        .good-card__about-model-item 
+                                            p.good-card__tabs-text Lorem ipsum dolor
+                                            p.good-card__tabs-text Lorem ipsum dolor
+                                            p.good-card__tabs-text Lorem ipsum dolor
+                                        .good-card__about-model-item 
+                                            p.good-card__tabs-text Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                            p.good-card__tabs-text Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                            p.good-card__tabs-text Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                .good-card__tabs-block.tabs__item#block03
+                                    .good-card__reviews-block
+                                        .good-card__reviews-slider
+                                            .swiper-container.reviews-slider__container
+                                                .swiper-button-prev.reviews-slider__button-prev
+                                                    svg.reviews-slider__btn-prev(width="50" height="50")
+                                                        use(xlink:href="./assets/images/sprite.svg#swiper-arrow-prev" alt="Кнопка влево")
+                                                .swiper-button-next.reviews-slider__button-next
+                                                    svg.reviews-slider__btn-next(width="50" height="50")
+                                                        use(xlink:href="./assets/images/sprite.svg#swiper-arrow-next" alt="Кнопка вправо")
+                                                .swiper-wrapper
+                                                    .swiper-slide
+                                                        .reviews-slider__item
+                                                            .good-reviews-row-item-user
+                                                                span.user-name Татьяна
+                                                                span.user-age 27 лет
+                                                                span.user-from Санкт-Петербург
+                                                            .good-reviews-row-item-review-box
+                                                                h3.good-reviews-row-item-title Супер!
+                                                                p.good-reviews-row-item-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut libero sit ducimus totam! Labore corporis dolore aliquam aspernatur velit eaque unde officia consectetur error 
+                                                    .swiper-slide
+                                                        .reviews-slider__item
+                                                            .good-reviews-row-item-user
+                                                                span.user-name Анна
+                                                                span.user-age 27 лет
+                                                                span.user-from Санкт-Петербург
+                                                            .good-reviews-row-item-review-box
+                                                                h3.good-reviews-row-item-title Супер!
+                                                                p.good-reviews-row-item-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut libero sit ducimus totam! Labore corporis dolore aliquam aspernatur velit eaque unde officia consectetur error natus ut ullam accusamus, deleniti minus delectus ea laborum eum. Necessitatibus, unde sunt fugit labore magni excepturi ipsa incidunt maxime ex impedit perferendis autem possimus animi. 
+                                                    .swiper-slide
+                                                        .reviews-slider__item
+                                                            .good-reviews-row-item-user
+                                                                span.user-name Иван
+                                                                span.user-age 27 лет
+                                                                span.user-from Санкт-Петербург
+                                                            .good-reviews-row-item-review-box
+                                                                h3.good-reviews-row-item-title Супер!
+                                                                p.good-reviews-row-item-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut libero sit ducimus totam! Labore corporis dolore aliquam aspernatur velit eaque unde officia consectetur error natus ut ullam accusamus, deleniti minus delectus ea laborum eum. Necessitatibus, unde sunt fugit labore magni excepturi ipsa incidunt maxime ex impedit perferendis autem possimus animi.
+                                                    .swiper-slide
+                                                        .reviews-slider__item
+                                                            .good-reviews-row-item-user
+                                                                span.user-name Иван
+                                                                span.user-age 27 лет
+                                                                span.user-from Санкт-Петербург
+                                                            .good-reviews-row-item-review-box
+                                                                h3.good-reviews-row-item-title Супер!
+                                                                p.good-reviews-row-item-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut libero sit ducimus totam! Labore corporis dolore aliquam aspernatur velit eaque unde officia consectetur error natus ut ullam accusamus, deleniti minus delectus ea laborum eum. Necessitatibus, unde sunt fugit labore magni excepturi ipsa incidunt maxime ex impedit perferendis autem possimus animi.
+                                        .good-card__reviews-btn-block
+                                            a.modal__link.good-card__reviews-btn(href="#modal05") Добавить отзыв
                                 .good-card__tabs-block.tabs__item#block04    
                                     p.good-card__tabs-text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati illo aspernatur qui? Cumque deserunt commodi mollitia dolores placeat ducimus vel consequuntur expedita esse ex! Sequi! 
 
