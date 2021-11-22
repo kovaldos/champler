@@ -154,7 +154,22 @@
     //subcategory page
     .goods
         margin: 15px 0 0 0
-
+        &__items
+            flex: 0 0 70%
+        &__filter
+            &-block
+                flex: 0 0 30%
+                padding: 0 10px 0 0
+            &-span
+                font-size: 16px
+            &-ac-heading
+                .ac-trigger
+                    font-size: 16px
+            &-range-span
+                font-size: 16px
+        &__sorting
+            .custom-select
+                font-size: 16px
     .page-pagination
         &__block
             grid-template-columns: repeat(3, 1fr)
@@ -320,6 +335,14 @@
         &__nav
             margin: 0 0 20px 0
 
+    // catalog
+    .goods
+        &__items
+            flex: 0 0 60%
+        &__filter
+            &-block
+                flex: 0 0 40%
+
     // good-card page
     .good-card
         margin: 15px 0 0 0
@@ -438,6 +461,9 @@
 
     // subcategory page
     .goods
+        &__filter
+            &-block
+                padding: 0
         &__content
             flex-direction: column
             margin: 15px 0 0 0
