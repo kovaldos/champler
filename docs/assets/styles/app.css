@@ -300,6 +300,42 @@ header._hidden {
     margin: 0 4px 0 0; }
   .header-top__menu-link:hover {
     text-decoration: underline; }
+  .header-top .cart-link {
+    position: relative; }
+  .header-top .cart-link-span {
+    position: absolute;
+    top: -5px;
+    left: auto;
+    right: 0px;
+    width: 25px;
+    height: 25px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #3D3D3D;
+    font-size: 14px;
+    line-height: 110%;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: visibility 0.3s ease 0s;
+    -o-transition: visibility 0.3s ease 0s;
+    transition: visibility 0.3s ease 0s; }
+  .header-top .cart-link-span._hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
   .header-top__logo-box {
     position: absolute;
     top: 20px;
@@ -590,7 +626,7 @@ header._white {
     right: 0;
     bottom: 0; }
     .main-banner__img-box_above {
-      z-index: 1; }
+      z-index: 2; }
     .main-banner__img-box img {
       width: 100%;
       height: 100%; }

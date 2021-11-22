@@ -38,6 +38,7 @@
     "imagemin-jpegtran": "^7.0.0",
     "imask": "^6.0.5",
     "medium-zoom": "^1.0.6",
+    "nouislider": "^15.5.0",
     "swiper": "^6.8.4"
   }
 }

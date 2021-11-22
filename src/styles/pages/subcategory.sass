@@ -5,35 +5,77 @@
     &__content
         display: flex
         justify-content: space-between
-        margin: 65px 0 0 0
+        margin: 40px 0 0 0
         overflow: hidden
-    &__filter-box
+    &__filter-block
         flex: 0 0 25%
-        padding: 0 10px 0 0
-    &__filter-form
+        padding: 0 58px 0 0
+        overflow: hidden
+    &__filter-types
         display: flex
         flex-direction: column
         justify-content: flex-start
+        overflow-y: scroll
+        width: 100%
+        height: 240px
+        // border-bottom: 1px solid $color-Gray_2
     &__filter-label
         display: inline-block
         position: relative
-        margin: -10px 0 27px 0
+        margin: -10px 0 5px 0
         padding: 10px 0
         cursor: pointer
         max-width: 60%
-        &:hover
+        &:hover,
             text-decoration: underline
     &__filter-input
         position: absolute
-        visibility: hidden
-        font-size: 0
-        pointer-events: none
-        user-slect: none
+        z-index: -1
         opacity: 0
+    &__filter
+        &-input
+            &:focus+.goods__filter-span::before
+                box-shadow: 0 0 2px 2px $color-Gray_2
+    &__filter
+        &-input
+            &:checked+.goods__filter-span::before
+                background-image: url(../images/svg/checked-icon-black.svg)
+        &-range-inputs
+            display: flex
+            justify-content: space-between
+            padding: 0 15px 25px 0
+        &-range-span
+            font-weight: normal
+            font-size: 18px
+            line-height: 25px
+        &-range-span.from,
+        &-range-span.to
+            font-weight: normal
+            font-size: 18px
+            line-height: 25px
+            color: $color-Gray_2
+        &-range-input
+            font-size: 0
     &__filter-span
+        display: inline-flex
+        align-items: center
         font-size: 18px
         line-height: 21px
         white-space: nowrap
+        padding: 2px
+        &::before
+            content: ''
+            display: inline-block
+            width: 20px
+            height: 20px
+            border: 1px solid $color-Gray_2
+            box-sizing: border-box
+            border-radius: 3px
+            margin-right: 10px
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 100% 100%
+            flex: 0 0 auto
     &__items
         flex: 0 0 75%
         display: grid
@@ -63,6 +105,59 @@
         min-height: 58px
         margin: 15px 0 0 0
 
+    &__sorting
+        display: flex
+        justify-content: flex-end
+        .custom-select
+            width: 241px
+            height: 25px
+            position: relative
+            text-align: right
+            font-weight: normal
+            font-size: 18px
+            line-height: 25px
+            &__inner
+                padding: 0 25px 0 0
+            &__current
+                width: 100%
+                height: 100%
+                cursor: pointer
+            &__icon
+                position: absolute
+                top: 0
+                left: auto
+                right: 0
+                transition: all 0.3s ease 0s
+            &__body
+                margin-top: 15px
+                position: absolute
+                right: 0
+                top: 0
+                width: 100%
+                padding: 10px 25px
+                background: $color-White
+                box-shadow: 0px 4px 10px 5px $color-Gray_2
+                border-radius: 5px
+                display: flex
+                flex-direction: column
+                z-index: 10
+                visibility: hidden
+                opacity: 0
+                transition: all 0.3s ease 0s
+                pointer-events: none
+            &__label-item
+                cursor: pointer
+                margin-bottom: 5px
+                &:hover
+                    color: rgba($color-Black, 0.5)
+        .custom-select._active
+            .custom-select__body
+                top: 100%
+                visibility: visible
+                opacity: 1
+                pointer-events: all
+            .custom-select__icon
+                transform: rotate(180deg)
     .add-to-cart
         &__box
             display: flex
@@ -110,6 +205,70 @@
     &__price,
     &__currency
         font-weight: bold
+
+    &__filter-ac
+        &-content
+            .noUi-target
+                background: $color-Gray_2
+                height: 2px
+                border: none
+            .noUi-connect
+                background: $color-Black
+                border: none
+                box-shadow: none
+                height: 2px
+            .noUi-horizontal
+                .noUi-handle::before,
+                .noUi-handle::after
+                    display: none
+                .noUi-handle
+                    width: 22px
+                    height: 22px
+                    border-radius: 100%
+                    border: 2px solid $color-Black
+                    background: $color-White
+                    top: -10px
+                    &-upper
+                        right: -1px
+                    &-lower
+                        right: -23px
+
+        &-heading
+            margin-top: 0
+            border: none
+            border-top: 1px solid $color-Gray_2
+            .ac-trigger
+                font-weight: normal
+                font-size: 18px
+                line-height: 25px
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                padding: 15px 0
+                &:focus
+                    color: initial
+                &::after
+                    content: ''
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    background: url(../images/svg/icon-arrow-down.svg) center no-repeat
+                    width: 20px
+                    height: 20px
+                    padding: 2px 0 0 0
+                    transition: transform 0.3s ease 0s
+            &:last-of-type
+                border-bottom: 1px solid $color-Gray_2
+        &-heading.is-active
+            .ac-trigger
+                &::after
+                    content: ''
+                    transform: rotate(180deg) translate(0, 50%)
+
+        &-content
+            display: flex
+            flex-direction: column
+            padding: 0 0 40px 0
 
 .fav-btn
     &:hover>.goods__fav-img

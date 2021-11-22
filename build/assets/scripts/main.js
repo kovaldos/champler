@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Поиск",
         "Оформление заказа",
         "Страница не найдена",
+        "Каталог",
       ];
 
       headers.forEach((header) => {
@@ -93,7 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           if (
             document.title == pageTitles[7] ||
-            document.title == pageTitles[12]
+            document.title == pageTitles[12] ||
+            document.title == pageTitles[15]
           ) {
             document.querySelector(".breadcrumbs__link._current").textContent =
               document.title;
@@ -157,7 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // ToDo
 // Сделать нормальные Хлебные крошки
 // Сделать добавление в избранное
-
 
 // Переключение табов Start
 
@@ -592,7 +593,53 @@ if (accordion) {
   new Accordion(accordion);
 }
 
+const accordion02 = document.querySelector(".goods__filter-ac-container");
+if (accordion02) {
+  new Accordion(accordion02);
+}
+
 // Accordion End
+
+// Ползунок фильтра по цене Старт
+const rangeSlider = document.getElementById("range-slider");
+
+if (rangeSlider) {
+  let input0 = document.getElementById("input-0");
+  let input1 = document.getElementById("input-1");
+  let inputs = [input0, input1];
+  let minPrice = Number(input0.dataset.priceMin);
+  let maxPrice = Number(input1.dataset.priceMax);
+  let minPriceCurrent = Number(input0.value);
+  let maxPriceCurrent = Number(input1.value);
+  noUiSlider.create(rangeSlider, {
+    start: [minPriceCurrent, maxPriceCurrent],
+    connect: true,
+    step: 1000,
+    range: {
+      min: [minPrice],
+      max: [maxPrice],
+    },
+  });
+
+  // const input0 = document.getElementById('arrFilter_P1_MIN');
+  // const input1 = document.getElementById('arrFilter_P1_MAX');
+  // const inputs = [input0, input1];
+
+  rangeSlider.noUiSlider.on("update", function (values, handle) {
+    inputs[handle].value = Math.round(values[handle]);
+
+    let inputValue0 = Number(input0.value);
+    let inputValue1 = Number(input1.value);
+
+    let priceFrom = document.getElementById("price-from");
+    priceFrom.innerText = inputValue0;
+
+    let priceTo = document.getElementById("price-to");
+    priceTo.innerText = inputValue1;
+  });
+}
+
+// Ползунок фильтра по цене Конец
 
 // Вставляем пробелы между разрядами цифр в ценах Старт
 
@@ -612,3 +659,32 @@ const setSpaces = () => {
 setSpaces();
 
 // Вставляем пробелы между разрядами цифр в ценах Конец
+
+	// custom-select
+
+	const select = function () {
+		let menuLocation = document.querySelectorAll(".custom-select__inner");
+		let selectItem = document.querySelectorAll(".custom-select__label-item");
+
+		menuLocation.forEach((item) => {
+			item.addEventListener("click", selectToggle);
+		});
+
+		selectItem.forEach((item) => {
+			item.addEventListener("click", selectChoose);
+		});
+
+		function selectToggle() {
+			this.parentElement.classList.toggle("_active");
+		}
+
+		function selectChoose() {
+			let text = this.innerText;
+			let location = this.closest(".custom-select");
+			let currentText = location.querySelector(".custom-select__current ");
+			currentText.innerText = text;
+			location.classList.remove("_active");
+		}
+	};
+
+	select();

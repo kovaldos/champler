@@ -30,7 +30,7 @@
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="contacts.html">Контакты</a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="help.html">Помощь</a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="my-data.html">Аккаунт</a></li>
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="cart.html">Корзина</a></li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link cart-link" href="cart.html">Корзина<span class="cart-link-span">1</span></a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link modal__link" href="#modal01">Поиск</a></li>
             </ul>
           </nav>
@@ -139,7 +139,7 @@
             </div>
             <div class="subscribe__block"> 
               <div class="subscribe__input-block">
-                <input class="subscribe__input" type="email" required placeholder="Ваш email">
+                <input class="subscribe__input" type="email" required placeholder="Ваш email" pattern="/^([A-Za-z0-9_-.])+@([A-Za-z0-9_-.])+.([A-Za-z]{2,4})$/">
                 <button class="subscribe__btn" type="submit">подписаться</button>
               </div>
               <div class="subscribe__agreement">
