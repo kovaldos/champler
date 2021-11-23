@@ -6,7 +6,7 @@
             .swiper-button-next
                 left: 48.7%
 
-@media screen and (max-width: 1280px)
+@media screen and (max-width: 1366px)
     .header-top
         &__menu-link
             font-size: 16px
@@ -15,6 +15,11 @@
         &__logo-img
             width: 120px
 
+@media screen and (max-width: 1280px)
+    .header-top
+        &__menu-link
+            font-size: 15px
+            padding: 10px 5px
     .goods
         &__items
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
@@ -30,7 +35,7 @@
         &__tabs
             // column-gap: 70px
         &__nav
-            margin: 0 70px 0 0 
+            margin: 0 70px 0 0
         &__tabs-items
             flex: 0 0 485px
 
@@ -72,29 +77,74 @@
     .container
         padding: $content-padding-tablet
     .menu
+        position: relative
         &__body
             flex-direction: column
             justify-content: flex-start
-            align-items: center
+            align-items: flex-start
             position: fixed
             top: 0
             left: -100%
             width: 100%
             height: 100%
-            background-color: $color-graphite
+            background-color: $color-White
             padding: 100px 40px
             margin: 0
             transition: all 0.5s ease 0s
             z-index: 14
         &__body._active
             left: 0
+            padding: 100px 20px
+            .header-top__list.left
+                width: 100%
+                .header-top__list-item
+                    width: 100%
+                .header-top__menu-link
+                    display: block
+                    font-weight: bold
+                    width: 100%
+                    max-width: 400px
+                    &::after
+                        display: none
+            .header-top__menu-link
+                color: $color-Black
+                font-size: 18px
+                line-height: 140%
+            .header-top__logo-img
+                color: $color-Black
+
         &__list
             flex-direction: column
-            align-items: center
+            align-items: flex-start
         &__list:last-child
             margin: 0
         &__item
             padding: 10px
+            position: relative
+        &__link
+            &-btn
+                display: flex
+                width: 46px
+                height: 46px
+                visibility: visible
+                opacity: 1
+                background: url(../images/svg/arrow-down.svg) center no-repeat
+                transform: rotate(-90deg)
+                position: absolute
+                top: 10px
+                left: 90%
+        &__sub-link
+            &-btn
+                display: flex
+                width: 46px
+                height: 46px
+                visibility: visible
+                opacity: 1
+                background: url(../images/svg/arrow-down.svg) center no-repeat
+                transform: rotate(-90deg)
+                position: absolute
+                top: -10px
+                left: 90%
         &__icon
             z-index: 50
             display: block
@@ -104,7 +154,8 @@
             padding: 10px
             cursor: pointer
             transition: all 0.5s ease 0s
-            margin-left: auto
+            margin-right: auto
+            margin-top: 30px
             & span,
             &::before,
             &::after
@@ -126,18 +177,67 @@
             &::after
                 bottom: 0
         &__icon._active
+            margin-left: auto
+            margin-right: 0
             & span
                 transform: scale(0) translate(0, -50%)
+                background-color: $color-Black
             &::before
                 top: 50%
                 transform: rotate(-45deg) translate(0, -50%)
+                background-color: $color-Black
             &::after
                 bottom: 50%
                 transform: rotate(45deg) translate(0, 50%)
+                background-color: $color-Black
+    .sub-menu-back-btn._active
+            display: flex
+            width: 46px
+            height: 46px
+            background: url(../images/svg/arrow-down.svg) center no-repeat
+            background-size: 75%
+            transform: rotate(90deg)
+            position: absolute
+            top: 20px
+            left: 0
+            z-index: 15
+    .header-top__list.left
+        border-bottom: 1px solid $color-Gray_2
+        .header-top__list-item
+            &:hover> .header-top__menu-link
+                text-decoration: underline
+    .menu__item
+        .header-top__sub-list-block
+            top: 0
+            left: 100%
+            visibility: hidden
+            opacity: 0
 
-    header._white
-        .header-top__logo-img._white
-            color: $color-White
+    .menu__item._active>
+        .header-top__sub-list-block
+            left: 0
+            visibility: visible
+            opacity: 1
+            z-index: 15
+            background: $color-White
+
+    .header-top
+        &__sub-list
+            &-item-col
+                position: relative
+            &-item-col._active> .header-top__sub-list
+                left: 0
+            &-items
+                grid-template-columns: 1fr
+        &__sub-list
+            width: 100%
+            height: 100vh
+            position: absolute
+            top: 0
+            left: 120%
+            transition: all 0.3s ease 0s
+            background: $color-White
+            z-index: 1
 
     // main
     .main-banner
@@ -226,7 +326,7 @@
         margin: 15px 0 0 0
 
     // order-complete page
-    .order-complete    
+    .order-complete
         margin: 15px 0 0 0
 
     // footer
@@ -393,7 +493,7 @@
         margin: 15px 0 0 0
 
     // order-complete page
-    .order-complete    
+    .order-complete
         margin: 15px 0 0 0
 
     // not-found page
@@ -464,6 +564,11 @@
         &__filter
             &-block
                 padding: 0
+            &-btn
+                margin-left: auto
+                margin-right: auto
+                &_cancel
+                    margin-bottom: 30px
         &__content
             flex-direction: column
             margin: 15px 0 0 0
@@ -600,7 +705,7 @@
             padding: 50px 25px
 
 @media screen and (max-width: 425px)
-    
+
     // contacts page
     .contacts
         &__cols

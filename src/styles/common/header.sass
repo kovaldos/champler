@@ -8,7 +8,7 @@ header._hidden
 .header-top
 	width: 100%
 	min-height: 86px
-	padding: 20px 0
+	// padding: 20px 0
 	position: relative
 	z-index: 10
 	margin: 0 0 -86px 0
@@ -23,6 +23,8 @@ header._hidden
 		display: flex
 		justify-content: space-between
 		align-items: center
+		&-item
+			padding: 20px 0
 	&__menu-body
 		margin: 0 -12px
 		padding: 12px 0
@@ -34,8 +36,19 @@ header._hidden
 		font-size: 18px
 		line-height: 21px
 		margin: 0 4px 0 0
-	&__menu-link:hover
-		text-decoration: underline
+		position: relative
+		&::after
+			content: ""
+			width: calc(100% - 24px)
+			height: 2px
+			background-color: $color-White
+			position: absolute
+			top: 115%
+			left: 12px
+			visibility: hidden
+			opacity: 0
+			pointer-events: none
+			transition: all 0.3s ease 0s
 	.cart-link
 		position: relative
 	.cart-img-block
@@ -83,6 +96,77 @@ header._hidden
 	&__logo-img
 		color: $color-White
 		transition: color 0.3s ease 0s
+	&__logo-img._black
+		color: $color-Black
+	&__sub-list
+		&-block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			min-height: 900px
+			// backdrop-filter: blur(10px)
+			visibility: hidden
+			opacity: 0
+			transition: 0.3s ease 0s
+			&::before
+				content: ""
+				width: 100%
+				height: 20px
+				position: absolute
+				top: -19px
+				left: 0
+
+		&-items
+			display: grid
+			grid-template-columns: repeat(6, 1fr)
+			grid-gap: 10px
+			padding: 20px 0
+		&-item-col
+			span
+				display: inline-block
+				margin-bottom: 12px
+				font-weight: normal
+				font-size: 18px
+				line-height: 25px
+				color: $color-Black
+		&-link
+			color: $color-Black
+			padding: 7px
+			margin: 0 -7px
+			display: inline-block
+			&:hover
+				text-decoration: underline
+.menu__link-btn,
+.menu__sub-link-btn,
+.sub-menu-back-btn
+	display: none
+
+.header-top__list.right
+	.header-top__menu-link
+		&:hover
+			text-decoration: underline
+
+@media screen and (min-width: 1025px)
+	.header-top__list.left
+		.header-top__list-item
+			&:hover> .header-top__menu-link
+				&::after
+					visibility: visible
+					opacity: 1
+			&:hover> .header-top__sub-list-block
+				top: 100%
+				visibility: visible
+				opacity: 1
+				background: url(../images/sub-menu-bg.png) 100% 100% no-repeat
+				background-size: cover
+		.header-top__sub-list-item-col
+			span
+				color: $color-White
+		.header-top__sub-list-link
+			color: $color-White
+
 
 // header not home page
 
@@ -99,11 +183,26 @@ header._white
 	.menu__icon::after
 		background-color: $color-Black
 	.menu__body._active .menu__link
-		color: $color-White
+		// color: $color-White
 	.menu__icon._active
 		&::before,
 		&::after
-			background-color: $color-White
+			// background-color: $color-White
+
+	.header-top__list.left
+		.header-top
+			&__menu-link
+				&::after
+					background-color: $color-Black
+			&__sub-list-block
+				background: $color-White
+			&__sub-list
+				&-item-col
+					span
+						color: $color-Black
+				&-link
+					color: $color-graphite
+
 .header-top._fixed
 	position: fixed
 	top: 0

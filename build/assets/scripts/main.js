@@ -260,8 +260,55 @@ if (iconMenu) {
     document.body.classList.toggle("_lock");
     iconMenu.classList.toggle("_active");
     menuBody.classList.toggle("_active");
-    document.querySelector(".header-top__logo-img").classList.toggle("_white");
+    document.querySelector(".header-top__logo-img").classList.toggle("_black");
   });
+  // Mobile sub-menu
+  const subMenuLinks = document.querySelectorAll(
+    ".header-top__list.left .menu__link-btn"
+  );
+  if (subMenuLinks.length) {
+    subMenuLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const item = e.target.closest(".menu__item");
+        const backBtn = document.querySelector(".sub-menu-back-btn");
+        backBtn.classList.add("_active");
+        backBtn.addEventListener("click", () => {
+          if (item.classList.contains("_active")) {
+            item.classList.remove("_active");
+          }
+        })
+        item.classList.add("_active");
+        iconMenu.addEventListener("click", () => {
+          if (item.classList.contains("_active")) {
+            item.classList.remove("_active");
+            backBtn.classList.remove("_active");
+          }
+        });
+      });
+      const subSubMenuLinks = document.querySelectorAll(
+        ".header-top__list.left .menu__sub-link-btn"
+      );
+      if (subSubMenuLinks.length) {
+        subSubMenuLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            const item = e.target.closest(".header-top__sub-list-item-col");
+            item.classList.add("_active");
+            const backBtn = document.querySelector(".sub-menu-back-btn");
+            backBtn.addEventListener("click", () => {
+              if (item.classList.contains("_active")) {
+                item.classList.remove("_active");
+              }
+            })
+            iconMenu.addEventListener("click", () => {
+              if (item.classList.contains("_active")) {
+                item.classList.remove("_active");
+              }
+            });
+          });
+        });
+      };
+    });
+  };
 }
 
 // Burger menu End
@@ -527,7 +574,7 @@ const reviewsSwiper = new Swiper(".reviews-slider__container", {
   observer: true,
   observeParents: true,
   observeSlideChildren: true,
-  
+
   navigation: {
     nextEl: ".reviews-slider__button-next",
     prevEl: ".reviews-slider__button-prev",
@@ -535,13 +582,11 @@ const reviewsSwiper = new Swiper(".reviews-slider__container", {
   breakpoints: {
     425: {
       slidesPerView: 1,
-     
     },
     640: {
       slidesPerView: 2,
       slidesPerGroup: 2,
     },
-
   },
 });
 
@@ -552,8 +597,6 @@ if (reviewsQuantity > 4) {
 }
 
 // reviews slider End
-
-
 
 // favorite toggle Start
 
@@ -699,32 +742,31 @@ setSpaces();
 
 // Вставляем пробелы между разрядами цифр в ценах Конец
 
-	// custom-select
+// custom-select
 
-	const select = function () {
-		let menuLocation = document.querySelectorAll(".custom-select__inner");
-		let selectItem = document.querySelectorAll(".custom-select__label-item");
+const select = function () {
+  let menuLocation = document.querySelectorAll(".custom-select__inner");
+  let selectItem = document.querySelectorAll(".custom-select__label-item");
 
-		menuLocation.forEach((item) => {
-			item.addEventListener("click", selectToggle);
-		});
+  menuLocation.forEach((item) => {
+    item.addEventListener("click", selectToggle);
+  });
 
-		selectItem.forEach((item) => {
-			item.addEventListener("click", selectChoose);
-		});
+  selectItem.forEach((item) => {
+    item.addEventListener("click", selectChoose);
+  });
 
-		function selectToggle() {
-			this.parentElement.classList.toggle("_active");
-		}
+  function selectToggle() {
+    this.parentElement.classList.toggle("_active");
+  }
 
-		function selectChoose() {
-			let text = this.innerText;
-			let location = this.closest(".custom-select");
-			let currentText = location.querySelector(".custom-select__current ");
-			currentText.innerText = text;
-			location.classList.remove("_active");
-		}
-	};
+  function selectChoose() {
+    let text = this.innerText;
+    let location = this.closest(".custom-select");
+    let currentText = location.querySelector(".custom-select__current ");
+    currentText.innerText = text;
+    location.classList.remove("_active");
+  }
+};
 
-	select();
-
+select();

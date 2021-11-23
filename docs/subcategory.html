@@ -94,27 +94,193 @@
             <div class="section__heading">
               <h1 class="section__title">Мужская одежда</h1>
             </div>
+            <div class="goods__sorting"> 
+              <div class="custom-select"> 
+                <div class="custom-select__inner">
+                  <div class="custom-select__current">Сортировать по </div>
+                  <div class="custom-select__icon">
+                    <svg width="12" height="12" aria-hidden="true">
+                      <use xlink:href="./assets/images/sprite.svg#icon-arrow-down"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="custom-select__body">
+                  <label class="custom-select__label-item">Сортировать по
+                    <input type="hidden" name="option">
+                  </label>
+                  <label class="custom-select__label-item">Рекомендованное
+                    <input type="hidden" name="option">
+                  </label>
+                  <label class="custom-select__label-item">Самое новое
+                    <input type="hidden" name="option">
+                  </label>
+                  <label class="custom-select__label-item">Цена: высокая-низкая
+                    <input type="hidden" name="option">
+                  </label>
+                  <label class="custom-select__label-item">Цена: низкая-высокая
+                    <input type="hidden" name="option">
+                  </label>
+                </div>
+              </div>
+            </div>
             <div class="goods__content">
-              <div class="goods__filter-box"> 
+              <div class="goods__filter-block"> 
                 <form class="goods__filter-form" action="#">
-                  <label class="goods__filter-label">
-                    <input class="goods__filter-input" type="checkbox" name="for men"><span class="goods__filter-span">Куртки</span>
-                  </label>
-                  <label class="goods__filter-label">
-                    <input class="goods__filter-input" type="checkbox" name="for men"><span class="goods__filter-span">Майки</span>
-                  </label>
-                  <label class="goods__filter-label">
-                    <input class="goods__filter-input" type="checkbox" name="for men"><span class="goods__filter-span">Трикотаж</span>
-                  </label>
-                  <label class="goods__filter-label">
-                    <input class="goods__filter-input" type="checkbox" name="for men"><span class="goods__filter-span">Футболки</span>
-                  </label>
-                  <label class="goods__filter-label">
-                    <input class="goods__filter-input" type="checkbox" name="for men"><span class="goods__filter-span">Толстовки</span>
-                  </label>
-                  <label class="goods__filter-label">
-                    <input class="goods__filter-input" type="checkbox" name="for men"><span class="goods__filter-span">Смотреть все</span>
-                  </label>
+                  <div class="goods__filter-types">
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Куртки</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Майки</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Трикотаж</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Футболки</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Толстовки</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Шорты</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Носки</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Смотреть все</span>
+                    </label>
+                  </div>
+                  <div class="goods__filter-ac-container"> 
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Пол  <span>&nbsp;(1)</span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Мужчины</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Женщины</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Унисекс</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Поиск по цене<span> </span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <div class="goods__filter-range-inputs">
+                            <label class="goods__filter-range-label"><span class="goods__filter-range-span from">от&nbsp;</span><span class="goods__filter-range-span number-spaced" id="price-from"> </span>
+                              <input class="goods__filter-range-input number-spaced" id="input-0" type="text" name="range-slider-input" min="99" max="999999" placeholder="2789" data-price-min="2789" value="2789"><span class="goods__filter-range-span">&#8381;</span>
+                            </label>
+                            <label class="goods__filter-range-label"><span class="goods__filter-range-span to">до&nbsp;</span><span class="goods__filter-range-span number-spaced" id="price-to"></span>
+                              <input class="goods__filter-range-input number-spaced" id="input-1" type="text" name="range-slider-input" min="99" max="999999" placeholder="216789" data-price-max="216789" value="216789"><span class="goods__filte-ranger-span"> &#8381;</span>
+                            </label>
+                          </div>
+                          <div class="goods__filter-range-slider" id="range-slider"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Со скидкой<span> </span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Распродажа</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Размер<span> </span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">3.5 (RU 34,5)</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">4.5 (RU 35,5)</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">5.5 (RU 36,5)</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Цвет<span> </span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Черный</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Зеленый</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Синий</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Красный</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Коричневый</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Мультицвет</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Серый</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Оранжевый</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Бренд<span> </span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Nike</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Reebook</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Adidas</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Puma</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Материал<span> </span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Микрофибра</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Флис</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Мембрана</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Акрил</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </form>
               </div>
               <div class="goods__items mens-wear">

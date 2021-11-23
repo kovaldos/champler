@@ -28,12 +28,11 @@
         max-width: 60%
         &:hover,
             text-decoration: underline
-    &__filter-input
-        position: absolute
-        z-index: -1
-        opacity: 0
     &__filter
         &-input
+            position: absolute
+            z-index: -1
+            opacity: 0
             &:focus+.goods__filter-span::before
                 box-shadow: 0 0 2px 2px $color-Gray_2
     &__filter
@@ -56,26 +55,62 @@
             color: $color-Gray_2
         &-range-input
             font-size: 0
-    &__filter-span
-        display: inline-flex
-        align-items: center
-        font-size: 18px
-        line-height: 21px
-        white-space: nowrap
-        padding: 2px
-        &::before
-            content: ''
-            display: inline-block
-            width: 20px
-            height: 20px
-            border: 1px solid $color-Gray_2
-            box-sizing: border-box
-            border-radius: 3px
-            margin-right: 10px
-            background-repeat: no-repeat
-            background-position: center center
-            background-size: 100% 100%
-            flex: 0 0 auto
+        &-span
+            display: inline-flex
+            align-items: center
+            font-size: 18px
+            line-height: 21px
+            white-space: nowrap
+            padding: 2px
+            &::before
+                content: ''
+                display: inline-block
+                width: 20px
+                height: 20px
+                border: 1px solid $color-Gray_2
+                box-sizing: border-box
+                border-radius: 3px
+                margin-right: 10px
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: 100% 100%
+                flex: 0 0 auto
+        &-btn
+            margin: 30px 0 20px 0
+            width: 100%
+            max-width: 390px
+            min-height: 50px
+            color: $color-White
+            background-color: $color-graphite
+            border-radius: 5px
+            &:hover
+                opacity: 0.8
+            &:focus
+                box-shadow: 0 0 2px 2 px $color-Gray_2
+            &_cancel
+                position: relative
+                color: $color-graphite
+                background-color: inherit
+                padding: 10px
+                width: 100%
+                &::before,
+                &::after
+                    content: ''
+                    width: 2px
+                    height: 15px
+                    background-color: $color-graphite
+                    position: absolute
+                    top: 11px
+                    left: 92.5%
+                    transform: rotate(45deg)
+                &::after
+                    transform: rotate(-45deg)
+                &:hover,
+                &:focus
+                    text-decoration: underline
+                    
+
+
     &__items
         flex: 0 0 75%
         display: grid
@@ -271,6 +306,7 @@
             display: flex
             flex-direction: column
             padding: 0 0 40px 0
+
 
 .fav-btn
     &:hover>.goods__fav-img
