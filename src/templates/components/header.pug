@@ -4,16 +4,25 @@ header.header-top.lock-padding
 			.header-top__menu-icon.menu__icon
 				span
 			button.sub-menu-back-btn(type="button")
+			.header-links-mobile
+				a.header-link-mobile.mobile-search(href="#")
+					+icon("search-icon", 20, 20)
+				a.header-link-mobile.mobile-account(href="#")
+					+icon("user-icon", 20, 20)
+				a.header-link-mobile.mobile-cart(href="#")
+					+icon("shopping-bag", 20, 20)
+					span.cart-img-block__span 2
 			nav.header-top__menu-body.menu__body
 				ul.header-top__list.left.menu__list
 					li.header-top__list-item.menu__item
 						a(href="for-men.html").header-top__menu-link.menu__link Мужчинам
 						button.menu__link-btn(type="button") 
 						.header-top__sub-list-block
+							button.sub-sub-menu-back-btn(type="button")
 							.container
 								.header-top__sub-list-items
 									.header-top__sub-list-item-col 
-										span Рекомендованное
+										a.header-top__sub-list-link-title(href="#") Рекомендованное
 										button.menu__sub-link-btn(type="button")
 											-var menuLinks01 = ["Бестселлеры","Лучшие подарки","Не пропусти","Экологичные материалы","Календарь релизов"]
 										ul.header-top__sub-list 
@@ -21,7 +30,7 @@ header.header-top.lock-padding
 												li.header-top__sub-list-item
 													a.header-top__sub-list-link(href="#")=link
 									.header-top__sub-list-item-col 
-										span Обувь
+										a.header-top__sub-list-link-title(href="#") Обувь
 										button.menu__sub-link-btn(type="button")
 											-var menuLinks02 = ["Вся обувь","Обувь из распродажи","Спортивный стиль","Бег","Баскетбол","Футбол","Фитнес","Скейтбординг","Теннис","Гольф"]
 										ul.header-top__sub-list 
@@ -29,7 +38,7 @@ header.header-top.lock-padding
 												li.header-top__sub-list-item
 													a.header-top__sub-list-link(href="#")=link
 									.header-top__sub-list-item-col 
-										span Одежда
+										a.header-top__sub-list-link-title(href="#") Одежда
 										button.menu__sub-link-btn(type="button")
 											-var menuLinks03 = ["Вся одежда","Одежда из распродажи","Худи и толстовки","Майки и футболки","Брюки и тайсы","Спортивные костюмы","Шорты","Куртки и жилеты","Форма и джерси","Рубашки-поло","Унисекс","Экологичные материалы","Носки"]
 										ul.header-top__sub-list 
@@ -37,7 +46,7 @@ header.header-top.lock-padding
 												li.header-top__sub-list-item
 													a.header-top__sub-list-link(href="#")=link
 									.header-top__sub-list-item-col 
-										span Аксессуары
+										a.header-top__sub-list-link-title(href="#") Аксессуары
 										button.menu__sub-link-btn(type="button")
 											-var menuLinks04 = ["Все Акссессуары","Снаряжение","Сумки","Рюкзаки"]
 										ul.header-top__sub-list 
@@ -45,7 +54,7 @@ header.header-top.lock-padding
 												li.header-top__sub-list-item
 													a.header-top__sub-list-link(href="#")=link
 									.header-top__sub-list-item-col 
-										span Новинки
+										a.header-top__sub-list-link-title(href="#") Новинки
 										button.menu__sub-link-btn(type="button")
 											-var menuLinks05 = ["Все новинки","Новинки зимнего сезона","Новинки летнего сезона","Товары из США"]
 										ul.header-top__sub-list 
@@ -53,7 +62,7 @@ header.header-top.lock-padding
 												li.header-top__sub-list-item
 													a.header-top__sub-list-link(href="#")=link
 									.header-top__sub-list-item-col 
-										span По виду спорта
+										a.header-top__sub-list-link-title(href="#") По виду спорта
 										button.menu__sub-link-btn(type="button")
 											-var menuLinks06 = ["Бег","Футбол","Баскетбол","НБА","Теннис","Гольф","Фитнес","Йога","Бокс"]
 										ul.header-top__sub-list 
@@ -78,7 +87,8 @@ header.header-top.lock-padding
 					li.header-top__list-item.menu__item
 						a(href="help.html").header-top__menu-link.menu__link Помощь
 					li.header-top__list-item.menu__item
-						a(href="my-data.html").header-top__menu-link.menu__link Аккаунт
+						a(href="my-data.html").header-top__menu-link.menu__link.account-link Аккаунт
+
 					li.header-top__list-item.menu__item
 						a(href="cart.html").header-top__menu-link.menu__link.cart-link Корзина
 							.cart-img-block
