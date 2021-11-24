@@ -74,16 +74,19 @@
         &__menu-icon
             margin-top: 20px
         &__list
-            padding: 0
+            padding: 10px 0
             &-item
-                padding: 10px 20px
+                padding: 0 20px
         &__logo-box._changed
             top: 19px
-            left: 125px
+            left: 55px
             font-weight: bold
             font-size: 20px
             line-height: 28px
             justify-content: flex-start
+            width: 100%
+            max-width: 250px
+            transform: none
     .header
         &-links-mobile
             width: 100%
@@ -176,8 +179,9 @@
                 background: url(../images/svg/arrow-down.svg) center no-repeat
                 transform: rotate(-90deg)
                 position: absolute
-                top: 10px
-                left: 90%
+                top: 0
+                left: auto
+                right: 15px
         &__sub-link
             &-btn
                 display: flex
@@ -189,7 +193,7 @@
                 transform: rotate(-90deg)
                 position: absolute
                 top: -10px
-                left: 98%
+                left: 99%
         &__icon
             z-index: 50
             display: block
@@ -253,8 +257,8 @@
         background-size: 75%
         transform: rotate(90deg)
         position: absolute
-        top: -51px
-        left: 5px
+        top: -70px
+        left: 10px
         z-index: 15
     .header-top__list.left
         border-top: 1px solid $color-Gray_2
@@ -262,12 +266,19 @@
         .header-top__list-item
             &:hover> .header-top__menu-link
                 text-decoration: underline
+    .header-top__list.right
+        margin-top: 10px
+        .menu__item
+            margin-bottom: 20px
+
     .menu__item
         .header-top__sub-list-block
-            top: 0
             left: 100%
             visibility: hidden
             opacity: 0
+    .header-top__sub-list-block
+        position: fixed
+        top: 80px
 
     .menu__item._active>
         .header-top__sub-list-block
@@ -287,12 +298,12 @@
                 font-weight: normal
                 font-size: 18px
                 line-height: 21px
-                margin-bottom: 25px
+                margin-bottom: 20px
             &-item-col._active> .header-top__sub-list
-                left: 0
+                left: 7px
             &-items
                 grid-template-columns: 1fr
-                padding: 20px 35px
+                padding: 10px 35px
         &__sub-list
             width: 100%
             height: 100vh
@@ -302,9 +313,9 @@
             transition: all 0.3s ease 0s
             background: $color-White
             z-index: 1
-            padding: 10px 50px
+            padding: 13px 50px
             &-item
-                margin-bottom: 20px
+                margin-bottom: 13px
             &-link
                 font-weight: normal
                 font-size: 18px
@@ -589,6 +600,11 @@
 @media screen and (max-width: 640px)
     .container
         padding: $content-padding-mob
+    .header-top__sub-list-block
+        .container
+            padding: $content-padding-tablet
+    .sub-sub-menu-back-btn._active
+        left: 5px
     .section
         &__title
             font-size: $section-title-mobile
@@ -779,15 +795,11 @@
     .header-top
         &__logo-img
             width: 73px
-        &__list.right
-            .menu__item
-                margin: 0 0 13px 0
         &__menu-link
             padding: 10px
     .menu
         &__link-btn
-            top: 10px
-            left: 85%
+            right: 10px
 
     // contacts page
     .contacts
