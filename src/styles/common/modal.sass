@@ -95,12 +95,17 @@
             max-width: 930px
             width: 100%
             border: 1px solid $color-White
-            padding: 13px 20px
+            padding: 13px 50px 13px 20px
             font-size: 16px
             line-height: 140%
             background-color: $color-graphite
             color: $color-White
             appearance: none
+            &::-ms-clear,
+            &::clear
+                display: none
+                width: 0
+                height: 0
 
     &__search-button
         position: absolute
@@ -112,6 +117,8 @@
             font-size: 16px
             line-height: 140%
             color: $color-Gray_3
+        svg
+            color: $color-White
 
     &__title
         font-weight: bold

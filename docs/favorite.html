@@ -18,18 +18,132 @@
     <header class="header-top lock-padding">
       <div class="container header-top__container"> 
         <div class="header-top__menu menu">
-          <div class="header-top__menu-icon menu__icon"><span> </span></div>
+          <div class="header-top__menu-icon menu__icon"><span></span></div>
+          <button class="sub-menu-back-btn" type="button"></button>
+          <div class="header-links-mobile"><a class="header-link-mobile mobile-search" href="#">
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="./assets/images/sprite.svg#search-icon"></use>
+              </svg></a><a class="header-link-mobile mobile-account" href="#">
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="./assets/images/sprite.svg#user-icon"></use>
+              </svg></a><a class="header-link-mobile mobile-cart" href="#">
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="./assets/images/sprite.svg#shopping-bag"></use>
+              </svg><span class="cart-img-block__span">2</span></a></div>
           <nav class="header-top__menu-body menu__body">
-            <ul class="header-top__list menu__list">
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="for-men.html">Мужчинам</a></li>
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="for-women.html">Женщинам</a></li>
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="collections.html">Коллекции</a></li>
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="kinds-of-sports.html">Виды спорта</a></li>
+            <ul class="header-top__list left menu__list">
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="for-men.html">Мужчинам</a>
+                <button class="menu__link-btn" type="button"> </button>
+                <div class="header-top__sub-list-block">
+                  <button class="sub-sub-menu-back-btn" type="button"></button>
+                  <div class="container">
+                    <div class="header-top__sub-list-items">
+                      <div class="header-top__sub-list-item-col"> <a class="header-top__sub-list-link-title" href="#">Рекомендованное</a>
+                        <button class="menu__sub-link-btn" type="button">
+                        </button>
+                        <ul class="header-top__sub-list"> 
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Бестселлеры</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Лучшие подарки</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Не пропусти</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Экологичные материалы</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Календарь релизов</a></li>
+                        </ul>
+                      </div>
+                      <div class="header-top__sub-list-item-col"> <a class="header-top__sub-list-link-title" href="#">Обувь</a>
+                        <button class="menu__sub-link-btn" type="button">
+                        </button>
+                        <ul class="header-top__sub-list"> 
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Вся обувь</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Обувь из распродажи</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Спортивный стиль</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Бег</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Баскетбол</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Футбол</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Фитнес</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Скейтбординг</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Теннис</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Гольф</a></li>
+                        </ul>
+                      </div>
+                      <div class="header-top__sub-list-item-col"> <a class="header-top__sub-list-link-title" href="#">Одежда</a>
+                        <button class="menu__sub-link-btn" type="button">
+                        </button>
+                        <ul class="header-top__sub-list"> 
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Вся одежда</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Одежда из распродажи</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Худи и толстовки</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Майки и футболки</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Брюки и тайсы</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Спортивные костюмы</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Шорты</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Куртки и жилеты</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Форма и джерси</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Рубашки-поло</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Унисекс</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Экологичные материалы</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Носки</a></li>
+                        </ul>
+                      </div>
+                      <div class="header-top__sub-list-item-col"> <a class="header-top__sub-list-link-title" href="#">Аксессуары</a>
+                        <button class="menu__sub-link-btn" type="button">
+                        </button>
+                        <ul class="header-top__sub-list"> 
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Все Акссессуары</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Снаряжение</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Сумки</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Рюкзаки</a></li>
+                        </ul>
+                      </div>
+                      <div class="header-top__sub-list-item-col"> <a class="header-top__sub-list-link-title" href="#">Новинки</a>
+                        <button class="menu__sub-link-btn" type="button">
+                        </button>
+                        <ul class="header-top__sub-list"> 
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Все новинки</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Новинки зимнего сезона</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Новинки летнего сезона</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Товары из США</a></li>
+                        </ul>
+                      </div>
+                      <div class="header-top__sub-list-item-col"> <a class="header-top__sub-list-link-title" href="#">По виду спорта</a>
+                        <button class="menu__sub-link-btn" type="button">
+                        </button>
+                        <ul class="header-top__sub-list"> 
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Бег</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Футбол</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Баскетбол</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">НБА</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Теннис</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Гольф</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Фитнес</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Йога</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Бокс</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="for-women.html">Женщинам</a>
+                <button class="menu__link-btn" type="button"> </button>
+              </li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="for-women.html">Детям</a>
+                <button class="menu__link-btn" type="button"> </button>
+              </li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="collections.html">Коллекции</a>
+                <button class="menu__link-btn" type="button"> </button>
+              </li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="kinds-of-sports.html">Виды спорта</a>
+                <button class="menu__link-btn" type="button"> </button>
+              </li>
             </ul>
-            <ul class="header-top__list menu__list">
+            <ul class="header-top__list right menu__list">
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="contacts.html">Контакты</a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="help.html">Помощь</a></li>
+<<<<<<< HEAD
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="my-data.html">Аккаунт</a></li>
+=======
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link account-link" href="my-data.html">Аккаунт</a></li>
+>>>>>>> e73dbced570d8e11c07b9c5b8f181cd284478db6
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link cart-link" href="cart.html">Корзина
                   <div class="cart-img-block">
                     <div class="cart-img-box"> 
@@ -474,6 +588,7 @@
     <script src="assets/scripts/swiper-bundle.min.js"></script>
     <script src="assets/scripts/medium-zoom.min.js"></script>
     <script src="assets/scripts/focus-visible.min.js"></script>
+    <script src="assets/scripts/nouislider.js"></script>
     <script src="assets/scripts/modal.js"></script>
     <script src="assets/scripts/main.js"></script>
   </body>

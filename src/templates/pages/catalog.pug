@@ -1,0 +1,406 @@
+extends ../template
+
+block variables
+    - var title = 'Каталог'
+    - var contactForm = false
+
+block content
+    .wrapper
+        main.main
+            section.section.goods
+                .container.goods__container
+                    .section__heading
+                        h1.section__title=title
+                    .goods__sorting 
+                        .custom-select 
+                            .custom-select__inner
+                                .custom-select__current Сортировать по 
+                                .custom-select__icon
+                                    +icon("icon-arrow-down", 12, 12)
+                            .custom-select__body
+                                label.custom-select__label-item Сортировать по
+                                    input(type="hidden" name="option")
+                                label.custom-select__label-item Рекомендованное
+                                    input(type="hidden" name="option")
+                                label.custom-select__label-item Самое новое
+                                    input(type="hidden" name="option")
+                                label.custom-select__label-item Цена: высокая-низкая
+                                    input(type="hidden" name="option")
+                                label.custom-select__label-item Цена: низкая-высокая
+                                    input(type="hidden" name="option")
+                    .goods__content
+                        .goods__filter-block 
+                            form.goods__filter-form(action="#")
+                                .goods__filter-types
+                                    label.goods__filter-label
+                                        input.goods__filter-input(type="checkbox" name="")
+                                        span.goods__filter-span Куртки
+                                    label.goods__filter-label
+                                        input.goods__filter-input(type="checkbox" name="")
+                                        span.goods__filter-span Майки
+                                    label.goods__filter-label
+                                        input.goods__filter-input(type="checkbox" name="")
+                                        span.goods__filter-span Трикотаж
+                                    label.goods__filter-label
+                                        input.goods__filter-input(type="checkbox" name="")
+                                        span.goods__filter-span Футболки
+                                    label.goods__filter-label
+                                        input.goods__filter-input(type="checkbox" name="")
+                                        span.goods__filter-span Толстовки
+                                    label.goods__filter-label
+                                        input.goods__filter-input(type="checkbox" name="")
+                                        span.goods__filter-span Шорты
+                                    label.goods__filter-label
+                                        input.goods__filter-input(type="checkbox" name="")
+                                        span.goods__filter-span Носки
+                                    label.goods__filter-label
+                                        input.goods__filter-input(type="checkbox" name="")
+                                        span.goods__filter-span Смотреть все
+                                .goods__filter-ac-container 
+                                    .goods__filter-ac-heading.ac 
+                                        button.ac-trigger Пол  
+                                            span &nbsp;(1)
+                                        .ac-panel
+                                            .goods__filter-ac-content
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Мужчины
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Женщины
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Унисекс
+                                    .goods__filter-ac-heading.ac 
+                                        button.ac-trigger Поиск по цене
+                                            span 
+                                        .ac-panel
+                                            .goods__filter-ac-content
+                                                .goods__filter-range-inputs
+                                                    label.goods__filter-range-label
+                                                        span.goods__filter-range-span.from от&nbsp;
+                                                        span.goods__filter-range-span.number-spaced#price-from 
+                                                        input.goods__filter-range-input.number-spaced#input-0(type="text" name="range-slider-input" min="99" max="999999" placeholder="2789" data-price-min="2789" value="2789")
+                                                        span.goods__filter-range-span &#8381;
+                                                    label.goods__filter-range-label
+                                                        span.goods__filter-range-span.to до&nbsp;
+                                                        span.goods__filter-range-span.number-spaced#price-to
+                                                        input.goods__filter-range-input.number-spaced#input-1(type="text" name="range-slider-input" min="99" max="999999" placeholder="216789" data-price-max="216789" value="216789")
+                                                        span.goods__filte-ranger-span  &#8381;
+                                                .goods__filter-range-slider#range-slider
+                                    .goods__filter-ac-heading.ac 
+                                        button.ac-trigger Со скидкой
+                                            span 
+                                        .ac-panel
+                                            .goods__filter-ac-content
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Распродажа
+                                    .goods__filter-ac-heading.ac 
+                                        button.ac-trigger Размер
+                                            span 
+                                        .ac-panel
+                                            .goods__filter-ac-content
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span 3.5 (RU 34,5)
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span 4.5 (RU 35,5)
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span 5.5 (RU 36,5)
+                                    .goods__filter-ac-heading.ac 
+                                        button.ac-trigger Цвет
+                                            span 
+                                        .ac-panel
+                                            .goods__filter-ac-content
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Черный
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Зеленый
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Синий
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Красный
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Коричневый
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Мультицвет
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Серый
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Оранжевый
+                                    .goods__filter-ac-heading.ac 
+                                        button.ac-trigger Бренд
+                                            span 
+                                        .ac-panel
+                                            .goods__filter-ac-content
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Nike
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Reebook
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Adidas
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Puma
+                                    .goods__filter-ac-heading.ac 
+                                        button.ac-trigger Материал
+                                            span 
+                                        .ac-panel
+                                            .goods__filter-ac-content
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Микрофибра
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Флис
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Мембрана
+                                                label.goods__filter-label
+                                                    input.goods__filter-input(type="checkbox" name="")
+                                                    span.goods__filter-span Акрил
+                                button.goods__filter-btn(type="submit") Показать
+                                button.goods__filter-btn_cancel(type="reset") Очистить фильтр
+                        .goods__items.mens-wear
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину  
+                                .goods__fav-img-box.fav-btn
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-1.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией 
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381;
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину 
+                                .goods__fav-img-box.fav-btn 
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-2.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381; 
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину 
+                                .goods__fav-img-box.fav-btn 
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-3.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381;
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину  
+                                .goods__fav-img-box.fav-btn
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-1.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией 
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381;
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину 
+                                .goods__fav-img-box.fav-btn 
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-2.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381; 
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину 
+                                .goods__fav-img-box.fav-btn 
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-3.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381;
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину  
+                                .goods__fav-img-box.fav-btn
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-1.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией 
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381;
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину 
+                                .goods__fav-img-box.fav-btn 
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-2.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381; 
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину 
+                                .goods__fav-img-box.fav-btn 
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-3.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381;
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину  
+                                .goods__fav-img-box.fav-btn
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-1.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией 
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381;
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину 
+                                .goods__fav-img-box.fav-btn 
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-2.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381; 
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину 
+                                .goods__fav-img-box.fav-btn 
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-3.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381;
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину  
+                                .goods__fav-img-box.fav-btn
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-1.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией 
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381;
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину 
+                                .goods__fav-img-box.fav-btn 
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-2.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381; 
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину 
+                                .goods__fav-img-box.fav-btn 
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-3.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381;
+                            .goods__item
+                                .add-to-cart__box 
+                                    a.add-to-cart__link(href="#") Добавить в корзину 
+                                .goods__fav-img-box.fav-btn 
+                                    svg.goods__fav-img(width="17" height="16")
+                                        use(xlink:href="./assets/images/sprite.svg#heart-favorite" alt="Иконка сердечка")
+                                .goods__img-box
+                                    img.goods__img(src="assets/images/slider3-img-3.jpg" alt="Картинка в слайде")
+                                .goods__text-block 
+                                    .goods__text-box
+                                        p.goods__text Кроссовки черные на высокой подошве с молнией
+                                        span.goods__price.number-spaced 3500
+                                        span.goods__currency &nbsp; &#8381;
+
+            section.section.page-pagination 
+                .container 
+                    .page-pagination__block
+                        nav.page-pagination__nav
+                            ul.page-pagination__list
+                                li.page-pagination__item
+                                    a.page-pagination__link.current(href="#") 1 
+                                li.page-pagination__item
+                                    a.page-pagination__link(href="#") 2
+                                li.page-pagination__item
+                                    a.page-pagination__link(href="#") 3
+                                li.page-pagination__item
+                                    a.page-pagination__link(href="#") 4
+                                li.page-pagination__item
+                                    a.page-pagination__link(href="#") ...
+                                li.page-pagination__item
+                                    a.page-pagination__link(href="#") 8
+                        .page-pagination__link-btn
+                            a.page-pagination__btn(href="#") Показать ещё 

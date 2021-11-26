@@ -18,18 +18,128 @@
     <header class="header-top lock-padding">
       <div class="container header-top__container"> 
         <div class="header-top__menu menu">
-          <div class="header-top__menu-icon menu__icon"><span> </span></div>
+          <div class="header-top__menu-icon menu__icon"><span></span></div>
+          <button class="sub-menu-back-btn" type="button"></button>
+          <div class="header-links-mobile"><a class="header-link-mobile mobile-search" href="#">
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="./assets/images/sprite.svg#search-icon"></use>
+              </svg></a><a class="header-link-mobile mobile-account" href="#">
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="./assets/images/sprite.svg#user-icon"></use>
+              </svg></a><a class="header-link-mobile mobile-cart" href="#">
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="./assets/images/sprite.svg#shopping-bag"></use>
+              </svg><span class="cart-img-block__span">2</span></a></div>
           <nav class="header-top__menu-body menu__body">
-            <ul class="header-top__list menu__list">
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="for-men.html">Мужчинам</a></li>
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="for-women.html">Женщинам</a></li>
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="collections.html">Коллекции</a></li>
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="kinds-of-sports.html">Виды спорта</a></li>
+            <ul class="header-top__list left menu__list">
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="for-men.html">Мужчинам</a>
+                <button class="menu__link-btn" type="button"> </button>
+                <div class="header-top__sub-list-block">
+                  <button class="sub-sub-menu-back-btn" type="button"></button>
+                  <div class="container">
+                    <div class="header-top__sub-list-items">
+                      <div class="header-top__sub-list-item-col"> <a class="header-top__sub-list-link-title" href="#">Рекомендованное</a>
+                        <button class="menu__sub-link-btn" type="button">
+                        </button>
+                        <ul class="header-top__sub-list"> 
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Бестселлеры</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Лучшие подарки</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Не пропусти</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Экологичные материалы</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Календарь релизов</a></li>
+                        </ul>
+                      </div>
+                      <div class="header-top__sub-list-item-col"> <a class="header-top__sub-list-link-title" href="#">Обувь</a>
+                        <button class="menu__sub-link-btn" type="button">
+                        </button>
+                        <ul class="header-top__sub-list"> 
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Вся обувь</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Обувь из распродажи</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Спортивный стиль</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Бег</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Баскетбол</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Футбол</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Фитнес</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Скейтбординг</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Теннис</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Гольф</a></li>
+                        </ul>
+                      </div>
+                      <div class="header-top__sub-list-item-col"> <a class="header-top__sub-list-link-title" href="#">Одежда</a>
+                        <button class="menu__sub-link-btn" type="button">
+                        </button>
+                        <ul class="header-top__sub-list"> 
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Вся одежда</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Одежда из распродажи</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Худи и толстовки</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Майки и футболки</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Брюки и тайсы</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Спортивные костюмы</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Шорты</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Куртки и жилеты</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Форма и джерси</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Рубашки-поло</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Унисекс</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Экологичные материалы</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Носки</a></li>
+                        </ul>
+                      </div>
+                      <div class="header-top__sub-list-item-col"> <a class="header-top__sub-list-link-title" href="#">Аксессуары</a>
+                        <button class="menu__sub-link-btn" type="button">
+                        </button>
+                        <ul class="header-top__sub-list"> 
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Все Акссессуары</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Снаряжение</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Сумки</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Рюкзаки</a></li>
+                        </ul>
+                      </div>
+                      <div class="header-top__sub-list-item-col"> <a class="header-top__sub-list-link-title" href="#">Новинки</a>
+                        <button class="menu__sub-link-btn" type="button">
+                        </button>
+                        <ul class="header-top__sub-list"> 
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Все новинки</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Новинки зимнего сезона</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Новинки летнего сезона</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Товары из США</a></li>
+                        </ul>
+                      </div>
+                      <div class="header-top__sub-list-item-col"> <a class="header-top__sub-list-link-title" href="#">По виду спорта</a>
+                        <button class="menu__sub-link-btn" type="button">
+                        </button>
+                        <ul class="header-top__sub-list"> 
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Бег</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Футбол</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Баскетбол</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">НБА</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Теннис</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Гольф</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Фитнес</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Йога</a></li>
+                          <li class="header-top__sub-list-item"><a class="header-top__sub-list-link" href="#">Бокс</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="for-women.html">Женщинам</a>
+                <button class="menu__link-btn" type="button"> </button>
+              </li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="for-women.html">Детям</a>
+                <button class="menu__link-btn" type="button"> </button>
+              </li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="collections.html">Коллекции</a>
+                <button class="menu__link-btn" type="button"> </button>
+              </li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="kinds-of-sports.html">Виды спорта</a>
+                <button class="menu__link-btn" type="button"> </button>
+              </li>
             </ul>
-            <ul class="header-top__list menu__list">
+            <ul class="header-top__list right menu__list">
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="contacts.html">Контакты</a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="help.html">Помощь</a></li>
-              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link" href="my-data.html">Аккаунт</a></li>
+              <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link account-link" href="my-data.html">Аккаунт</a></li>
               <li class="header-top__list-item menu__item"><a class="header-top__menu-link menu__link cart-link" href="cart.html">Корзина
                   <div class="cart-img-block">
                     <div class="cart-img-box"> 
@@ -94,27 +204,195 @@
             <div class="section__heading">
               <h1 class="section__title">Мужская одежда</h1>
             </div>
+            <div class="goods__sorting"> 
+              <div class="custom-select"> 
+                <div class="custom-select__inner">
+                  <div class="custom-select__current">Сортировать по </div>
+                  <div class="custom-select__icon">
+                    <svg width="12" height="12" aria-hidden="true">
+                      <use xlink:href="./assets/images/sprite.svg#icon-arrow-down"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="custom-select__body">
+                  <label class="custom-select__label-item">Сортировать по
+                    <input type="hidden" name="option">
+                  </label>
+                  <label class="custom-select__label-item">Рекомендованное
+                    <input type="hidden" name="option">
+                  </label>
+                  <label class="custom-select__label-item">Самое новое
+                    <input type="hidden" name="option">
+                  </label>
+                  <label class="custom-select__label-item">Цена: высокая-низкая
+                    <input type="hidden" name="option">
+                  </label>
+                  <label class="custom-select__label-item">Цена: низкая-высокая
+                    <input type="hidden" name="option">
+                  </label>
+                </div>
+              </div>
+            </div>
             <div class="goods__content">
-              <div class="goods__filter-box"> 
+              <div class="goods__filter-block"> 
                 <form class="goods__filter-form" action="#">
-                  <label class="goods__filter-label">
-                    <input class="goods__filter-input" type="checkbox" name="for men"><span class="goods__filter-span">Куртки</span>
-                  </label>
-                  <label class="goods__filter-label">
-                    <input class="goods__filter-input" type="checkbox" name="for men"><span class="goods__filter-span">Майки</span>
-                  </label>
-                  <label class="goods__filter-label">
-                    <input class="goods__filter-input" type="checkbox" name="for men"><span class="goods__filter-span">Трикотаж</span>
-                  </label>
-                  <label class="goods__filter-label">
-                    <input class="goods__filter-input" type="checkbox" name="for men"><span class="goods__filter-span">Футболки</span>
-                  </label>
-                  <label class="goods__filter-label">
-                    <input class="goods__filter-input" type="checkbox" name="for men"><span class="goods__filter-span">Толстовки</span>
-                  </label>
-                  <label class="goods__filter-label">
-                    <input class="goods__filter-input" type="checkbox" name="for men"><span class="goods__filter-span">Смотреть все</span>
-                  </label>
+                  <div class="goods__filter-types">
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Куртки</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Майки</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Трикотаж</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Футболки</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Толстовки</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Шорты</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Носки</span>
+                    </label>
+                    <label class="goods__filter-label">
+                      <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Смотреть все</span>
+                    </label>
+                  </div>
+                  <div class="goods__filter-ac-container"> 
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Пол  <span>&nbsp;(1)</span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Мужчины</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Женщины</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Унисекс</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Поиск по цене<span> </span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <div class="goods__filter-range-inputs">
+                            <label class="goods__filter-range-label"><span class="goods__filter-range-span from">от&nbsp;</span><span class="goods__filter-range-span number-spaced" id="price-from"> </span>
+                              <input class="goods__filter-range-input number-spaced" id="input-0" type="text" name="range-slider-input" min="99" max="999999" placeholder="2789" data-price-min="2789" value="2789"><span class="goods__filter-range-span">&#8381;</span>
+                            </label>
+                            <label class="goods__filter-range-label"><span class="goods__filter-range-span to">до&nbsp;</span><span class="goods__filter-range-span number-spaced" id="price-to"></span>
+                              <input class="goods__filter-range-input number-spaced" id="input-1" type="text" name="range-slider-input" min="99" max="999999" placeholder="216789" data-price-max="216789" value="216789"><span class="goods__filte-ranger-span"> &#8381;</span>
+                            </label>
+                          </div>
+                          <div class="goods__filter-range-slider" id="range-slider"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Со скидкой<span> </span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Распродажа</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Размер<span> </span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">3.5 (RU 34,5)</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">4.5 (RU 35,5)</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">5.5 (RU 36,5)</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Цвет<span> </span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Черный</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Зеленый</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Синий</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Красный</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Коричневый</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Мультицвет</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Серый</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Оранжевый</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Бренд<span> </span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Nike</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Reebook</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Adidas</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Puma</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="goods__filter-ac-heading ac"> 
+                      <button class="ac-trigger">Материал<span> </span></button>
+                      <div class="ac-panel">
+                        <div class="goods__filter-ac-content">
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Микрофибра</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Флис</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Мембрана</span>
+                          </label>
+                          <label class="goods__filter-label">
+                            <input class="goods__filter-input" type="checkbox" name=""><span class="goods__filter-span">Акрил</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="goods__filter-btn" type="submit">Показать</button>
+                  <button class="goods__filter-btn_cancel" type="reset">Очистить фильтр</button>
                 </form>
               </div>
               <div class="goods__items mens-wear">
@@ -655,6 +933,7 @@
     <script src="assets/scripts/swiper-bundle.min.js"></script>
     <script src="assets/scripts/medium-zoom.min.js"></script>
     <script src="assets/scripts/focus-visible.min.js"></script>
+    <script src="assets/scripts/nouislider.js"></script>
     <script src="assets/scripts/modal.js"></script>
     <script src="assets/scripts/main.js"></script>
   </body>
