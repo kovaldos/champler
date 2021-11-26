@@ -159,10 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Сделать нормальные Хлебные крошки
   // Сделать добавление в избранное
 
-<<<<<<< HEAD
-
-// Переключение табов Start
-=======
   // Белый хедер на мобайле Старт
   const header = document.querySelector(".header-top");
   if (header) {
@@ -170,7 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.add("_white");
     }
   }
->>>>>>> e73dbced570d8e11c07b9c5b8f181cd284478db6
 
   // Белый хедер на мобайле Финиш
 
@@ -372,33 +367,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-<<<<<<< HEAD
-if (signUpInput) {
-  var phoneMask = IMask(signUpInput, {
-    mask: "+{7} (000) 000-00-00",
-  });
-}
-
-// Mask for phone number End
-
-// check password
-
-const passInput = document.getElementById("password");
-const passCheckInput = document.getElementById("passwordCheck");
-if (passInput && passCheckInput) {
-  const passError = document.querySelector(".pass-error");
-  passInput.addEventListener("change", () => {
-    passCheckInput.addEventListener("change", () => {
-      if (passCheckInput.value !== passInput.value) {
-        passInput.classList.add("not-the-same");
-        passCheckInput.classList.add("not-the-same");
-        passError.classList.remove("_hidden");
-      } else {
-        passInput.classList.remove("not-the-same");
-        passCheckInput.classList.remove("not-the-same");
-        passError.classList.add("_hidden");
-      }
-=======
   // Mask for phone number End
 
   // check password
@@ -419,7 +387,6 @@ if (passInput && passCheckInput) {
           passError.classList.add("_hidden");
         }
       });
->>>>>>> e73dbced570d8e11c07b9c5b8f181cd284478db6
     });
   }
 
@@ -636,48 +603,6 @@ if (passInput && passCheckInput) {
     observeParents: true,
     observeSlideChildren: true,
 
-<<<<<<< HEAD
-// reviews slider Start
-
-const reviewsSwiper = new Swiper(".reviews-slider__container", {
-  watchOverflow: true,
-  direction: "horizontal",
-  slidesPerGroup: 1,
-  initialSlide: 0,
-  spaceBetween: 10,
-  observer: true,
-  observeParents: true,
-  observeSlideChildren: true,
-  
-  navigation: {
-    nextEl: ".reviews-slider__button-next",
-    prevEl: ".reviews-slider__button-prev",
-  },
-  breakpoints: {
-    425: {
-      slidesPerView: 1,
-     
-    },
-    640: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-    },
-
-  },
-});
-
-const reviewsQuantity = reviewsSwiper.slides.length;
-
-if (reviewsQuantity > 4) {
-  navigationShow(reviewsSwiper);
-}
-
-// reviews slider End
-
-
-
-// favorite toggle Start
-=======
     navigation: {
       nextEl: ".reviews-slider__button-next",
       prevEl: ".reviews-slider__button-prev",
@@ -702,7 +627,6 @@ if (reviewsQuantity > 4) {
   // reviews slider End
 
   // favorite toggle Start
->>>>>>> e73dbced570d8e11c07b9c5b8f181cd284478db6
 
   const addToFav = () => {
     const favBtns = document.querySelectorAll(".fav-btn");
@@ -866,10 +790,6 @@ if (reviewsQuantity > 4) {
       this.parentElement.classList.toggle("_active");
     }
 
-<<<<<<< HEAD
-// Вставляем пробелы между разрядами цифр в ценах Конец
-
-=======
     function selectChoose() {
       let text = this.innerText;
       let location = this.closest(".custom-select");
@@ -881,4 +801,3 @@ if (reviewsQuantity > 4) {
 
   select();
 });
->>>>>>> e73dbced570d8e11c07b9c5b8f181cd284478db6
