@@ -158,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Сделать нормальные Хлебные крошки
 // Сделать добавление в избранное
 
+
 // Переключение табов Start
 
 const tabItems = document.querySelectorAll(".tabs__link");
@@ -297,17 +298,17 @@ if (signUpInput) {
 const passInput = document.getElementById("password");
 const passCheckInput = document.getElementById("passwordCheck");
 if (passInput && passCheckInput) {
-  const passError = document.querySelector('.pass-error');
+  const passError = document.querySelector(".pass-error");
   passInput.addEventListener("change", () => {
     passCheckInput.addEventListener("change", () => {
       if (passCheckInput.value !== passInput.value) {
         passInput.classList.add("not-the-same");
         passCheckInput.classList.add("not-the-same");
-        passError.classList.remove('_hidden')
+        passError.classList.remove("_hidden");
       } else {
         passInput.classList.remove("not-the-same");
         passCheckInput.classList.remove("not-the-same");
-        passError.classList.add('_hidden')
+        passError.classList.add("_hidden");
       }
     });
   });
@@ -514,6 +515,45 @@ if (slidesQuantity > 4) {
 
 // favorite slider End
 
+// reviews slider Start
+
+const reviewsSwiper = new Swiper(".reviews-slider__container", {
+  watchOverflow: true,
+  direction: "horizontal",
+  slidesPerGroup: 1,
+  initialSlide: 0,
+  spaceBetween: 10,
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+  
+  navigation: {
+    nextEl: ".reviews-slider__button-next",
+    prevEl: ".reviews-slider__button-prev",
+  },
+  breakpoints: {
+    425: {
+      slidesPerView: 1,
+     
+    },
+    640: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+
+  },
+});
+
+const reviewsQuantity = reviewsSwiper.slides.length;
+
+if (reviewsQuantity > 4) {
+  navigationShow(reviewsSwiper);
+}
+
+// reviews slider End
+
+
+
 // favorite toggle Start
 
 const addToFav = () => {
@@ -611,3 +651,4 @@ const setSpaces = () => {
 setSpaces();
 
 // Вставляем пробелы между разрядами цифр в ценах Конец
+
